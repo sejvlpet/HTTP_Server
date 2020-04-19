@@ -1,0 +1,3 @@
+/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir
+/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles/edit_cache.dir
