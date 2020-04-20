@@ -1,5 +1,5 @@
 CXX := g++
-override CXXFLAGS += -Wall -pedantic -std=c++14git
+override CXXFLAGS += -Wall -pedantic -std=c++14
 LDLIBS := -pthread
 OBJS := main.o server.o helper.o
 BINARY := server
