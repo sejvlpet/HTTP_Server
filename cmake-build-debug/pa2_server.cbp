@@ -123,6 +123,12 @@
 		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/request.h">
 			<Option target="pa2_server"/>
 		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/response.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/response.h">
+			<Option target="pa2_server"/>
+		</Unit>
 		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/server.cpp">
 			<Option target="pa2_server"/>
 		</Unit>

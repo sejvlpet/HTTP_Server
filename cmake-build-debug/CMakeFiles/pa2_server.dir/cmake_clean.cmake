@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pa2_server.dir/main.cpp.o"
   "CMakeFiles/pa2_server.dir/parser.cpp.o"
   "CMakeFiles/pa2_server.dir/request.cpp.o"
+  "CMakeFiles/pa2_server.dir/response.cpp.o"
   "CMakeFiles/pa2_server.dir/server.cpp.o"
   "CMakeFiles/pa2_server.dir/worker.cpp.o"
   "pa2_server"

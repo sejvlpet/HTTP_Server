@@ -312,6 +312,33 @@ request.cpp.s:
 	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/request.cpp.s
 .PHONY : request.cpp.s
 
+response.o: response.cpp.o
+
+.PHONY : response.o
+
+# target to build an object file
+response.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/response.cpp.o
+.PHONY : response.cpp.o
+
+response.i: response.cpp.i
+
+.PHONY : response.i
+
+# target to preprocess a source file
+response.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/response.cpp.i
+.PHONY : response.cpp.i
+
+response.s: response.cpp.s
+
+.PHONY : response.s
+
+# target to generate assembly for a file
+response.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/response.cpp.s
+.PHONY : response.cpp.s
+
 server.o: server.cpp.o
 
 .PHONY : server.o
@@ -396,6 +423,9 @@ help:
 	@echo "... request.o"
 	@echo "... request.i"
 	@echo "... request.s"
+	@echo "... response.o"
+	@echo "... response.i"
+	@echo "... response.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"
