@@ -84,19 +84,55 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/src/helper.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/controller.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/src/helper.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/controller.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/src/main.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/helper.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/src/server.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/helper.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/src/server.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/log.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/log.h">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/logger.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/logger.h">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/main.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/parser.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/parser.h">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/request.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/request.h">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/server.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/server.h">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/worker.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/worker.h">
 			<Option target="pa2_server"/>
 		</Unit>
 		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/CMakeLists.txt">

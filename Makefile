@@ -1,7 +1,7 @@
 CXX := g++
 override CXXFLAGS += -Wall -pedantic -std=c++14
 LDLIBS := -pthread
-OBJS := main.o server.o helper.o
+OBJS := main.o server.o helper.o worker.o logger.o log.o controller.o parser.o
 BINARY := server
 
 .PHONY: all clean debug help

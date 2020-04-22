@@ -7,11 +7,10 @@
 #include <thread>
 #include "helper.h"
 #include "server.h"
+#include "worker.h"
 
 
 // todo - as there'll be loads of const and messages like that, I'd like to keep them in seperate file shared over more classes
-const char *Server::WAIT = "wait";
-int Server::_workersCount{0};
 const std::set<std::string> Server::IGNORE_LIST {"favicon.ico"};
 
 
@@ -53,6 +52,13 @@ void Server::Setup() {
         _setupStatus = FAIL;
         return;
     }
+
+    if(_logLocation == CONSOLE) {
+        _logger = std::make_unique<ConsoleLogger>();
+    } else {
+        _logger = std::make_unique<FileLogger>();
+    }
+
     _setupStatus = OK;
 }
 
@@ -69,85 +75,8 @@ int Server::Listen() {
                 perror("In accept");
                 return LISTEN_FAIL;
             }
-            std::thread thr(Response, newSocket);
-            thr.detach();
-        } else if(_workersCount == 0) return LISTEN_OK;
+            Worker worker(this, newSocket);
+            worker.Run();
+        } else if(_workersCount == 0) return LISTEN_SUCCESS;
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// fixme add some logic
-// will throw exceptions if something happens
-// entire response could be another class, at lest I wouldn't have to pass that socket number all the time
-void Server::Response(int socket) {
-    std::cout << "currently running " << ++_workersCount << " threads\n";
-    char buffer[BUFFER_READ_SIZE] = {0};
-    read(socket, buffer, BUFFER_READ_SIZE);
-
-    ProcessMessage(socket, buffer);
-    close(socket);
-    std::cout << "currently running " << --_workersCount << " threads\n";
-}
-
-
-int Server::ProcessMessage(int socket, char buffer[BUFFER_READ_SIZE]) {
-    std::string req = GetReq(buffer);
-    if(IGNORE_LIST.find(req) != IGNORE_LIST.end())
-        return IGNORE;
-
-    if(req == "THREAD_TEST") {
-        std::cout << "thread tested with " << _workersCount << " running workers\n";
-        std::string response = "TEST_PASSED-" + std::to_string(_workersCount);
-        const char *success = response.c_str();
-        write(socket, success, strlen(success));
-        Helper::Wait(5000000000);
-        return SUCCESS;
-    }
-
-
-    std::cout << req << '\n';
-    write(socket, HELLO, strlen(HELLO));
-    if(req == WAIT) Helper::Wait();
-    return SUCCESS;
-}
-
-// fixme needs rename
-std::string Server::GetReq(char buffer[BUFFER_READ_SIZE]) {
-    if(!strcmp(buffer,"THREAD_TEST")) {
-        return "THREAD_TEST";
-    }
-
-    std::string res;
-    size_t i = 0;
-    while(i < BUFFER_READ_SIZE && buffer[i++] != '/'){}
-    while(i < BUFFER_READ_SIZE && buffer[i] != ' ') {
-        res.push_back(buffer[i++]);
-    }
-    if(i == BUFFER_READ_SIZE) {
-        // this shouldn't happen, but lets be paranoid and throw something here (in the future)
-        std::cout << "this shouldn't have happend\n";
-        std::cout << buffer << '\n';
-    }
-    return res;
 }
