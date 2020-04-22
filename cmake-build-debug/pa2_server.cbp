@@ -84,19 +84,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/helper.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/src/helper.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/helper.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/src/helper.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/main.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/src/main.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/server.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/src/server.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/server.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/src/server.h">
 			<Option target="pa2_server"/>
 		</Unit>
 		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/CMakeLists.txt">

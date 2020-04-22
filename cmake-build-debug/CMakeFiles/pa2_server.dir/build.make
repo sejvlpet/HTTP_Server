@@ -57,57 +57,57 @@ include CMakeFiles/pa2_server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/pa2_server.dir/flags.make
 
-CMakeFiles/pa2_server.dir/main.cpp.o: CMakeFiles/pa2_server.dir/flags.make
-CMakeFiles/pa2_server.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pa2_server.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pa2_server.dir/main.cpp.o -c /home/petrsejvl/Dropbox/pa2/pa2_server/main.cpp
+CMakeFiles/pa2_server.dir/src/main.cpp.o: CMakeFiles/pa2_server.dir/flags.make
+CMakeFiles/pa2_server.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pa2_server.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pa2_server.dir/src/main.cpp.o -c /home/petrsejvl/Dropbox/pa2/pa2_server/src/main.cpp
 
-CMakeFiles/pa2_server.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pa2_server.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petrsejvl/Dropbox/pa2/pa2_server/main.cpp > CMakeFiles/pa2_server.dir/main.cpp.i
+CMakeFiles/pa2_server.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pa2_server.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petrsejvl/Dropbox/pa2/pa2_server/src/main.cpp > CMakeFiles/pa2_server.dir/src/main.cpp.i
 
-CMakeFiles/pa2_server.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pa2_server.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petrsejvl/Dropbox/pa2/pa2_server/main.cpp -o CMakeFiles/pa2_server.dir/main.cpp.s
+CMakeFiles/pa2_server.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pa2_server.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petrsejvl/Dropbox/pa2/pa2_server/src/main.cpp -o CMakeFiles/pa2_server.dir/src/main.cpp.s
 
-CMakeFiles/pa2_server.dir/helper.cpp.o: CMakeFiles/pa2_server.dir/flags.make
-CMakeFiles/pa2_server.dir/helper.cpp.o: ../helper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pa2_server.dir/helper.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pa2_server.dir/helper.cpp.o -c /home/petrsejvl/Dropbox/pa2/pa2_server/helper.cpp
+CMakeFiles/pa2_server.dir/src/helper.cpp.o: CMakeFiles/pa2_server.dir/flags.make
+CMakeFiles/pa2_server.dir/src/helper.cpp.o: ../src/helper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pa2_server.dir/src/helper.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pa2_server.dir/src/helper.cpp.o -c /home/petrsejvl/Dropbox/pa2/pa2_server/src/helper.cpp
 
-CMakeFiles/pa2_server.dir/helper.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pa2_server.dir/helper.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petrsejvl/Dropbox/pa2/pa2_server/helper.cpp > CMakeFiles/pa2_server.dir/helper.cpp.i
+CMakeFiles/pa2_server.dir/src/helper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pa2_server.dir/src/helper.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petrsejvl/Dropbox/pa2/pa2_server/src/helper.cpp > CMakeFiles/pa2_server.dir/src/helper.cpp.i
 
-CMakeFiles/pa2_server.dir/helper.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pa2_server.dir/helper.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petrsejvl/Dropbox/pa2/pa2_server/helper.cpp -o CMakeFiles/pa2_server.dir/helper.cpp.s
+CMakeFiles/pa2_server.dir/src/helper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pa2_server.dir/src/helper.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petrsejvl/Dropbox/pa2/pa2_server/src/helper.cpp -o CMakeFiles/pa2_server.dir/src/helper.cpp.s
 
-CMakeFiles/pa2_server.dir/server.cpp.o: CMakeFiles/pa2_server.dir/flags.make
-CMakeFiles/pa2_server.dir/server.cpp.o: ../server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pa2_server.dir/server.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pa2_server.dir/server.cpp.o -c /home/petrsejvl/Dropbox/pa2/pa2_server/server.cpp
+CMakeFiles/pa2_server.dir/src/server.cpp.o: CMakeFiles/pa2_server.dir/flags.make
+CMakeFiles/pa2_server.dir/src/server.cpp.o: ../src/server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pa2_server.dir/src/server.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pa2_server.dir/src/server.cpp.o -c /home/petrsejvl/Dropbox/pa2/pa2_server/src/server.cpp
 
-CMakeFiles/pa2_server.dir/server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pa2_server.dir/server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petrsejvl/Dropbox/pa2/pa2_server/server.cpp > CMakeFiles/pa2_server.dir/server.cpp.i
+CMakeFiles/pa2_server.dir/src/server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pa2_server.dir/src/server.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petrsejvl/Dropbox/pa2/pa2_server/src/server.cpp > CMakeFiles/pa2_server.dir/src/server.cpp.i
 
-CMakeFiles/pa2_server.dir/server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pa2_server.dir/server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petrsejvl/Dropbox/pa2/pa2_server/server.cpp -o CMakeFiles/pa2_server.dir/server.cpp.s
+CMakeFiles/pa2_server.dir/src/server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pa2_server.dir/src/server.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petrsejvl/Dropbox/pa2/pa2_server/src/server.cpp -o CMakeFiles/pa2_server.dir/src/server.cpp.s
 
 # Object files for target pa2_server
 pa2_server_OBJECTS = \
-"CMakeFiles/pa2_server.dir/main.cpp.o" \
-"CMakeFiles/pa2_server.dir/helper.cpp.o" \
-"CMakeFiles/pa2_server.dir/server.cpp.o"
+"CMakeFiles/pa2_server.dir/src/main.cpp.o" \
+"CMakeFiles/pa2_server.dir/src/helper.cpp.o" \
+"CMakeFiles/pa2_server.dir/src/server.cpp.o"
 
 # External object files for target pa2_server
 pa2_server_EXTERNAL_OBJECTS =
 
-pa2_server: CMakeFiles/pa2_server.dir/main.cpp.o
-pa2_server: CMakeFiles/pa2_server.dir/helper.cpp.o
-pa2_server: CMakeFiles/pa2_server.dir/server.cpp.o
+pa2_server: CMakeFiles/pa2_server.dir/src/main.cpp.o
+pa2_server: CMakeFiles/pa2_server.dir/src/helper.cpp.o
+pa2_server: CMakeFiles/pa2_server.dir/src/server.cpp.o
 pa2_server: CMakeFiles/pa2_server.dir/build.make
 pa2_server: CMakeFiles/pa2_server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable pa2_server"

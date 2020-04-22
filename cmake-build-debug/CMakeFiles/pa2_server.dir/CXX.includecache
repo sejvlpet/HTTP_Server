@@ -6,21 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/petrsejvl/Dropbox/pa2/pa2_server/helper.cpp
-iostream
--
-helper.h
-/home/petrsejvl/Dropbox/pa2/pa2_server/helper.h
-
-/home/petrsejvl/Dropbox/pa2/pa2_server/helper.h
+/home/petrsejvl/Dropbox/pa2/pa2_server/src/helper.h
 cstdio
 -
 
-/home/petrsejvl/Dropbox/pa2/pa2_server/main.cpp
+/home/petrsejvl/Dropbox/pa2/pa2_server/src/main.cpp
 server.h
-/home/petrsejvl/Dropbox/pa2/pa2_server/server.h
+/home/petrsejvl/Dropbox/pa2/pa2_server/src/server.h
 
-/home/petrsejvl/Dropbox/pa2/pa2_server/server.cpp
+/home/petrsejvl/Dropbox/pa2/pa2_server/src/server.cpp
 cstdio
 -
 sys/socket.h
@@ -36,11 +30,11 @@ iostream
 thread
 -
 helper.h
-/home/petrsejvl/Dropbox/pa2/pa2_server/helper.h
+/home/petrsejvl/Dropbox/pa2/pa2_server/src/helper.h
 server.h
-/home/petrsejvl/Dropbox/pa2/pa2_server/server.h
+/home/petrsejvl/Dropbox/pa2/pa2_server/src/server.h
 
-/home/petrsejvl/Dropbox/pa2/pa2_server/server.h
+/home/petrsejvl/Dropbox/pa2/pa2_server/src/server.h
 netinet/in.h
 -
 string

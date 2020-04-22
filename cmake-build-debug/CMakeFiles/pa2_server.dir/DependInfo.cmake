@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/petrsejvl/Dropbox/pa2/pa2_server/helper.cpp" "/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/helper.cpp.o"
-  "/home/petrsejvl/Dropbox/pa2/pa2_server/main.cpp" "/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/main.cpp.o"
-  "/home/petrsejvl/Dropbox/pa2/pa2_server/server.cpp" "/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/server.cpp.o"
+  "/home/petrsejvl/Dropbox/pa2/pa2_server/src/helper.cpp" "/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/src/helper.cpp.o"
+  "/home/petrsejvl/Dropbox/pa2/pa2_server/src/main.cpp" "/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/src/main.cpp.o"
+  "/home/petrsejvl/Dropbox/pa2/pa2_server/src/server.cpp" "/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/src/server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

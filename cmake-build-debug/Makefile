@@ -123,86 +123,86 @@ pa2_server/fast:
 	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/build
 .PHONY : pa2_server/fast
 
-helper.o: helper.cpp.o
+src/helper.o: src/helper.cpp.o
 
-.PHONY : helper.o
-
-# target to build an object file
-helper.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/helper.cpp.o
-.PHONY : helper.cpp.o
-
-helper.i: helper.cpp.i
-
-.PHONY : helper.i
-
-# target to preprocess a source file
-helper.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/helper.cpp.i
-.PHONY : helper.cpp.i
-
-helper.s: helper.cpp.s
-
-.PHONY : helper.s
-
-# target to generate assembly for a file
-helper.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/helper.cpp.s
-.PHONY : helper.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
+.PHONY : src/helper.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/helper.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/helper.cpp.o
+.PHONY : src/helper.cpp.o
 
-main.i: main.cpp.i
+src/helper.i: src/helper.cpp.i
 
-.PHONY : main.i
+.PHONY : src/helper.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/helper.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/helper.cpp.i
+.PHONY : src/helper.cpp.i
 
-main.s: main.cpp.s
+src/helper.s: src/helper.cpp.s
 
-.PHONY : main.s
+.PHONY : src/helper.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/helper.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/helper.cpp.s
+.PHONY : src/helper.cpp.s
 
-server.o: server.cpp.o
+src/main.o: src/main.cpp.o
 
-.PHONY : server.o
+.PHONY : src/main.o
 
 # target to build an object file
-server.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/server.cpp.o
-.PHONY : server.cpp.o
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-server.i: server.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : server.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-server.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/server.cpp.i
-.PHONY : server.cpp.i
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-server.s: server.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : server.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-server.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/server.cpp.s
-.PHONY : server.cpp.s
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/server.o: src/server.cpp.o
+
+.PHONY : src/server.o
+
+# target to build an object file
+src/server.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/server.cpp.o
+.PHONY : src/server.cpp.o
+
+src/server.i: src/server.cpp.i
+
+.PHONY : src/server.i
+
+# target to preprocess a source file
+src/server.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/server.cpp.i
+.PHONY : src/server.cpp.i
+
+src/server.s: src/server.cpp.s
+
+.PHONY : src/server.s
+
+# target to generate assembly for a file
+src/server.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/server.cpp.s
+.PHONY : src/server.cpp.s
 
 # Help Target
 help:
@@ -213,15 +213,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... pa2_server"
 	@echo "... edit_cache"
-	@echo "... helper.o"
-	@echo "... helper.i"
-	@echo "... helper.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
+	@echo "... src/helper.o"
+	@echo "... src/helper.i"
+	@echo "... src/helper.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/server.o"
+	@echo "... src/server.i"
+	@echo "... src/server.s"
 .PHONY : help
 
 

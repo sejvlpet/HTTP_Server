@@ -11,21 +11,26 @@
 
 // todo - as there'll be loads of const and messages like that, I'd like to keep them in seperate file shared over more classes
 const char *Server::WAIT = "wait";
-const char *Server::END = "end";
 int Server::_workersCount{0};
 const std::set<std::string> Server::IGNORE_LIST {"favicon.ico"};
 
 
-int Server::Setup() {
+Server::Server() {
+    Setup();
+}
+
+
+void Server::Setup() {
     if ((_serverFd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
         perror("In socket");
-        return SETUP_FAIL;
+        _setupStatus = FAIL;
+        return;
     }
     _addrLen = sizeof(_address);
 
     _address.sin_family = AF_INET;
     _address.sin_addr.s_addr = INADDR_ANY;
-    _address.sin_port = htons(PORT);
+    _address.sin_port = htons(_port);
 
     // fixme do something more c++
     memset(_address.sin_zero, '\0', sizeof(_address.sin_zero));
@@ -33,35 +38,64 @@ int Server::Setup() {
     // fixme this has to change
     const int trueFlag = 1;
     if (setsockopt(_serverFd, SOL_SOCKET, SO_REUSEADDR, &trueFlag, sizeof(int)) < 0) {
-        return SETUP_FAIL;
+        _setupStatus = FAIL;
+        return;
     }
 
     // fixme this has to change
     if (bind(_serverFd, (struct sockaddr *) &_address, sizeof(_address)) < 0) {
         perror("In bind");
-        return SETUP_FAIL;
+        _setupStatus = FAIL;
+        return;
     }
     if (listen(_serverFd, 10) < 0) {
         perror("In listen");
-        return SETUP_FAIL;
+        _setupStatus = FAIL;
+        return;
     }
-    return SETUP_OK;
+    _setupStatus = OK;
 }
 
 int Server::Listen() {
+    if(_setupStatus == SETUP_STATUS::FAIL) return SETUP_FAIL;
+
     while (true) {
         int newSocket;
         // fixme do something more c++
-        if ((newSocket = accept(_serverFd, (sockaddr *) &_address, (socklen_t *) &_addrLen)) < 0) {
-            perror("In accept");
-            return LISTEN_FAIL;
-        }
 
-        std::thread thr(Response, newSocket);
-        thr.detach();
+        if(!_shutDown) {
+            if ((newSocket = accept(_serverFd, (sockaddr *) &_address, (socklen_t *) &_addrLen)) < 0) {
+                // listening failed
+                perror("In accept");
+                return LISTEN_FAIL;
+            }
+            std::thread thr(Response, newSocket);
+            thr.detach();
+        } else if(_workersCount == 0) return LISTEN_OK;
     }
-    return LISTEN_OK;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // fixme add some logic
 // will throw exceptions if something happens
@@ -90,11 +124,9 @@ int Server::ProcessMessage(int socket, char buffer[BUFFER_READ_SIZE]) {
         Helper::Wait(5000000000);
         return SUCCESS;
     }
-    std::cout << req << '\n';
-    if(req == END) {
-        // fixme here we have to end somehow
-    }
 
+
+    std::cout << req << '\n';
     write(socket, HELLO, strlen(HELLO));
     if(req == WAIT) Helper::Wait();
     return SUCCESS;
