@@ -10,7 +10,6 @@
 
 
 // todo - as there'll be loads of const and messages like that, I'd like to keep them in seperate file shared over more classes
-const char *Server::HELLO = "HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 12\n\nHello world!";
 const char *Server::WAIT = "wait";
 const char *Server::END = "end";
 int Server::_workersCount{0};

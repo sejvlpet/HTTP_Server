@@ -6,22 +6,39 @@
 #include <set>
 
 class Server {
-public:
+private:
+    // new implementation
+    // options
     const static int PORT{8080};
-    const static int SETUP_FAIL{1};
-    const static int SETUP_OK{0};
-    const static int LISTEN_FAIL{1};
-    const static int LISTEN_OK{0};
-    const static int IGNORE{-1};
-    const static int SUCCESS{1};
+    enum class SETUP_STATUS {
+        OK, FAIL, NO_SETUP
+    };
+    const static int LISTEN_SUCCESS{0}; // value to be return from listen if succeeds
+    const static int LISTEN_FAIL{1}; // to be return if fails, generally if server's not setuped well before listening
+    // simple hello world response
+    const constexpr static char *HELLO{"HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 12\n\nHello world! prdel"};
 
-    const static char *HELLO;
+
+public:
+    static int _workersCount; // recent count of request being processed
+
+
+
+    // to be removed or replaced
+    const static int SETUP_FAIL{1}; // won't be used
+    const static int SETUP_OK{0}; // won't be used
+//    const static int LISTEN_FAIL{1};
+    const static int LISTEN_OK{0}; // renamed
+    const static int IGNORE{-1}; // wtf?
+    const static int SUCCESS{1}; // wtf?
+
+
     const static char *WAIT;
     const static char *END;
     const static int BUFFER_READ_SIZE {30000};
     const static std::set<std::string> IGNORE_LIST;
 
-    static int _workersCount;
+
     int Setup();
     int Listen();
 
