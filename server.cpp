@@ -11,7 +11,7 @@
 
 
 // todo - as there'll be loads of const and messages like that, I'd like to keep them in seperate file shared over more classes
-const std::set<std::string> Server::IGNORE_LIST {"favicon.ico"};
+const std::set<std::string> Server::IGNORE_LIST{"favicon.ico"};
 
 
 Server::Server() {
@@ -53,7 +53,7 @@ void Server::Setup() {
         return;
     }
 
-    if(_logLocation == CONSOLE) {
+    if (_logLocation == CONSOLE) {
         _logger = std::make_unique<ConsoleLogger>();
     } else {
         _logger = std::make_unique<FileLogger>();
@@ -62,14 +62,18 @@ void Server::Setup() {
     _setupStatus = OK;
 }
 
+void Server::ShutDown() {
+    Log(std::make_unique<ShutDownLog>(false));
+    _shutDown = true;
+}
+
 int Server::Listen() {
-    if(_setupStatus == SETUP_STATUS::FAIL) return SETUP_FAIL;
+    if (_setupStatus == SETUP_STATUS::FAIL) return SETUP_FAIL;
 
     while (true) {
-        int newSocket;
-        // fixme do something more c++
-
-        if(!_shutDown) {
+        if (!_shutDown) { // after shutdown any request won't be accepted
+            int newSocket;
+            // fixme do something more c++
             if ((newSocket = accept(_serverFd, (sockaddr *) &_address, (socklen_t *) &_addrLen)) < 0) {
                 // listening failed
                 perror("In accept");
@@ -77,6 +81,12 @@ int Server::Listen() {
             }
             Worker worker(this, newSocket);
             worker.Run();
-        } else if(_workersCount == 0) return LISTEN_SUCCESS;
+        }
+
+        // fixme - this condition doesn't obviously work :D
+        if(_shutDown && _workersCount == 0) break;
     }
+    // fixme log shutting down
+    Log(std::make_unique<ShutDownLog>(true));
+    return LISTEN_SUCCESS;
 }

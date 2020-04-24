@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bits/unique_ptr.h>
 #include "log.h"
 #ifndef PA2_SERVER_LOGGER_H
 #define PA2_SERVER_LOGGER_H
@@ -7,7 +8,7 @@
 class Logger {
 public:
     // todo add logic and move to .cpp
-    virtual void Log(const Log &log)  {
+    virtual void Log(const std::unique_ptr<class Log> &log) const  {
         std::cout << "Log from base class\n";
     }
 
@@ -21,8 +22,8 @@ public:
 class FileLogger : public Logger {
 public:
     // fixme why there has to be keyword class?
-    void Log(const class Log &log) override {
-        std::cout << "Log from FileLogger class\n";
+    void Log(const std::unique_ptr<class Log> &log) const override {
+        std::cout << log->ToString();
     }
 
     FileLogger *Clone() override {
@@ -34,8 +35,8 @@ public:
 class ConsoleLogger : public Logger {
 public:
     // fixme why there has to be keyword class?
-    void Log(const class Log &log) override {
-        std::cout << "Log from ConsoleLogger class\n";
+    void Log(const std::unique_ptr<class Log> &log) const override {
+        std::cout << log->ToString();
     }
 
     ConsoleLogger *Clone() override {

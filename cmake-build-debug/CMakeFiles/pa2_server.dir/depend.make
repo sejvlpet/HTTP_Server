@@ -3,9 +3,11 @@
 
 CMakeFiles/pa2_server.dir/controller.cpp.o: ../controller.cpp
 CMakeFiles/pa2_server.dir/controller.cpp.o: ../controller.h
+CMakeFiles/pa2_server.dir/controller.cpp.o: ../helper.h
 CMakeFiles/pa2_server.dir/controller.cpp.o: ../log.h
 CMakeFiles/pa2_server.dir/controller.cpp.o: ../logger.h
 CMakeFiles/pa2_server.dir/controller.cpp.o: ../request.h
+CMakeFiles/pa2_server.dir/controller.cpp.o: ../response.h
 CMakeFiles/pa2_server.dir/controller.cpp.o: ../server.h
 
 CMakeFiles/pa2_server.dir/helper.cpp.o: ../helper.cpp
@@ -23,14 +25,12 @@ CMakeFiles/pa2_server.dir/main.cpp.o: ../logger.h
 CMakeFiles/pa2_server.dir/main.cpp.o: ../main.cpp
 CMakeFiles/pa2_server.dir/main.cpp.o: ../server.h
 
-CMakeFiles/pa2_server.dir/parser.cpp.o: ../controller.h
 CMakeFiles/pa2_server.dir/parser.cpp.o: ../log.h
 CMakeFiles/pa2_server.dir/parser.cpp.o: ../logger.h
 CMakeFiles/pa2_server.dir/parser.cpp.o: ../parser.cpp
 CMakeFiles/pa2_server.dir/parser.cpp.o: ../parser.h
 CMakeFiles/pa2_server.dir/parser.cpp.o: ../request.h
 CMakeFiles/pa2_server.dir/parser.cpp.o: ../server.h
-CMakeFiles/pa2_server.dir/parser.cpp.o: ../worker.h
 
 CMakeFiles/pa2_server.dir/request.cpp.o: ../log.h
 CMakeFiles/pa2_server.dir/request.cpp.o: ../logger.h
@@ -38,17 +38,28 @@ CMakeFiles/pa2_server.dir/request.cpp.o: ../request.cpp
 CMakeFiles/pa2_server.dir/request.cpp.o: ../request.h
 CMakeFiles/pa2_server.dir/request.cpp.o: ../server.h
 
+CMakeFiles/pa2_server.dir/response.cpp.o: ../log.h
+CMakeFiles/pa2_server.dir/response.cpp.o: ../response.cpp
+CMakeFiles/pa2_server.dir/response.cpp.o: ../response.h
+
+CMakeFiles/pa2_server.dir/server.cpp.o: ../controller.h
 CMakeFiles/pa2_server.dir/server.cpp.o: ../helper.h
 CMakeFiles/pa2_server.dir/server.cpp.o: ../log.h
 CMakeFiles/pa2_server.dir/server.cpp.o: ../logger.h
+CMakeFiles/pa2_server.dir/server.cpp.o: ../parser.h
+CMakeFiles/pa2_server.dir/server.cpp.o: ../request.h
+CMakeFiles/pa2_server.dir/server.cpp.o: ../response.h
 CMakeFiles/pa2_server.dir/server.cpp.o: ../server.cpp
 CMakeFiles/pa2_server.dir/server.cpp.o: ../server.h
+CMakeFiles/pa2_server.dir/server.cpp.o: ../worker.h
 
 CMakeFiles/pa2_server.dir/worker.cpp.o: ../controller.h
+CMakeFiles/pa2_server.dir/worker.cpp.o: ../helper.h
 CMakeFiles/pa2_server.dir/worker.cpp.o: ../log.h
 CMakeFiles/pa2_server.dir/worker.cpp.o: ../logger.h
 CMakeFiles/pa2_server.dir/worker.cpp.o: ../parser.h
 CMakeFiles/pa2_server.dir/worker.cpp.o: ../request.h
+CMakeFiles/pa2_server.dir/worker.cpp.o: ../response.h
 CMakeFiles/pa2_server.dir/worker.cpp.o: ../server.h
 CMakeFiles/pa2_server.dir/worker.cpp.o: ../worker.cpp
 CMakeFiles/pa2_server.dir/worker.cpp.o: ../worker.h

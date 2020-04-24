@@ -4,6 +4,7 @@
 
 class Parser {
 public:
+    // reads buffer, saves information from which it creates its parsed request which shall be later returned
     Parser(const char *buffer) {
 
     }
@@ -12,6 +13,9 @@ public:
         Request tmp(socket);
         return tmp;
     }
+
+private:
+    Request _parsedRequest;
 };
 
 

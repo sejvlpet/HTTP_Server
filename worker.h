@@ -15,7 +15,7 @@ public:
     static const int BUFFER_READ_SIZE{300000};
 
     // fixme move this to cpp file
-    Worker(const Server *parent, int socket) : _parent(parent), _socket(socket) {
+    Worker(Server *parent, int socket) : _parent(parent), _socket(socket) {
         // read
         read(socket, _buffer, BUFFER_READ_SIZE);
         ParseMessage();
@@ -35,7 +35,7 @@ public:
     }
 
 private:
-    const Server *_parent{nullptr};
+    Server *_parent{nullptr};
     char _buffer[BUFFER_READ_SIZE]{0};
     int _socket;
     Request _request;
@@ -46,7 +46,7 @@ private:
         // create instance of parser and give it _request to parse, returns
         Parser parser(_buffer);
         _request = parser.GetRequest(_socket);
-        _parent->Log(_request.GetParseLog());
+        _parent->Log(_request.GetLog());
     }
 };
 

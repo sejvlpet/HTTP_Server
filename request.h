@@ -10,15 +10,9 @@ public:
     Request(int socket) : _socket(socket) {}
 
     // returns log object about request parsing
-    Log GetParseLog() const {
-        Log tmp;
-        return tmp;
-    }
-
-    // returns log object about request sending
-    Log GetSendLog() const {
-        Log tmp;
-        return tmp;
+    std::unique_ptr<Log> GetLog(){
+        RequestLog tmp;
+        return std::make_unique<RequestLog>(tmp);
     }
 };
 

@@ -32,24 +32,22 @@ public:
     void Setup(const std::string &configFileName); // setups server from configFile, same todos as ctor
     int Listen(); // listen on configured port, if setup failed returns proper constant
 
-    void ShutDown() {
-        _shutDown = true;
-    }
+    void ShutDown();
 
     bool ShutDownCalled(const std::string &reqUrl) const {
         return _shutdownUrl == reqUrl;
     }
 
-    int IncWorkers() const { // increments worker counts and returns it
+    int IncWorkers() { // increments worker counts and returns it
         return ++_workersCount;
     }
 
-    int DecWorkers() const { // increments worker counts and returns it
+    int DecWorkers() { // increments worker counts and returns it
         return --_workersCount;
     }
 
 //     logs message taken as parameter
-    void Log(const Log &log) const {
+    void Log(std::unique_ptr<Log> log) const {
         _logger->Log(log);
     }
 
@@ -71,8 +69,7 @@ private:
     const std::vector<std::string> STATIC_EXTENSIONS; // extensions to be treated as static
     const std::vector<std::string> DYNAMIC_EXTENSIONS; // extensions to be treated as dynamic
 
-    // fixme - is mutable OK?
-    mutable int _workersCount{0}; // recent count of request being processed
+    int _workersCount{0}; // recent count of request being processed
 
 
     // options from configuration
