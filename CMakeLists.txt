@@ -4,4 +4,4 @@ project(pa2_server)
 set(CMAKE_CXX_STANDARD 14)
 SET(CMAKE_CXX_FLAGS -pthread)
 
-add_executable(pa2_server main.cpp helper.cpp helper.h server.cpp server.h worker.cpp worker.h logger.cpp logger.h log.cpp log.h controller.cpp controller.h parser.cpp parser.h request.cpp request.h response.cpp response.h)
+add_executable(pa2_server main.cpp helper.cpp helper.h src/logic/server.cpp src/logic/server.h src/logic/worker.cpp src/logic/worker.h src/logger/logger.cpp src/logger/logger.h src/log/log.cpp src/log/log.h src/logic/controller.cpp src/logic/controller.h src/io/parser.cpp src/io/parser.h src/io/request.cpp src/io/request.h src/io/response.cpp src/io/response.h src/log/responseLog.cpp src/log/responseLog.h src/log/requestLog.cpp src/log/requestLog.h src/log/shutdownLog.cpp src/log/shutdownLog.h src/log/errorLog.cpp src/log/errorLog.h)

@@ -5,9 +5,10 @@
 #include <cstring>
 #include <iostream>
 #include <thread>
-#include "helper.h"
+#include "../../helper.h"
 #include "server.h"
 #include "worker.h"
+#include "../log/shutdownLog.h"
 
 
 // todo - as there'll be loads of const and messages like that, I'd like to keep them in seperate file shared over more classes

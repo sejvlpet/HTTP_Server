@@ -1,7 +1,7 @@
 #ifndef PA2_SERVER_REQUEST_H
 #define PA2_SERVER_REQUEST_H
-#include "log.h"
-#include "server.h"
+#include "../log/requestLog.h"
+#include "../logic/server.h"
 
 class Request {
 public:

@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug"/>
+				<Option working_dir="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug"/>
+				<Option working_dir="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="pa2_server">
-				<Option output="/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/pa2_server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug"/>
+				<Option output="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/pa2_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 pa2_server"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 pa2_server"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="pa2_server/fast">
-				<Option output="/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/pa2_server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug"/>
+				<Option output="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/pa2_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,81 +67,105 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 pa2_server/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 pa2_server/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug"/>
+				<Option working_dir="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/controller.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/helper.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/controller.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/helper.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/helper.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/main.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/helper.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/log.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/log.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/logger.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/logger.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/main.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/parser.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/errorLog.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/parser.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/errorLog.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/request.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/request.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/response.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/response.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/server.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/responseLog.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/server.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/responseLog.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/worker.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/shutdownLog.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/worker.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/shutdownLog.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/pa2_server/CMakeLists.txt">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.h">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -48,10 +48,10 @@ RM = /opt/clion-2019.3.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/petrsejvl/Dropbox/pa2/pa2_server
+CMAKE_SOURCE_DIR = /home/petrsejvl/Dropbox/pa2/server2/pa2_server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug
+CMAKE_BINARY_DIR = /home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles /home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles /home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/petrsejvl/Dropbox/pa2/pa2_server/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,33 +123,6 @@ pa2_server/fast:
 	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/build
 .PHONY : pa2_server/fast
 
-controller.o: controller.cpp.o
-
-.PHONY : controller.o
-
-# target to build an object file
-controller.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/controller.cpp.o
-.PHONY : controller.cpp.o
-
-controller.i: controller.cpp.i
-
-.PHONY : controller.i
-
-# target to preprocess a source file
-controller.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/controller.cpp.i
-.PHONY : controller.cpp.i
-
-controller.s: controller.cpp.s
-
-.PHONY : controller.s
-
-# target to generate assembly for a file
-controller.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/controller.cpp.s
-.PHONY : controller.cpp.s
-
 helper.o: helper.cpp.o
 
 .PHONY : helper.o
@@ -176,60 +149,6 @@ helper.s: helper.cpp.s
 helper.cpp.s:
 	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/helper.cpp.s
 .PHONY : helper.cpp.s
-
-log.o: log.cpp.o
-
-.PHONY : log.o
-
-# target to build an object file
-log.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/log.cpp.o
-.PHONY : log.cpp.o
-
-log.i: log.cpp.i
-
-.PHONY : log.i
-
-# target to preprocess a source file
-log.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/log.cpp.i
-.PHONY : log.cpp.i
-
-log.s: log.cpp.s
-
-.PHONY : log.s
-
-# target to generate assembly for a file
-log.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/log.cpp.s
-.PHONY : log.cpp.s
-
-logger.o: logger.cpp.o
-
-.PHONY : logger.o
-
-# target to build an object file
-logger.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/logger.cpp.o
-.PHONY : logger.cpp.o
-
-logger.i: logger.cpp.i
-
-.PHONY : logger.i
-
-# target to preprocess a source file
-logger.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/logger.cpp.i
-.PHONY : logger.cpp.i
-
-logger.s: logger.cpp.s
-
-.PHONY : logger.s
-
-# target to generate assembly for a file
-logger.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/logger.cpp.s
-.PHONY : logger.cpp.s
 
 main.o: main.cpp.o
 
@@ -258,140 +177,329 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-parser.o: parser.cpp.o
+src/io/parser.o: src/io/parser.cpp.o
 
-.PHONY : parser.o
-
-# target to build an object file
-parser.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/parser.cpp.o
-.PHONY : parser.cpp.o
-
-parser.i: parser.cpp.i
-
-.PHONY : parser.i
-
-# target to preprocess a source file
-parser.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/parser.cpp.i
-.PHONY : parser.cpp.i
-
-parser.s: parser.cpp.s
-
-.PHONY : parser.s
-
-# target to generate assembly for a file
-parser.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/parser.cpp.s
-.PHONY : parser.cpp.s
-
-request.o: request.cpp.o
-
-.PHONY : request.o
+.PHONY : src/io/parser.o
 
 # target to build an object file
-request.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/request.cpp.o
-.PHONY : request.cpp.o
+src/io/parser.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/parser.cpp.o
+.PHONY : src/io/parser.cpp.o
 
-request.i: request.cpp.i
+src/io/parser.i: src/io/parser.cpp.i
 
-.PHONY : request.i
+.PHONY : src/io/parser.i
 
 # target to preprocess a source file
-request.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/request.cpp.i
-.PHONY : request.cpp.i
+src/io/parser.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/parser.cpp.i
+.PHONY : src/io/parser.cpp.i
 
-request.s: request.cpp.s
+src/io/parser.s: src/io/parser.cpp.s
 
-.PHONY : request.s
+.PHONY : src/io/parser.s
 
 # target to generate assembly for a file
-request.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/request.cpp.s
-.PHONY : request.cpp.s
+src/io/parser.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/parser.cpp.s
+.PHONY : src/io/parser.cpp.s
 
-response.o: response.cpp.o
+src/io/request.o: src/io/request.cpp.o
 
-.PHONY : response.o
+.PHONY : src/io/request.o
 
 # target to build an object file
-response.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/response.cpp.o
-.PHONY : response.cpp.o
+src/io/request.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/request.cpp.o
+.PHONY : src/io/request.cpp.o
 
-response.i: response.cpp.i
+src/io/request.i: src/io/request.cpp.i
 
-.PHONY : response.i
+.PHONY : src/io/request.i
 
 # target to preprocess a source file
-response.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/response.cpp.i
-.PHONY : response.cpp.i
+src/io/request.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/request.cpp.i
+.PHONY : src/io/request.cpp.i
 
-response.s: response.cpp.s
+src/io/request.s: src/io/request.cpp.s
 
-.PHONY : response.s
+.PHONY : src/io/request.s
 
 # target to generate assembly for a file
-response.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/response.cpp.s
-.PHONY : response.cpp.s
+src/io/request.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/request.cpp.s
+.PHONY : src/io/request.cpp.s
 
-server.o: server.cpp.o
+src/io/response.o: src/io/response.cpp.o
 
-.PHONY : server.o
+.PHONY : src/io/response.o
 
 # target to build an object file
-server.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/server.cpp.o
-.PHONY : server.cpp.o
+src/io/response.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/response.cpp.o
+.PHONY : src/io/response.cpp.o
 
-server.i: server.cpp.i
+src/io/response.i: src/io/response.cpp.i
 
-.PHONY : server.i
+.PHONY : src/io/response.i
 
 # target to preprocess a source file
-server.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/server.cpp.i
-.PHONY : server.cpp.i
+src/io/response.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/response.cpp.i
+.PHONY : src/io/response.cpp.i
 
-server.s: server.cpp.s
+src/io/response.s: src/io/response.cpp.s
 
-.PHONY : server.s
+.PHONY : src/io/response.s
 
 # target to generate assembly for a file
-server.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/server.cpp.s
-.PHONY : server.cpp.s
+src/io/response.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/response.cpp.s
+.PHONY : src/io/response.cpp.s
 
-worker.o: worker.cpp.o
+src/log/errorLog.o: src/log/errorLog.cpp.o
 
-.PHONY : worker.o
+.PHONY : src/log/errorLog.o
 
 # target to build an object file
-worker.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/worker.cpp.o
-.PHONY : worker.cpp.o
+src/log/errorLog.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/errorLog.cpp.o
+.PHONY : src/log/errorLog.cpp.o
 
-worker.i: worker.cpp.i
+src/log/errorLog.i: src/log/errorLog.cpp.i
 
-.PHONY : worker.i
+.PHONY : src/log/errorLog.i
 
 # target to preprocess a source file
-worker.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/worker.cpp.i
-.PHONY : worker.cpp.i
+src/log/errorLog.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/errorLog.cpp.i
+.PHONY : src/log/errorLog.cpp.i
 
-worker.s: worker.cpp.s
+src/log/errorLog.s: src/log/errorLog.cpp.s
 
-.PHONY : worker.s
+.PHONY : src/log/errorLog.s
 
 # target to generate assembly for a file
-worker.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/worker.cpp.s
-.PHONY : worker.cpp.s
+src/log/errorLog.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/errorLog.cpp.s
+.PHONY : src/log/errorLog.cpp.s
+
+src/log/log.o: src/log/log.cpp.o
+
+.PHONY : src/log/log.o
+
+# target to build an object file
+src/log/log.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/log.cpp.o
+.PHONY : src/log/log.cpp.o
+
+src/log/log.i: src/log/log.cpp.i
+
+.PHONY : src/log/log.i
+
+# target to preprocess a source file
+src/log/log.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/log.cpp.i
+.PHONY : src/log/log.cpp.i
+
+src/log/log.s: src/log/log.cpp.s
+
+.PHONY : src/log/log.s
+
+# target to generate assembly for a file
+src/log/log.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/log.cpp.s
+.PHONY : src/log/log.cpp.s
+
+src/log/requestLog.o: src/log/requestLog.cpp.o
+
+.PHONY : src/log/requestLog.o
+
+# target to build an object file
+src/log/requestLog.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/requestLog.cpp.o
+.PHONY : src/log/requestLog.cpp.o
+
+src/log/requestLog.i: src/log/requestLog.cpp.i
+
+.PHONY : src/log/requestLog.i
+
+# target to preprocess a source file
+src/log/requestLog.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/requestLog.cpp.i
+.PHONY : src/log/requestLog.cpp.i
+
+src/log/requestLog.s: src/log/requestLog.cpp.s
+
+.PHONY : src/log/requestLog.s
+
+# target to generate assembly for a file
+src/log/requestLog.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/requestLog.cpp.s
+.PHONY : src/log/requestLog.cpp.s
+
+src/log/responseLog.o: src/log/responseLog.cpp.o
+
+.PHONY : src/log/responseLog.o
+
+# target to build an object file
+src/log/responseLog.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/responseLog.cpp.o
+.PHONY : src/log/responseLog.cpp.o
+
+src/log/responseLog.i: src/log/responseLog.cpp.i
+
+.PHONY : src/log/responseLog.i
+
+# target to preprocess a source file
+src/log/responseLog.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/responseLog.cpp.i
+.PHONY : src/log/responseLog.cpp.i
+
+src/log/responseLog.s: src/log/responseLog.cpp.s
+
+.PHONY : src/log/responseLog.s
+
+# target to generate assembly for a file
+src/log/responseLog.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/responseLog.cpp.s
+.PHONY : src/log/responseLog.cpp.s
+
+src/log/shutdownLog.o: src/log/shutdownLog.cpp.o
+
+.PHONY : src/log/shutdownLog.o
+
+# target to build an object file
+src/log/shutdownLog.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/shutdownLog.cpp.o
+.PHONY : src/log/shutdownLog.cpp.o
+
+src/log/shutdownLog.i: src/log/shutdownLog.cpp.i
+
+.PHONY : src/log/shutdownLog.i
+
+# target to preprocess a source file
+src/log/shutdownLog.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/shutdownLog.cpp.i
+.PHONY : src/log/shutdownLog.cpp.i
+
+src/log/shutdownLog.s: src/log/shutdownLog.cpp.s
+
+.PHONY : src/log/shutdownLog.s
+
+# target to generate assembly for a file
+src/log/shutdownLog.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/shutdownLog.cpp.s
+.PHONY : src/log/shutdownLog.cpp.s
+
+src/logger/logger.o: src/logger/logger.cpp.o
+
+.PHONY : src/logger/logger.o
+
+# target to build an object file
+src/logger/logger.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logger/logger.cpp.o
+.PHONY : src/logger/logger.cpp.o
+
+src/logger/logger.i: src/logger/logger.cpp.i
+
+.PHONY : src/logger/logger.i
+
+# target to preprocess a source file
+src/logger/logger.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logger/logger.cpp.i
+.PHONY : src/logger/logger.cpp.i
+
+src/logger/logger.s: src/logger/logger.cpp.s
+
+.PHONY : src/logger/logger.s
+
+# target to generate assembly for a file
+src/logger/logger.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logger/logger.cpp.s
+.PHONY : src/logger/logger.cpp.s
+
+src/logic/controller.o: src/logic/controller.cpp.o
+
+.PHONY : src/logic/controller.o
+
+# target to build an object file
+src/logic/controller.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o
+.PHONY : src/logic/controller.cpp.o
+
+src/logic/controller.i: src/logic/controller.cpp.i
+
+.PHONY : src/logic/controller.i
+
+# target to preprocess a source file
+src/logic/controller.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logic/controller.cpp.i
+.PHONY : src/logic/controller.cpp.i
+
+src/logic/controller.s: src/logic/controller.cpp.s
+
+.PHONY : src/logic/controller.s
+
+# target to generate assembly for a file
+src/logic/controller.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logic/controller.cpp.s
+.PHONY : src/logic/controller.cpp.s
+
+src/logic/server.o: src/logic/server.cpp.o
+
+.PHONY : src/logic/server.o
+
+# target to build an object file
+src/logic/server.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logic/server.cpp.o
+.PHONY : src/logic/server.cpp.o
+
+src/logic/server.i: src/logic/server.cpp.i
+
+.PHONY : src/logic/server.i
+
+# target to preprocess a source file
+src/logic/server.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logic/server.cpp.i
+.PHONY : src/logic/server.cpp.i
+
+src/logic/server.s: src/logic/server.cpp.s
+
+.PHONY : src/logic/server.s
+
+# target to generate assembly for a file
+src/logic/server.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logic/server.cpp.s
+.PHONY : src/logic/server.cpp.s
+
+src/logic/worker.o: src/logic/worker.cpp.o
+
+.PHONY : src/logic/worker.o
+
+# target to build an object file
+src/logic/worker.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logic/worker.cpp.o
+.PHONY : src/logic/worker.cpp.o
+
+src/logic/worker.i: src/logic/worker.cpp.i
+
+.PHONY : src/logic/worker.i
+
+# target to preprocess a source file
+src/logic/worker.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logic/worker.cpp.i
+.PHONY : src/logic/worker.cpp.i
+
+src/logic/worker.s: src/logic/worker.cpp.s
+
+.PHONY : src/logic/worker.s
+
+# target to generate assembly for a file
+src/logic/worker.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logic/worker.cpp.s
+.PHONY : src/logic/worker.cpp.s
 
 # Help Target
 help:
@@ -402,36 +510,48 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... pa2_server"
 	@echo "... edit_cache"
-	@echo "... controller.o"
-	@echo "... controller.i"
-	@echo "... controller.s"
 	@echo "... helper.o"
 	@echo "... helper.i"
 	@echo "... helper.s"
-	@echo "... log.o"
-	@echo "... log.i"
-	@echo "... log.s"
-	@echo "... logger.o"
-	@echo "... logger.i"
-	@echo "... logger.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... parser.o"
-	@echo "... parser.i"
-	@echo "... parser.s"
-	@echo "... request.o"
-	@echo "... request.i"
-	@echo "... request.s"
-	@echo "... response.o"
-	@echo "... response.i"
-	@echo "... response.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
-	@echo "... worker.o"
-	@echo "... worker.i"
-	@echo "... worker.s"
+	@echo "... src/io/parser.o"
+	@echo "... src/io/parser.i"
+	@echo "... src/io/parser.s"
+	@echo "... src/io/request.o"
+	@echo "... src/io/request.i"
+	@echo "... src/io/request.s"
+	@echo "... src/io/response.o"
+	@echo "... src/io/response.i"
+	@echo "... src/io/response.s"
+	@echo "... src/log/errorLog.o"
+	@echo "... src/log/errorLog.i"
+	@echo "... src/log/errorLog.s"
+	@echo "... src/log/log.o"
+	@echo "... src/log/log.i"
+	@echo "... src/log/log.s"
+	@echo "... src/log/requestLog.o"
+	@echo "... src/log/requestLog.i"
+	@echo "... src/log/requestLog.s"
+	@echo "... src/log/responseLog.o"
+	@echo "... src/log/responseLog.i"
+	@echo "... src/log/responseLog.s"
+	@echo "... src/log/shutdownLog.o"
+	@echo "... src/log/shutdownLog.i"
+	@echo "... src/log/shutdownLog.s"
+	@echo "... src/logger/logger.o"
+	@echo "... src/logger/logger.i"
+	@echo "... src/logger/logger.s"
+	@echo "... src/logic/controller.o"
+	@echo "... src/logic/controller.i"
+	@echo "... src/logic/controller.s"
+	@echo "... src/logic/server.o"
+	@echo "... src/logic/server.i"
+	@echo "... src/logic/server.s"
+	@echo "... src/logic/worker.o"
+	@echo "... src/logic/worker.i"
+	@echo "... src/logic/worker.s"
 .PHONY : help
 
 

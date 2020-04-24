@@ -6,8 +6,8 @@
 #include <thread>
 #include "server.h"
 #include "controller.h"
-#include "parser.h"
-#include "request.h"
+#include "../io/parser.h"
+#include "../io/request.h"
 
 // parses message and let controller handle it in it's own thread
 class Worker {
