@@ -10,10 +10,15 @@ public:
     Request(int socket) : _socket(socket) {}
 
     // returns log object about request parsing
-    std::unique_ptr<Log> GetLog(){
-        RequestLog tmp;
-        return std::make_unique<RequestLog>(tmp);
+    // as request log will be always obtained in same thread where it is created, we can afford to pass it as ref
+    // anyway, maybe I'll change it to unique_ptr to have that same as in resonse class
+    // where I have no choice but unique_ptr
+    Log &GetLog(){
+        return _log;
     }
+
+private:
+    RequestLog _log;
 };
 
 

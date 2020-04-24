@@ -8,13 +8,9 @@
 class Logger {
 public:
     // todo add logic and move to .cpp
-    virtual void Log(const std::unique_ptr<class Log> &log) const  {
-        std::cout << "Log from base class\n";
-    }
+    virtual void Log(const std::unique_ptr<class Log> &log) const = 0;
+    virtual void Log(const class Log &log) const = 0;
 
-    virtual Logger *Clone() {
-        return new Logger(*this);
-    }
 };
 
 

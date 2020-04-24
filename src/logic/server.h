@@ -51,6 +51,11 @@ public:
         _logger->Log(log);
     }
 
+    void Log(const class Log &log) const {
+        _logger->Log(log);
+    }
+
+
 private:
     // new implementation
     // constants and enums

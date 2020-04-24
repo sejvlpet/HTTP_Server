@@ -23,6 +23,8 @@ Server::Server() {
 
 
 void Server::Setup() {
+    // fixme log error isntead of perror
+
     if ((_serverFd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
         perror("In socket");
         _setupStatus = FAIL;
@@ -66,7 +68,7 @@ void Server::Setup() {
 }
 
 void Server::ShutDown() {
-    Log(std::make_unique<ShutDownLog>(false));
+    Log(ShutDownLog(false));
     _shutDown = true;
 }
 
@@ -90,6 +92,6 @@ int Server::Listen() {
         if(_shutDown && _workersCount == 0) break;
     }
     // fixme log shutting down
-    Log(std::make_unique<ShutDownLog>(true));
+    Log(ShutDownLog(true));
     return LISTEN_SUCCESS;
 }

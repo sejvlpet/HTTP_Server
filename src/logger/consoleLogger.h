@@ -9,9 +9,8 @@ public:
     void Log(const std::unique_ptr<class Log> &log) const override {
         std::cout << log->ToString();
     }
-
-    ConsoleLogger *Clone() override {
-        return new ConsoleLogger(*this);
+    void Log(const class Log &log) const override {
+        std::cout << log.ToString();
     }
 };
 
