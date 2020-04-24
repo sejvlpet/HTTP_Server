@@ -393,6 +393,60 @@ src/log/shutdownLog.cpp.s:
 	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/log/shutdownLog.cpp.s
 .PHONY : src/log/shutdownLog.cpp.s
 
+src/logger/consoleLogger.o: src/logger/consoleLogger.cpp.o
+
+.PHONY : src/logger/consoleLogger.o
+
+# target to build an object file
+src/logger/consoleLogger.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logger/consoleLogger.cpp.o
+.PHONY : src/logger/consoleLogger.cpp.o
+
+src/logger/consoleLogger.i: src/logger/consoleLogger.cpp.i
+
+.PHONY : src/logger/consoleLogger.i
+
+# target to preprocess a source file
+src/logger/consoleLogger.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logger/consoleLogger.cpp.i
+.PHONY : src/logger/consoleLogger.cpp.i
+
+src/logger/consoleLogger.s: src/logger/consoleLogger.cpp.s
+
+.PHONY : src/logger/consoleLogger.s
+
+# target to generate assembly for a file
+src/logger/consoleLogger.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logger/consoleLogger.cpp.s
+.PHONY : src/logger/consoleLogger.cpp.s
+
+src/logger/fileLogger.o: src/logger/fileLogger.cpp.o
+
+.PHONY : src/logger/fileLogger.o
+
+# target to build an object file
+src/logger/fileLogger.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logger/fileLogger.cpp.o
+.PHONY : src/logger/fileLogger.cpp.o
+
+src/logger/fileLogger.i: src/logger/fileLogger.cpp.i
+
+.PHONY : src/logger/fileLogger.i
+
+# target to preprocess a source file
+src/logger/fileLogger.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logger/fileLogger.cpp.i
+.PHONY : src/logger/fileLogger.cpp.i
+
+src/logger/fileLogger.s: src/logger/fileLogger.cpp.s
+
+.PHONY : src/logger/fileLogger.s
+
+# target to generate assembly for a file
+src/logger/fileLogger.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/logger/fileLogger.cpp.s
+.PHONY : src/logger/fileLogger.cpp.s
+
 src/logger/logger.o: src/logger/logger.cpp.o
 
 .PHONY : src/logger/logger.o
@@ -540,6 +594,12 @@ help:
 	@echo "... src/log/shutdownLog.o"
 	@echo "... src/log/shutdownLog.i"
 	@echo "... src/log/shutdownLog.s"
+	@echo "... src/logger/consoleLogger.o"
+	@echo "... src/logger/consoleLogger.i"
+	@echo "... src/logger/consoleLogger.s"
+	@echo "... src/logger/fileLogger.o"
+	@echo "... src/logger/fileLogger.i"
+	@echo "... src/logger/fileLogger.s"
 	@echo "... src/logger/logger.o"
 	@echo "... src/logger/logger.i"
 	@echo "... src/logger/logger.s"

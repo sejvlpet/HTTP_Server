@@ -18,31 +18,4 @@ public:
 };
 
 
-
-class FileLogger : public Logger {
-public:
-    // fixme why there has to be keyword class?
-    void Log(const std::unique_ptr<class Log> &log) const override {
-        std::cout << log->ToString();
-    }
-
-    FileLogger *Clone() override {
-        return new FileLogger(*this);
-    }
-};
-
-
-class ConsoleLogger : public Logger {
-public:
-    // fixme why there has to be keyword class?
-    void Log(const std::unique_ptr<class Log> &log) const override {
-        std::cout << log->ToString();
-    }
-
-    ConsoleLogger *Clone() override {
-        return new ConsoleLogger(*this);
-    }
-};
-
-
 #endif //PA2_SERVER_LOGGER_H

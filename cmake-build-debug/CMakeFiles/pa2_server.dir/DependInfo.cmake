@@ -14,6 +14,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.cpp" "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/src/log/requestLog.cpp.o"
   "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/responseLog.cpp" "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/src/log/responseLog.cpp.o"
   "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/shutdownLog.cpp" "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/src/log/shutdownLog.cpp.o"
+  "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.cpp" "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/src/logger/consoleLogger.cpp.o"
+  "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/fileLogger.cpp" "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/src/logger/fileLogger.cpp.o"
   "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.cpp" "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/src/logger/logger.cpp.o"
   "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.cpp" "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o"
   "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.cpp" "/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles/pa2_server.dir/src/logic/server.cpp.o"

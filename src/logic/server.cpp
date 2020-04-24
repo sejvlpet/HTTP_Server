@@ -9,7 +9,9 @@
 #include "server.h"
 #include "worker.h"
 #include "../log/shutdownLog.h"
-
+#include "../log/errorLog.h"
+#include "../logger/consoleLogger.h"
+#include "../logger/fileLogger.h"
 
 // todo - as there'll be loads of const and messages like that, I'd like to keep them in seperate file shared over more classes
 const std::set<std::string> Server::IGNORE_LIST{"favicon.ico"};

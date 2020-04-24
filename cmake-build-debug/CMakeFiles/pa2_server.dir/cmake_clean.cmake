@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/pa2_server.dir/src/log/requestLog.cpp.o"
   "CMakeFiles/pa2_server.dir/src/log/responseLog.cpp.o"
   "CMakeFiles/pa2_server.dir/src/log/shutdownLog.cpp.o"
+  "CMakeFiles/pa2_server.dir/src/logger/consoleLogger.cpp.o"
+  "CMakeFiles/pa2_server.dir/src/logger/fileLogger.cpp.o"
   "CMakeFiles/pa2_server.dir/src/logger/logger.cpp.o"
   "CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o"
   "CMakeFiles/pa2_server.dir/src/logic/server.cpp.o"

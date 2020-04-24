@@ -48,6 +48,16 @@ CMakeFiles/pa2_server.dir/src/log/shutdownLog.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/shutdownLog.cpp
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/shutdownLog.h
+CMakeFiles/pa2_server.dir/src/logger/consoleLogger.cpp.o
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.cpp
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
+CMakeFiles/pa2_server.dir/src/logger/fileLogger.cpp.o
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/fileLogger.cpp
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/fileLogger.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
 CMakeFiles/pa2_server.dir/src/logger/logger.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.cpp
@@ -68,10 +78,13 @@ CMakeFiles/pa2_server.dir/src/logic/server.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/errorLog.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/responseLog.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/shutdownLog.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/fileLogger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.cpp

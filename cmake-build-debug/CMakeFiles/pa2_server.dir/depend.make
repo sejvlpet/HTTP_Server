@@ -48,6 +48,16 @@ CMakeFiles/pa2_server.dir/src/log/shutdownLog.cpp.o: ../src/log/log.h
 CMakeFiles/pa2_server.dir/src/log/shutdownLog.cpp.o: ../src/log/shutdownLog.cpp
 CMakeFiles/pa2_server.dir/src/log/shutdownLog.cpp.o: ../src/log/shutdownLog.h
 
+CMakeFiles/pa2_server.dir/src/logger/consoleLogger.cpp.o: ../src/log/log.h
+CMakeFiles/pa2_server.dir/src/logger/consoleLogger.cpp.o: ../src/logger/consoleLogger.cpp
+CMakeFiles/pa2_server.dir/src/logger/consoleLogger.cpp.o: ../src/logger/consoleLogger.h
+CMakeFiles/pa2_server.dir/src/logger/consoleLogger.cpp.o: ../src/logger/logger.h
+
+CMakeFiles/pa2_server.dir/src/logger/fileLogger.cpp.o: ../src/log/log.h
+CMakeFiles/pa2_server.dir/src/logger/fileLogger.cpp.o: ../src/logger/fileLogger.cpp
+CMakeFiles/pa2_server.dir/src/logger/fileLogger.cpp.o: ../src/logger/fileLogger.h
+CMakeFiles/pa2_server.dir/src/logger/fileLogger.cpp.o: ../src/logger/logger.h
+
 CMakeFiles/pa2_server.dir/src/logger/logger.cpp.o: ../src/log/log.h
 CMakeFiles/pa2_server.dir/src/logger/logger.cpp.o: ../src/logger/logger.cpp
 CMakeFiles/pa2_server.dir/src/logger/logger.cpp.o: ../src/logger/logger.h
@@ -67,10 +77,13 @@ CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../helper.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/io/parser.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/io/request.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/io/response.h
+CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/log/errorLog.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/log/log.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/log/requestLog.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/log/responseLog.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/log/shutdownLog.h
+CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/logger/consoleLogger.h
+CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/logger/fileLogger.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/logger/logger.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/logic/controller.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/logic/server.cpp
