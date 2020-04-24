@@ -15,14 +15,14 @@ parser.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h
+map
+-
 request.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.cpp
-request.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
+map
+-
 ../log/requestLog.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.h
 ../logic/server.h
@@ -75,10 +75,6 @@ bits/unique_ptr.h
 -
 ../log/log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.cpp
-controller.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
 cstring

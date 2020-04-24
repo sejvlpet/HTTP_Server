@@ -9,7 +9,7 @@
 
 class Controller {
 public:
-    void operator() (Server *parent, Request request) {
+    void operator() (Server *parent, const Request &request) {
         _parent = parent;
         _request = request;
 
@@ -26,7 +26,7 @@ private:
 
     void HandleRequest() {
         _parent->IncWorkers();
-        write(_request._socket, HELLO, strlen(HELLO));
+        write(_request.GetSocket(), HELLO, strlen(HELLO));
         // Helper::Wait();
 
         _parent->Log(_response->GetLog());

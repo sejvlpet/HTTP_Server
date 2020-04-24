@@ -12,7 +12,7 @@
 // parses message and let controller handle it in it's own thread
 class Worker {
 public:
-    static const int BUFFER_READ_SIZE{300000};
+    static const size_t BUFFER_READ_SIZE{300000};
 
     // fixme move this to cpp file
     Worker(Server *parent, int socket) : _parent(parent), _socket(socket) {
@@ -22,10 +22,7 @@ public:
     }
 
 
-    // tohle se musi vymyslet, je potreba aby odsud controller veci poresil ve vlastnim threadu, takze
-    // prislusna metoda musi byt static, nejsem si jistej jak moc dobre to ted pujde
     int Run() {
-        // todo run in thread
 
         std::thread thr(Controller(), _parent, _request);
         thr.detach();
@@ -44,8 +41,8 @@ private:
     // Parse message and saves it as request object
     void ParseMessage() {
         // create instance of parser and give it _request to parse, returns
-        Parser parser(_buffer);
-        _request = parser.GetRequest(_socket);
+        Parser parser(_buffer, _socket);
+        _request = parser.GetRequest();
         _parent->Log(_request.GetLog());
     }
 };

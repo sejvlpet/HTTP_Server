@@ -23,7 +23,6 @@ private:
         response.push_back('\n');
         response.append(TimeToString());
         response.push_back('\n');
-        response.append("Testing polymorfism\n");
         AddSeparators(response);
         return response;
     }
