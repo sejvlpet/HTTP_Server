@@ -231,32 +231,59 @@ src/io/request.cpp.s:
 	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/request.cpp.s
 .PHONY : src/io/request.cpp.s
 
-src/io/response.o: src/io/response.cpp.o
+src/io/response/fileResponse.o: src/io/response/fileResponse.cpp.o
 
-.PHONY : src/io/response.o
+.PHONY : src/io/response/fileResponse.o
 
 # target to build an object file
-src/io/response.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/response.cpp.o
-.PHONY : src/io/response.cpp.o
+src/io/response/fileResponse.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/response/fileResponse.cpp.o
+.PHONY : src/io/response/fileResponse.cpp.o
 
-src/io/response.i: src/io/response.cpp.i
+src/io/response/fileResponse.i: src/io/response/fileResponse.cpp.i
 
-.PHONY : src/io/response.i
+.PHONY : src/io/response/fileResponse.i
 
 # target to preprocess a source file
-src/io/response.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/response.cpp.i
-.PHONY : src/io/response.cpp.i
+src/io/response/fileResponse.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/response/fileResponse.cpp.i
+.PHONY : src/io/response/fileResponse.cpp.i
 
-src/io/response.s: src/io/response.cpp.s
+src/io/response/fileResponse.s: src/io/response/fileResponse.cpp.s
 
-.PHONY : src/io/response.s
+.PHONY : src/io/response/fileResponse.s
 
 # target to generate assembly for a file
-src/io/response.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/response.cpp.s
-.PHONY : src/io/response.cpp.s
+src/io/response/fileResponse.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/response/fileResponse.cpp.s
+.PHONY : src/io/response/fileResponse.cpp.s
+
+src/io/response/response.o: src/io/response/response.cpp.o
+
+.PHONY : src/io/response/response.o
+
+# target to build an object file
+src/io/response/response.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/response/response.cpp.o
+.PHONY : src/io/response/response.cpp.o
+
+src/io/response/response.i: src/io/response/response.cpp.i
+
+.PHONY : src/io/response/response.i
+
+# target to preprocess a source file
+src/io/response/response.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/response/response.cpp.i
+.PHONY : src/io/response/response.cpp.i
+
+src/io/response/response.s: src/io/response/response.cpp.s
+
+.PHONY : src/io/response/response.s
+
+# target to generate assembly for a file
+src/io/response/response.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/io/response/response.cpp.s
+.PHONY : src/io/response/response.cpp.s
 
 src/log/errorLog.o: src/log/errorLog.cpp.o
 
@@ -576,9 +603,12 @@ help:
 	@echo "... src/io/request.o"
 	@echo "... src/io/request.i"
 	@echo "... src/io/request.s"
-	@echo "... src/io/response.o"
-	@echo "... src/io/response.i"
-	@echo "... src/io/response.s"
+	@echo "... src/io/response/fileResponse.o"
+	@echo "... src/io/response/fileResponse.i"
+	@echo "... src/io/response/fileResponse.s"
+	@echo "... src/io/response/response.o"
+	@echo "... src/io/response/response.i"
+	@echo "... src/io/response/response.s"
 	@echo "... src/log/errorLog.o"
 	@echo "... src/log/errorLog.i"
 	@echo "... src/log/errorLog.s"

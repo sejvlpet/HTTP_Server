@@ -24,10 +24,16 @@ CMakeFiles/pa2_server.dir/src/io/request.cpp.o: ../src/log/requestLog.h
 CMakeFiles/pa2_server.dir/src/io/request.cpp.o: ../src/logger/logger.h
 CMakeFiles/pa2_server.dir/src/io/request.cpp.o: ../src/logic/server.h
 
-CMakeFiles/pa2_server.dir/src/io/response.cpp.o: ../src/io/response.cpp
-CMakeFiles/pa2_server.dir/src/io/response.cpp.o: ../src/io/response.h
-CMakeFiles/pa2_server.dir/src/io/response.cpp.o: ../src/log/log.h
-CMakeFiles/pa2_server.dir/src/io/response.cpp.o: ../src/log/responseLog.h
+CMakeFiles/pa2_server.dir/src/io/response/fileResponse.cpp.o: ../src/io/response/fileResponse.cpp
+CMakeFiles/pa2_server.dir/src/io/response/fileResponse.cpp.o: ../src/io/response/fileResponse.h
+CMakeFiles/pa2_server.dir/src/io/response/fileResponse.cpp.o: ../src/io/response/response.h
+CMakeFiles/pa2_server.dir/src/io/response/fileResponse.cpp.o: ../src/log/log.h
+CMakeFiles/pa2_server.dir/src/io/response/fileResponse.cpp.o: ../src/log/responseLog.h
+
+CMakeFiles/pa2_server.dir/src/io/response/response.cpp.o: ../src/io/response/response.cpp
+CMakeFiles/pa2_server.dir/src/io/response/response.cpp.o: ../src/io/response/response.h
+CMakeFiles/pa2_server.dir/src/io/response/response.cpp.o: ../src/log/log.h
+CMakeFiles/pa2_server.dir/src/io/response/response.cpp.o: ../src/log/responseLog.h
 
 CMakeFiles/pa2_server.dir/src/log/errorLog.cpp.o: ../src/log/errorLog.cpp
 CMakeFiles/pa2_server.dir/src/log/errorLog.cpp.o: ../src/log/errorLog.h
@@ -64,7 +70,8 @@ CMakeFiles/pa2_server.dir/src/logger/logger.cpp.o: ../src/logger/logger.h
 
 CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o: ../helper.h
 CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o: ../src/io/request.h
-CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o: ../src/io/response.h
+CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o: ../src/io/response/fileResponse.h
+CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o: ../src/io/response/response.h
 CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o: ../src/log/log.h
 CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o: ../src/log/requestLog.h
 CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o: ../src/log/responseLog.h
@@ -76,7 +83,8 @@ CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o: ../src/logic/server.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../helper.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/io/parser.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/io/request.h
-CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/io/response.h
+CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/io/response/fileResponse.h
+CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/io/response/response.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/log/errorLog.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/log/log.h
 CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/log/requestLog.h
@@ -93,7 +101,8 @@ CMakeFiles/pa2_server.dir/src/logic/server.cpp.o: ../src/logic/worker.h
 CMakeFiles/pa2_server.dir/src/logic/worker.cpp.o: ../helper.h
 CMakeFiles/pa2_server.dir/src/logic/worker.cpp.o: ../src/io/parser.h
 CMakeFiles/pa2_server.dir/src/logic/worker.cpp.o: ../src/io/request.h
-CMakeFiles/pa2_server.dir/src/logic/worker.cpp.o: ../src/io/response.h
+CMakeFiles/pa2_server.dir/src/logic/worker.cpp.o: ../src/io/response/fileResponse.h
+CMakeFiles/pa2_server.dir/src/logic/worker.cpp.o: ../src/io/response/response.h
 CMakeFiles/pa2_server.dir/src/logic/worker.cpp.o: ../src/log/log.h
 CMakeFiles/pa2_server.dir/src/logic/worker.cpp.o: ../src/log/requestLog.h
 CMakeFiles/pa2_server.dir/src/logic/worker.cpp.o: ../src/log/responseLog.h

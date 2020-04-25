@@ -10,10 +10,6 @@
 cstdio
 -
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.cpp
-parser.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h
 map
 -
@@ -28,10 +24,26 @@ map
 ../logic/server.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.cpp
+fileResponse.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.h
+utility
+-
+fstream
+-
+cstring
+-
+unistd.h
+-
+response.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h
 bits/unique_ptr.h
 -
-../log/responseLog.h
+../../log/responseLog.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/responseLog.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/errorLog.h
@@ -49,6 +61,10 @@ iostream
 -
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.h
+map
+-
+vector
+-
 log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
 
@@ -76,6 +92,10 @@ bits/unique_ptr.h
 ../log/log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
 
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.cpp
+controller.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
+
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
 cstring
 -
@@ -85,8 +105,10 @@ unistd.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
 ../../helper.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/helper.h
-../io/response.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response.h
+../io/response/response.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h
+../io/response/fileResponse.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.cpp
 cstdio
