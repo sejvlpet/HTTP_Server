@@ -13,13 +13,10 @@ public:
         else Parse();
     }
 
-    Request GetRequest() const {
-        return _parsedRequest;
+    Request GetRequest() {
+        return std::move(_parsedRequest); // parses is one use only
     }
 
-    std::map<std::string, std::string> GetParsed() {
-        return std::move(_parsed); // parses is one use only
-    }
 
 private:
     Request _parsedRequest;
@@ -32,6 +29,7 @@ private:
         SetTaret();
         GetExtension();
 
+        // notice that _parsed is moved to setup and therefore destroyed here
         _parsedRequest.Setup(_parsed, _socket);
     }
 
@@ -59,8 +57,6 @@ private:
 
         if (start - 1 == std::string::npos) _parsed["extension"] = "";
         else _parsed["extension"] = tmp.substr(start);
-
-        std::cout << _parsed["extension"] << '\n';
     }
 
 

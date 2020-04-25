@@ -20,16 +20,18 @@ public:
 protected:
     std::chrono::time_point<std::chrono::system_clock> _dateTime;
     const char *HEADER{"Base Log"};
-    const char *SEPARATOR{"----------------------\n"};
+    const char *SEPARATOR{"----------------------"};
+    std::string _customMessage;
 
-    virtual std::string Serialize() const {
-        std::string response;
-        response.append(HEADER);
-        response.push_back('\n');
-        response.append(TimeToString());
-        response.push_back('\n');
-        AddSeparators(response);
-        return response;
+    virtual std::string Serialize() const = 0;
+
+    std::string CreateLine(const std::string &data) const {
+        return data + '\n';
+    }
+
+    void AddCommonPart(std::string &response) const {
+        response.append(CreateLine(TimeToString()));
+        response.append(CreateLine(SEPARATOR));
     }
 
     std::string TimeToString() const {
@@ -37,12 +39,6 @@ protected:
         std::string ts = std::ctime(&t);
         ts.resize(ts.size() - 1);
         return ts;
-    }
-
-    void AddSeparators(std::string &response) const {
-        // insert here is quite innefective, but readability is better and response shouldn't be long
-        response.insert(0, SEPARATOR);
-        response.append(SEPARATOR);
     }
 };
 

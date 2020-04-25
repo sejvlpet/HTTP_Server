@@ -16,11 +16,10 @@ private:
 
     std::string Serialize() const override {
         std::string response;
-        response.append(HEADER);
-        response.push_back('\n');
-        response.append(TimeToString());
-        response.push_back('\n');
-        AddSeparators(response);
+        response.append(CreateLine(HEADER));
+        response.append((CreateLine(_customMessage)));
+
+        AddCommonPart(response);
         return response;
     }
 };

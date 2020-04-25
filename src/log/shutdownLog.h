@@ -19,11 +19,10 @@ private:
 
     std::string Serialize() const override {
         std::string response;
-        response.append(_final ? HEADER_FINAL : HEADER_NOT_FINAL);
-        response.push_back('\n');
-        response.append(TimeToString());
-        response.push_back('\n');
-        AddSeparators(response);
+        response.append(CreateLine(_final ? HEADER_FINAL : HEADER_NOT_FINAL));
+        response.append((CreateLine(_customMessage)));
+
+        AddCommonPart(response);
         return response;
     }
 };

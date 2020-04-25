@@ -11,21 +11,23 @@ public:
     // as request log will be always obtained in same thread where it is created, we can afford to pass it as ref
     // anyway, maybe I'll change it to unique_ptr to have that same as in resonse class
     // where I have no choice but unique_ptr
-    Log &GetLog(){
+    Log &GetLog() {
         return _log;
     }
 
     // from parsed request setups request
     void Setup(std::map<std::string, std::string> &parsed, int socket) {
         _isValid = true;
+        _socket = socket;
         _params = std::move(parsed); // nobody cares about parsers ownership lol
+        CreateLog();
     }
 
     void Error() {
         _isValid = false;
     }
 
-    int GetSocket() {
+    int GetSocket() const {
         return _socket;
     }
 
@@ -34,6 +36,11 @@ private:
     bool _isValid{true};
     std::map<std::string, std::string> _params;
     RequestLog _log;
+
+    void CreateLog() {
+        if(_isValid) _log.SetCustom(_params);
+        else _log.SetInvalid();
+    }
 };
 
 

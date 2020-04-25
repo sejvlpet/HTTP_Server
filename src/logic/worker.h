@@ -41,8 +41,8 @@ private:
     // Parse message and saves it as request object
     void ParseMessage() {
         // create instance of parser and give it _request to parse, returns
-        Parser parser(_buffer, _socket); // parses request, creates its own isntance of request
-        _request = parser.GetRequest(); // here is request instance passed from parser
+        Parser parser(_buffer, _socket); // parses request, creates its own instance of request
+        _request = parser.GetRequest(); // here is request instance mover from parser
         _parent->Log(_request.GetLog()); // log things
     }
 };

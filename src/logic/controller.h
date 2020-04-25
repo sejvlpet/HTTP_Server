@@ -26,6 +26,7 @@ private:
 
     void HandleRequest() {
         _parent->IncWorkers();
+        if(_request.GetSocket() == 0) return; // fixme find why does this keep happening
         write(_request.GetSocket(), HELLO, strlen(HELLO));
         // Helper::Wait();
 
