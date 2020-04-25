@@ -12,19 +12,18 @@ public:
     }
 
     void SetCustom(std::map<std::string, std::string> &data) {
-        for(const std::string &l : _toLog) {
-            _customMessage.append(CreateLine(
-                    l + ": " + data[l]
-            ));
+        if (data["valid"] == "false") _customMessage.append(CreateLine("This request was invalid"));
+        else {
+            for (const std::string &l : _toLog) {
+                _customMessage.append(CreateLine(
+                        l + ": " + data[l]
+                ));
+            }
         }
     }
 
-    void SetInvalid() {
-        _customMessage.append(CreateLine("This request was invalid"));
-    }
-
 private:
-    std::vector<std::string> _toLog {"target", "Host", "User-Agent", "Accept"};
+    std::vector<std::string> _toLog{"target", "Host", "User-Agent", "Accept"};
     const char *HEADER{"Request Log"};
 
     std::string Serialize() const override {
@@ -36,7 +35,6 @@ private:
         return response;
     }
 };
-
 
 
 #endif //PA2_SERVER_REQUESTLOG_H

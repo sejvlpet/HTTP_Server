@@ -12,9 +12,6 @@ public:
     void operator() (Server *parent, const Request &request) {
         _parent = parent;
         _request = request;
-
-
-        // todo add some logic round responses
         HandleRequest();
     }
 
@@ -22,16 +19,22 @@ private:
     const constexpr static char *HELLO{"HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 12\n\nHello world!"};
     Server *_parent{nullptr};
     Request _request;
-    std::unique_ptr<Response> _response;
+    Response _response;
 
     void HandleRequest() {
         _parent->IncWorkers();
-        if(_request.GetSocket() == 0) return; // fixme find why does this keep happening
+
         write(_request.GetSocket(), HELLO, strlen(HELLO));
+        close(_request.GetSocket());
         // Helper::Wait();
+        if(!_request.IsValid()) {
+            // _response = GetInvalid...
+        } else if(_request.GetTarget().empty()) { // no target given => writeOut index.Html
 
-        _parent->Log(_response->GetLog());
+        }
 
+
+        _parent->Log(_response.GetLog());
         _parent->DecWorkers();
     }
 };

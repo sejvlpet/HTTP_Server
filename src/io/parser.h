@@ -9,7 +9,7 @@ public:
     // reads buffer, saves information from which it creates its parsed request which shall be later returned
     Parser(const char *buffer, int socket) : _buffer(buffer), _socket(socket) {
         std::map<std::string, std::string> parsed;
-        if (_buffer.empty()) _parsedRequest.Error();
+        if (_buffer.empty()) _parsed["valid"] = "false";
         else Parse();
     }
 
@@ -30,12 +30,13 @@ private:
         GetExtension();
 
         // notice that _parsed is moved to setup and therefore destroyed here
+        _parsed["valid"] = "true";
         _parsedRequest.Setup(_parsed, _socket);
     }
 
     void SetTaret() {
         if (_parsed.find("request") == _parsed.end()) {
-            _parsedRequest.Error();
+            _parsed["valid"] = "false";
             return;
         }
 
@@ -48,7 +49,7 @@ private:
 
     void GetExtension() {
         if (_parsed.find("target") == _parsed.end()) { // this is a little paranoid
-            _parsedRequest.Error();
+            _parsed["valid"] = "false";
             return;
         }
 

@@ -17,29 +17,30 @@ public:
 
     // from parsed request setups request
     void Setup(std::map<std::string, std::string> &parsed, int socket) {
-        _isValid = true;
         _socket = socket;
         _params = std::move(parsed); // nobody cares about parsers ownership lol
         CreateLog();
-    }
-
-    void Error() {
-        _isValid = false;
     }
 
     int GetSocket() const {
         return _socket;
     }
 
+    bool IsValid() {
+        return _params["valid"] == "true";
+    }
+
+    const std::string &GetTarget() {
+        return _params["target"];
+    }
+
 private:
     int _socket{0}; // fixme deafult value  seems  wrong - but isn't unutilised (or how to spell it) even worse?
-    bool _isValid{true};
     std::map<std::string, std::string> _params;
     RequestLog _log;
 
     void CreateLog() {
-        if(_isValid) _log.SetCustom(_params);
-        else _log.SetInvalid();
+       _log.SetCustom(_params);
     }
 };
 
