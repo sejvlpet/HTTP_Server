@@ -16,6 +16,7 @@ public:
 
     // todo this method should be abstracy
     virtual std::string ToString() const = 0;
+    virtual ~Log()= default;
 
 protected:
     std::chrono::time_point<std::chrono::system_clock> _dateTime;

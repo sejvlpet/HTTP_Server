@@ -17,7 +17,7 @@ private:
     std::string Serialize() const override {
         std::string response;
         response.append(CreateLine(HEADER));
-        response.append((CreateLine(_customMessage)));
+        response.append(_customMessage);
 
         AddCommonPart(response);
         return response;

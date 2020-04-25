@@ -47,7 +47,11 @@ public:
     }
 
 //     logs message taken as parameter
-    void Log(std::unique_ptr<Log> log) const {
+    void Log(const std::unique_ptr<Log> log) const {
+        _logger->Log(log);
+    }
+
+    void Log(const class Log *log) const {
         _logger->Log(log);
     }
 

@@ -9,8 +9,14 @@ public:
     void Log(const std::unique_ptr<class Log> &log) const override {
         std::cout << log->ToString();
     }
+
     void Log(const class Log &log) const override {
         std::cout << log.ToString();
+    }
+
+    void Log(const class Log *log) const override {
+        std::cout << log->ToString();
+        delete log;
     }
 };
 

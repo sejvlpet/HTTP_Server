@@ -2,6 +2,8 @@
 #define PA2_SERVER_RESPONSE_H
 
 #include <bits/unique_ptr.h>
+#include <cstring>
+#include <unistd.h>
 #include "../../log/responseLog.h"
 
 class Response {
@@ -12,8 +14,10 @@ public:
     }
 
     virtual void WriteOut(int socket) {
-
+        write(socket, HELLO, strlen(HELLO));
     };
+
+    virtual ~Response()=default;
 
 protected:
     ResponseLog _log;

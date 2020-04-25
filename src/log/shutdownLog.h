@@ -20,7 +20,7 @@ private:
     std::string Serialize() const override {
         std::string response;
         response.append(CreateLine(_final ? HEADER_FINAL : HEADER_NOT_FINAL));
-        response.append((CreateLine(_customMessage)));
+        response.append(_customMessage);
 
         AddCommonPart(response);
         return response;

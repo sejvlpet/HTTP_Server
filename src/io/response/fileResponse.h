@@ -39,7 +39,7 @@ private:
     void CreateLog() override {
         std::map<std::string, std::string> res;
         res["status"] = "200";
-        res["requested file"] = _target;
+        res["returned file"] = _target;
 
         _log.SetCustom(res);
     }

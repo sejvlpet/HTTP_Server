@@ -19,7 +19,7 @@ public:
 private:
     Server *_parent{nullptr};
     Request _request;
-    std::unique_ptr<Response> _response{std::make_unique<Response>()}; // fixme I don't like that unique_ptr
+    std::unique_ptr<Response> _response{new Response()}; // fixme I don't like that unique_ptr
 
     void HandleRequest() {
         std::string target = _request.GetTarget();
