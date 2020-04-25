@@ -27,6 +27,7 @@ public:
         realResponse.append(response);
 
         write(socket, realResponse.c_str(), realResponse.size());
+        CreateLog();
     };
 
 
@@ -36,7 +37,11 @@ private:
 
 
     void CreateLog() override {
-        // set log
+        std::map<std::string, std::string> res;
+        res["status"] = "200";
+        res["requested file"] = _target;
+
+        _log.SetCustom(res);
     }
 };
 
