@@ -21,7 +21,7 @@ public:
         _params = std::move(parsed); // nobody cares about parsers ownership lol
     }
 
-    void UnknownError() {
+    void Error() {
         _isValid = false;
     }
 

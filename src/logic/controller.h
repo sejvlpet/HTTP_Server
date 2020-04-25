@@ -31,7 +31,6 @@ private:
 
         _parent->Log(_response->GetLog());
 
-        _parent->ShutDown();
         _parent->DecWorkers();
     }
 };

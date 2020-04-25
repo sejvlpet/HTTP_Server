@@ -9,7 +9,7 @@ public:
     // reads buffer, saves information from which it creates its parsed request which shall be later returned
     Parser(const char *buffer, int socket) : _buffer(buffer), _socket(socket) {
         std::map<std::string, std::string> parsed;
-        if (_buffer.empty()) _parsedRequest.UnknownError();
+        if (_buffer.empty()) _parsedRequest.Error();
         else Parse();
     }
 
@@ -29,19 +29,38 @@ private:
 
     void Parse() {
         SetKeyValues();
-        SetUrl();
+        SetTaret();
+        GetExtension();
 
         _parsedRequest.Setup(_parsed, _socket);
     }
 
-    void SetUrl() {
-        if(_parsed.find("request") == _parsed.end()) {
-            _parsedRequest.UnknownError();
+    void SetTaret() {
+        if (_parsed.find("request") == _parsed.end()) {
+            _parsedRequest.Error();
             return;
         }
 
         std::string tmp = _parsed["request"];
-        // todo read string after / from that
+        size_t start = tmp.find('/') + 1;
+        size_t end = tmp.find_last_of('H'); // finds last H => it's part of protocol name
+
+        _parsed["target"] = tmp.substr(start, end - start);
+    }
+
+    void GetExtension() {
+        if (_parsed.find("target") == _parsed.end()) { // this is a little paranoid
+            _parsedRequest.Error();
+            return;
+        }
+
+        std::string tmp = _parsed["target"];
+        size_t start = tmp.find('.') + 1;
+
+        if (start - 1 == std::string::npos) _parsed["extension"] = "";
+        else _parsed["extension"] = tmp.substr(start);
+
+        std::cout << _parsed["extension"] << '\n';
     }
 
 
@@ -57,16 +76,14 @@ private:
                 readKey = true; // \n means end of line => end of one req param (no matter where found)
                 // save key-value to map and continue with (hopefully) emptied key and value
                 // I have no idea why, but the most needed part of request is in part with protocol name
-                if(!reqfound && key.find("HTTP/1.1") != std::string::npos) {
+                if (!reqfound && key.find("HTTP/1.1") != std::string::npos) {
                     _parsed["request"] = std::move(key);
                     reqfound = true;
-                }
-                else _parsed[std::move(key)] = std::move(value);
+                } else _parsed[std::move(key)] = std::move(value);
                 key.empty();
                 value.empty(); // just in case...
-            }
-            else if(!isspace(c)) {
-                if(readKey) key.push_back(c);
+            } else if (!isspace(c)) {
+                if (readKey) key.push_back(c);
                 else value.push_back(c);
             }
         }
