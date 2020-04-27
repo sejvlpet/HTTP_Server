@@ -10,9 +10,21 @@
 cstdio
 -
 
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/main.cpp
+src/logic/server.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.cpp
+parser.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h
+
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h
 map
 -
+request.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.cpp
 request.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
 
@@ -23,10 +35,6 @@ map
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.h
 ../logic/server.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.cpp
-fileResponse.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.h
 utility
@@ -40,12 +48,12 @@ unistd.h
 response.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.cpp
-response.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h
 bits/unique_ptr.h
+-
+cstring
+-
+unistd.h
 -
 ../../log/responseLog.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/responseLog.h

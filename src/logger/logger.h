@@ -13,8 +13,6 @@ public:
 
     virtual void Log(const class Log &log) const = 0;
 
-    virtual void Log(const class Log *log) const = 0;
-
     virtual ~Logger()=default;
 
 };

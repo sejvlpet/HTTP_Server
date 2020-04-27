@@ -14,10 +14,6 @@ public:
         std::cout << log.ToString();
     }
 
-    void Log(const class Log *log) const override {
-        std::cout << log->ToString();
-        delete log;
-    }
 };
 
 

@@ -29,7 +29,7 @@ public:
     // sets enum setup
 
 
-    void Setup(const std::string &configFileName); // setups server from configFile, same todos as ctor
+    void Setup(const std::string &configFileName);
     int Listen(); // listen on configured port, if setup failed returns proper constant
 
     void ShutDown();
@@ -51,10 +51,6 @@ public:
         _logger->Log(log);
     }
 
-    void Log(const class Log *log) const {
-        _logger->Log(log);
-    }
-
     void Log(const class Log &log) const {
         _logger->Log(log);
     }
@@ -72,8 +68,6 @@ private:
 
     const static int LISTEN_SUCCESS{0}; // value to be return from listen if succeeds
     const static int LISTEN_FAIL{1}; // to be return if fails, generally if server's not setuped well before listening
-    // simple hello world response
-    const constexpr static char *HELLO{"HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 12\n\nHello world!"};
     const std::vector<std::string> TEST_CASES; // vector of unit test scenario names
     const std::vector<std::string> STATIC_EXTENSIONS; // extensions to be treated as static
     const std::vector<std::string> DYNAMIC_EXTENSIONS; // extensions to be treated as dynamic
@@ -94,7 +88,8 @@ private:
     sockaddr_in _address{};
     int _addrLen{0};
     int _serverFd{0};
-    std::string _shutdownUrl = "shutdown"; // specifies name of shutdown url
+    std::string _shutdownUrl = "E5gySqfwoPjevP3RYP5o"; // specifies name of shutdown url
+    std::string _userDefinedShutdownUrl = "E5gySqfwoPjevP3RYP5o"; // defined from config file
     std::unique_ptr<Logger> _logger;
 
     // methods
