@@ -46,6 +46,12 @@ private:
     const constexpr static char *HTML_FOOTER{"</body>\n"
                                              "</html>"};
     void CreateLog() override {
+        std::map<std::string, std::string> res;
+        res["status"] = "200";
+        res["returned dir"] = _root;
+
+        _log.SetCustom(res);
+
     };
 };
 
