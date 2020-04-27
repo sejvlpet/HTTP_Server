@@ -15,6 +15,7 @@ public:
 
     virtual void WriteOut(int socket) {
         write(socket, HELLO, strlen(HELLO));
+        CreateLog();
     };
 
     virtual ~Response()=default;
@@ -22,10 +23,16 @@ public:
 protected:
     ResponseLog _log;
 
-    virtual void CreateLog() {};
+    virtual void CreateLog() {
+        std::map<std::string, std::string> res;
+        res["status"] = "200";
+        res["returned"] = "default response";
+
+        _log.SetCustom(res);
+    };
 
 private:
-    const constexpr static char *HELLO{"HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 21\n\nSomething went wrong"};
+    const char *HELLO{"HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 20\n\nSomething went wrong"};
 
 };
 

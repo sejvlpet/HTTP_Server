@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pa2_server.dir/main.cpp.o"
   "CMakeFiles/pa2_server.dir/src/io/parser.cpp.o"
   "CMakeFiles/pa2_server.dir/src/io/request.cpp.o"
+  "CMakeFiles/pa2_server.dir/src/io/response/dirResponse.cpp.o"
   "CMakeFiles/pa2_server.dir/src/io/response/fileResponse.cpp.o"
   "CMakeFiles/pa2_server.dir/src/io/response/response.cpp.o"
   "CMakeFiles/pa2_server.dir/src/log/errorLog.cpp.o"

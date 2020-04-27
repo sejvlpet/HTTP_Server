@@ -5,8 +5,8 @@
 #include <unistd.h>
 #include "../io/request.h"
 #include "../../helper.h"
-#include "../io/response/response.h"
 #include "../io/response/fileResponse.h"
+#include "../io/response/dirResponse.h"
 
 class Controller {
 public:
@@ -19,23 +19,27 @@ public:
 private:
     Server *_parent{nullptr};
     Request _request;
-    std::unique_ptr<Response> _response{new Response()}; // fixme I don't like that unique_ptr
+    std::unique_ptr<Response> _response{std::make_unique<Response>()}; // fixme I don't like that unique_ptr
 
     void HandleRequest() {
         std::string target = _request.GetTarget();
+        std::string extension = _request.GetExtension();
+        std::string root = _request.GetRoot();
 
         _parent->IncWorkers();
 
-        // Helper::Wait();
+        // todo check rights and persmisions
         if (!_request.IsValid()) {
             // _response = GetInvalid...
         } else if (target.empty()) { // no target given => writeOut index.Html
-            // todo check if do we have right to read index.html
-            _response = std::make_unique<FileResponse>(); // set response to write out index.html
+            _response = std::make_unique<DirResponse>(root);
         } else if (_parent->ShutDownCalled(target)) {
             _parent->ShutDown();
-            // todo check if do we have right to read
-            _response = std::make_unique<FileResponse>("bye.html");
+            _response = std::make_unique<FileResponse>(root + "/" + "bye.html");
+        } else if(extension.empty()) { // no extension, but some target there is
+            _response = std::make_unique<DirResponse>(root + target);
+        } else if(extension == "html") {
+            _response = std::make_unique<FileResponse>(target); // set response to write out index.html
         } else {
             // todo handle other requests - concrete files, folders, executable and so on
         }
@@ -46,6 +50,7 @@ private:
         close(_request.GetSocket());
         _parent->DecWorkers();
     }
+
 };
 
 

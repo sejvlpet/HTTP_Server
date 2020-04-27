@@ -9,7 +9,7 @@
 
 class FileResponse : public Response {
 public:
-    FileResponse(std::string target = "index.html") : _target("router/" + std::move(target)) {}
+    FileResponse(std::string target) : _target(std::move(target)) {}
 
     void WriteOut(int socket) override {
         std::string response, tmp;

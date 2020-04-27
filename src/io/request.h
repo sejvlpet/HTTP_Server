@@ -34,6 +34,13 @@ public:
         return _params["target"];
     }
 
+    const std::string &GetExtension() {
+        return _params["extension"];
+    }
+
+    const std::string &GetRoot() {
+        return _params["root"];
+    }
 private:
     int _socket{0}; // fixme deafult value  seems  wrong - but isn't unutilised (or how to spell it) even worse?
     std::map<std::string, std::string> _params;

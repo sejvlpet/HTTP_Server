@@ -13,6 +13,8 @@ cstdio
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h
 map
 -
+utility
+-
 request.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
 
@@ -23,6 +25,18 @@ map
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.h
 ../logic/server.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.cpp
+dirResponse.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.h
+dirent.h
+-
+vector
+-
+response.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.h
 utility
@@ -94,6 +108,10 @@ bits/unique_ptr.h
 ../log/log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
 
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.cpp
+controller.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
+
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
 cstring
 -
@@ -103,10 +121,10 @@ unistd.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
 ../../helper.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/helper.h
-../io/response/response.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h
 ../io/response/fileResponse.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.h
+../io/response/dirResponse.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.cpp
 cstdio
@@ -157,6 +175,10 @@ map
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
 ../logger/consoleLogger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.cpp
+worker.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.h
 iostream

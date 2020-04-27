@@ -2,12 +2,13 @@
 #define PA2_SERVER_PARSER_H
 
 #include <map>
+#include <utility>
 #include "request.h"
 
 class Parser {
 public:
     // reads buffer, saves information from which it creates its parsed request which shall be later returned
-    Parser(const char *buffer, int socket) : _buffer(buffer), _socket(socket) {
+    Parser(const char *buffer, int socket, std::string root) : _buffer(buffer), _socket(socket), _root(std::move(root)) {
         std::map<std::string, std::string> parsed;
         if (_buffer.empty()) _parsed["valid"] = "false";
         else Parse();
@@ -23,6 +24,7 @@ private:
     std::map<std::string, std::string> _parsed;
     const std::string _buffer;
     int _socket;
+    const std::string _root;
 
     void Parse() {
         SetKeyValues();
@@ -31,6 +33,7 @@ private:
 
         // notice that _parsed is moved to setup and therefore destroyed here
         _parsed["valid"] = "true";
+        _parsed["root"] = _root + "/";
         _parsedRequest.Setup(_parsed, _socket);
     }
 
@@ -44,6 +47,7 @@ private:
         size_t start = tmp.find('/') + 1;
         size_t end = tmp.find_last_of('H'); // finds last H => it's part of protocol name
 
+        // target will always be searched in root directory
         _parsed["target"] = tmp.substr(start, end - start);
     }
 

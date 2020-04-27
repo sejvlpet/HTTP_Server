@@ -51,6 +51,9 @@ public:
         _logger->Log(log);
     }
 
+    const std::string &GetRoot() {
+        return _options["root"];
+    }
 
 private:
     // new implementation
@@ -72,13 +75,14 @@ private:
 
 
     // options for configurtion with ther default values
+    // todo add test options
     std::map<std::string, std::string> _options{{
                                                         {"port", "8080"},
                                                         {"logLocation", "CONSOLE"}, // todo how to parse string to enum?
                                                         {"root", "router/"}, // todo at least this option has to be passed
                                                         {"logLevel", "INFO"},
                                                         {"logFile", ""}, // if log to file is set and file empty => error
-                                                        {"shutDownUrl", "E5gySqfwoPjevP3RYP5o"},
+                                                        {"shutdownUrl", "E5gySqfwoPjevP3RYP5o"},
                                                         {"userDefinedShutdownUrl", "E5gySqfwoPjevP3RYP5o"},
                                                         {"maxPendingRequests", "20"}
 

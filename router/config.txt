@@ -1,4 +1,4 @@
-port:6060
+port:8080
 logLocation:CONSOLE
 root:router
 logLevel:INFO
