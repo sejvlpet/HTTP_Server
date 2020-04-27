@@ -9,11 +9,11 @@
 
 class FileResponse : public Response {
 public:
-    FileResponse(std::string target) : _target(std::move(target)) {}
+    FileResponse(std::string root, std::string target) : _root(std::move(root)), _target(std::move(target)) {}
 
     void WriteOut(int socket) override {
         std::string response, tmp;
-        std::ifstream file(_target);
+        std::ifstream file(_root + "/" +_target);
 
         // read content of given file
         while (std::getline (file, tmp)) {
@@ -32,6 +32,7 @@ public:
 
 
 private:
+    std::string _root;
     std::string _target;
     const constexpr static char *HEADER{"HTTP/1.1 200 OK\nContent-Type: text/html\nContent-Length: "};
 

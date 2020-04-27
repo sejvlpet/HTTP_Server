@@ -28,18 +28,21 @@ private:
 
         _parent->IncWorkers();
 
-        // todo check rights and persmisions
+        // todo check rights and permisions
+        // this version recently fails if trying to read nonexistng folder and returns nothing for
+        // not existing file
+
         if (!_request.IsValid()) {
             // _response = GetInvalid...
         } else if (target.empty()) { // no target given => writeOut index.Html
             _response = std::make_unique<DirResponse>(root);
         } else if (_parent->ShutDownCalled(target)) {
             _parent->ShutDown();
-            _response = std::make_unique<FileResponse>(root + "/" + "bye.html");
+            _response = std::make_unique<FileResponse>(root, "bye.html");
         } else if(extension.empty()) { // no extension, but some target there is
             _response = std::make_unique<DirResponse>(root + target);
-        } else if(extension == "html") {
-            _response = std::make_unique<FileResponse>(target); // set response to write out index.html
+        } else if(extension == "html" || extension == "txt") {
+            _response = std::make_unique<FileResponse>(root, target); // set response to write out index.html
         } else {
             // todo handle other requests - concrete files, folders, executable and so on
         }

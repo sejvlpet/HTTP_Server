@@ -26,10 +26,6 @@ map
 ../logic/server.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.cpp
-dirResponse.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.h
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.h
 dirent.h
 -
