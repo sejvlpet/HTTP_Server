@@ -10,21 +10,9 @@
 cstdio
 -
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/main.cpp
-src/logic/server.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.cpp
-parser.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h
 map
 -
-request.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.cpp
 request.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
 
@@ -106,10 +94,6 @@ bits/unique_ptr.h
 ../log/log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.cpp
-controller.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
 cstring
 -
@@ -167,12 +151,12 @@ utility
 -
 memory
 -
+map
+-
 ../logger/logger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.cpp
-worker.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.h
+../logger/consoleLogger.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.h
 iostream

@@ -1,0 +1,7 @@
+port:6060
+logLocation:CONSOLE
+root:router
+logLevel:INFO
+logFile:logs.txt
+userDefinedShutdownUrl:shutdown
+maxPendingRequests:20

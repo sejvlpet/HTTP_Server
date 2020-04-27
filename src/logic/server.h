@@ -7,7 +7,9 @@
 #include <set>
 #include <utility>
 #include <memory>
+#include <map>
 #include "../logger/logger.h"
+#include "../logger/consoleLogger.h"
 
 
 class Server {
@@ -18,24 +20,18 @@ public:
     SETUP_STATUS _setupStatus{DEFAULT};
     const static int SETUP_FAIL{1};
     const static std::set<std::string> IGNORE_LIST;
+    // simply reads options from config file
+    void ReadOptions(const std::string &configFileName);
+    // methods
+    void Setup(); // from options saved in members setups server
 
-    Server();
-
-    Server(const std::string &configFileName);
-    // todo - implement config reading from file - notes:
-    // check if socket port is within allowed ranges
-    // check if logFile has proper rights
-    // check root directory (not sure what to check yet, but surely there'll be something to check)
-    // sets enum setup
-
-
-    void Setup(const std::string &configFileName);
     int Listen(); // listen on configured port, if setup failed returns proper constant
 
     void ShutDown();
 
-    bool ShutDownCalled(const std::string &reqUrl) const {
-        return _shutdownUrl == reqUrl;
+    // fixme due to work with map, this cannot be const
+    bool ShutDownCalled(const std::string &reqUrl) {
+        return _options["shutdownUrl"] == reqUrl || _options["userDefinedShutdownUrl"] == reqUrl;
     }
 
     int IncWorkers() { // increments worker counts and returns it
@@ -63,7 +59,7 @@ private:
         FILE, CONSOLE
     };
     enum LOG_LEVEL { // tells what should be logged
-        INFO, DEBUG, WARN, ERROR
+        INFO, WARN, ERROR
     };
 
     const static int LISTEN_SUCCESS{0}; // value to be return from listen if succeeds
@@ -75,25 +71,41 @@ private:
     int _workersCount{0}; // recent count of request being processed
 
 
-    // options from configuration
-    // todo - implement configuration reading
-    int _port{8080};
-    std::string _root; // name of root directory
-    LOG_LOCATION _logLocation{CONSOLE};
-    LOG_LEVEL _logLevel{INFO};
-    std::string _logFile; // default empty as by default logs to console
+    // options for configurtion with ther default values
+    std::map<std::string, std::string> _options{{
+                                                        {"port", "8080"},
+                                                        {"logLocation", "CONSOLE"}, // todo how to parse string to enum?
+                                                        {"root", "router/"}, // todo at least this option has to be passed
+                                                        {"logLevel", "INFO"},
+                                                        {"logFile", ""}, // if log to file is set and file empty => error
+                                                        {"shutDownUrl", "E5gySqfwoPjevP3RYP5o"},
+                                                        {"userDefinedShutdownUrl", "E5gySqfwoPjevP3RYP5o"},
+                                                        {"maxPendingRequests", "20"}
+
+                                                }};
+    std::map<const std::string, const LOG_LOCATION> _locations{{
+                                                           {"CONSOLE", CONSOLE},
+                                                           {"FILE", FILE}
+                                                   }};
+
+    std::map<const std::string, const LOG_LEVEL> _levels{{
+                                                     {"INFO", INFO},
+                                                     {"WARN", WARN},
+                                                     {"ERROR", ERROR}
+                                             }};
 
     // members with default values
     bool _shutDown{false}; // sets to true if serer's about to shutDown
     sockaddr_in _address{};
     int _addrLen{0};
     int _serverFd{0};
-    std::string _shutdownUrl = "E5gySqfwoPjevP3RYP5o"; // specifies name of shutdown url
-    std::string _userDefinedShutdownUrl = "E5gySqfwoPjevP3RYP5o"; // defined from config file
-    std::unique_ptr<Logger> _logger;
+    std::unique_ptr<Logger> _logger{std::make_unique<ConsoleLogger>()};
 
-    // methods
-    void Setup(); // from options saved in members setups server
+    // checks validity of options and sets them to our server options
+    void SetupOptions(std::map<std::string, std::string> &options);
+    // logs Error and sets status
+    void Error(const std::string &message);
+
 };
 
 #endif //PA2_SERVER_SERVER_H

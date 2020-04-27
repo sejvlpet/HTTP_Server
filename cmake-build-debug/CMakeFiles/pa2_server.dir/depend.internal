@@ -7,6 +7,7 @@ CMakeFiles/pa2_server.dir/helper.cpp.o
 CMakeFiles/pa2_server.dir/main.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/main.cpp
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h
 CMakeFiles/pa2_server.dir/src/io/parser.cpp.o
@@ -15,6 +16,7 @@ CMakeFiles/pa2_server.dir/src/io/parser.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h
 CMakeFiles/pa2_server.dir/src/io/request.cpp.o
@@ -22,6 +24,7 @@ CMakeFiles/pa2_server.dir/src/io/request.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h
 CMakeFiles/pa2_server.dir/src/io/response/fileResponse.cpp.o
@@ -76,6 +79,7 @@ CMakeFiles/pa2_server.dir/src/logic/controller.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/responseLog.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.cpp
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
@@ -107,6 +111,7 @@ CMakeFiles/pa2_server.dir/src/logic/worker.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/responseLog.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h
