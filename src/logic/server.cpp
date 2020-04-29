@@ -5,6 +5,7 @@
 #include <cstring>
 #include <iostream>
 #include <thread>
+#include <arpa/inet.h>
 #include "../../helper.h"
 #include "server.h"
 #include "worker.h"
@@ -89,6 +90,7 @@ void Server::Setup() {
 
     _address.sin_family = AF_INET;
     _address.sin_addr.s_addr = INADDR_ANY;
+    _address.sin_addr.s_addr = inet_addr(_options["address"].c_str());
     _address.sin_port = htons(std::stoi(_options["port"]));
 
     // fixme do something more c++

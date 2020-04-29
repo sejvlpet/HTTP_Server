@@ -1,7 +1,8 @@
 port:8080
+address:0.0.0.0
 logLocation:CONSOLE
 root:router
 logLevel:INFO
 logFile:logs.txt
 userDefinedShutdownUrl:shutdown
-maxPendingRequests:20
+maxPendingRequests:10

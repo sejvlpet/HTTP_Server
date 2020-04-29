@@ -26,14 +26,22 @@ map
 ../logic/server.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.cpp
-dirResponse.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.h
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.h
 dirent.h
 -
 vector
+-
+response.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/execResponse.h
+utility
+-
+fstream
+-
+cstring
+-
+unistd.h
 -
 response.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h
@@ -47,6 +55,10 @@ cstring
 -
 unistd.h
 -
+response.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/notFoundResponse.h
 response.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h
 
@@ -108,14 +120,14 @@ bits/unique_ptr.h
 ../log/log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.cpp
-controller.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
 cstring
 -
 unistd.h
+-
+sys/stat.h
+-
+fstream
 -
 ../io/request.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
@@ -125,6 +137,10 @@ unistd.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.h
 ../io/response/dirResponse.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.h
+../io/response/execResponse.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/execResponse.h
+../io/response/notFoundResponse.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/notFoundResponse.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.cpp
 cstdio
@@ -140,6 +156,8 @@ cstring
 iostream
 -
 thread
+-
+arpa/inet.h
 -
 ../../helper.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/helper.h
@@ -175,10 +193,6 @@ map
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
 ../logger/consoleLogger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.cpp
-worker.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.h
 iostream

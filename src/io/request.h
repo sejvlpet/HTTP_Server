@@ -9,7 +9,7 @@ class Request {
 public:
     // returns log object about request parsing
     // as request log will be always obtained in same thread where it is created, we can afford to pass it as ref
-    // anyway, maybe I'll change it to unique_ptr to have that same as in resonse class
+    // anyway, maybe I'll change it to unique_ptr to have that same as in respsonse class
     // where I have no choice but unique_ptr
     Log &GetLog() {
         return _log;
@@ -19,6 +19,7 @@ public:
     void Setup(std::map<std::string, std::string> &parsed, int socket) {
         _socket = socket;
         _params = std::move(parsed); // nobody cares about parsers ownership lol
+        _params["id"] = std::to_string(_id++);
         CreateLog();
     }
 
@@ -45,6 +46,7 @@ private:
     int _socket{0}; // fixme deafult value  seems  wrong - but isn't unutilised (or how to spell it) even worse?
     std::map<std::string, std::string> _params;
     RequestLog _log;
+    static size_t _id;
 
     void CreateLog() {
        _log.SetCustom(_params);

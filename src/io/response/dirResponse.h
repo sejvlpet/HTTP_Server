@@ -41,7 +41,7 @@ private:
                                              "    <meta charset=\"UTF-8\">\n"
                                              "    <title>Directory passing</title>\n"
                                              "</head>\n"
-                                             "<body>"};
+                                             "<body>\n"};
 
     const constexpr static char *HTML_FOOTER{"</body>\n"
                                              "</html>"};

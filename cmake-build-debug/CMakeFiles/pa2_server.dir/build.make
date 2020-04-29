@@ -291,6 +291,32 @@ CMakeFiles/pa2_server.dir/src/io/response/dirResponse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pa2_server.dir/src/io/response/dirResponse.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.cpp -o CMakeFiles/pa2_server.dir/src/io/response/dirResponse.cpp.s
 
+CMakeFiles/pa2_server.dir/src/io/response/execResponse.cpp.o: CMakeFiles/pa2_server.dir/flags.make
+CMakeFiles/pa2_server.dir/src/io/response/execResponse.cpp.o: ../src/io/response/execResponse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/pa2_server.dir/src/io/response/execResponse.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pa2_server.dir/src/io/response/execResponse.cpp.o -c /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/execResponse.cpp
+
+CMakeFiles/pa2_server.dir/src/io/response/execResponse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pa2_server.dir/src/io/response/execResponse.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/execResponse.cpp > CMakeFiles/pa2_server.dir/src/io/response/execResponse.cpp.i
+
+CMakeFiles/pa2_server.dir/src/io/response/execResponse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pa2_server.dir/src/io/response/execResponse.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/execResponse.cpp -o CMakeFiles/pa2_server.dir/src/io/response/execResponse.cpp.s
+
+CMakeFiles/pa2_server.dir/src/io/response/notFoundResponse.cpp.o: CMakeFiles/pa2_server.dir/flags.make
+CMakeFiles/pa2_server.dir/src/io/response/notFoundResponse.cpp.o: ../src/io/response/notFoundResponse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/pa2_server.dir/src/io/response/notFoundResponse.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pa2_server.dir/src/io/response/notFoundResponse.cpp.o -c /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/notFoundResponse.cpp
+
+CMakeFiles/pa2_server.dir/src/io/response/notFoundResponse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pa2_server.dir/src/io/response/notFoundResponse.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/notFoundResponse.cpp > CMakeFiles/pa2_server.dir/src/io/response/notFoundResponse.cpp.i
+
+CMakeFiles/pa2_server.dir/src/io/response/notFoundResponse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pa2_server.dir/src/io/response/notFoundResponse.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/notFoundResponse.cpp -o CMakeFiles/pa2_server.dir/src/io/response/notFoundResponse.cpp.s
+
 # Object files for target pa2_server
 pa2_server_OBJECTS = \
 "CMakeFiles/pa2_server.dir/main.cpp.o" \
@@ -310,7 +336,9 @@ pa2_server_OBJECTS = \
 "CMakeFiles/pa2_server.dir/src/logger/consoleLogger.cpp.o" \
 "CMakeFiles/pa2_server.dir/src/logger/fileLogger.cpp.o" \
 "CMakeFiles/pa2_server.dir/src/io/response/fileResponse.cpp.o" \
-"CMakeFiles/pa2_server.dir/src/io/response/dirResponse.cpp.o"
+"CMakeFiles/pa2_server.dir/src/io/response/dirResponse.cpp.o" \
+"CMakeFiles/pa2_server.dir/src/io/response/execResponse.cpp.o" \
+"CMakeFiles/pa2_server.dir/src/io/response/notFoundResponse.cpp.o"
 
 # External object files for target pa2_server
 pa2_server_EXTERNAL_OBJECTS =
@@ -333,9 +361,11 @@ pa2_server: CMakeFiles/pa2_server.dir/src/logger/consoleLogger.cpp.o
 pa2_server: CMakeFiles/pa2_server.dir/src/logger/fileLogger.cpp.o
 pa2_server: CMakeFiles/pa2_server.dir/src/io/response/fileResponse.cpp.o
 pa2_server: CMakeFiles/pa2_server.dir/src/io/response/dirResponse.cpp.o
+pa2_server: CMakeFiles/pa2_server.dir/src/io/response/execResponse.cpp.o
+pa2_server: CMakeFiles/pa2_server.dir/src/io/response/notFoundResponse.cpp.o
 pa2_server: CMakeFiles/pa2_server.dir/build.make
 pa2_server: CMakeFiles/pa2_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable pa2_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/petrsejvl/Dropbox/pa2/server2/pa2_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable pa2_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pa2_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

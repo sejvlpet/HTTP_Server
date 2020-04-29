@@ -27,12 +27,12 @@ private:
     const std::string _root;
 
     void Parse() {
+        _parsed["valid"] = "true";
         SetKeyValues();
         SetTaret();
         GetExtension();
 
         // notice that _parsed is moved to setup and therefore destroyed here
-        _parsed["valid"] = "true";
         _parsed["root"] = _root + "/";
         _parsedRequest.Setup(_parsed, _socket);
     }

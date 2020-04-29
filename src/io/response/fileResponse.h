@@ -9,20 +9,21 @@
 
 class FileResponse : public Response {
 public:
-    FileResponse(std::string root, std::string target) : _root(std::move(root)), _target(std::move(target)) {}
+    FileResponse(std::string root, std::string target, bool isHtml = true) :
+            _root(std::move(root)), _target(std::move(target)), _isHtml(isHtml) {}
 
     void WriteOut(int socket) override {
         std::string response, tmp;
-        std::ifstream file(_root + "/" +_target);
+        std::ifstream file(_root + "/" + _target);
 
         // read content of given file
-        while (std::getline (file, tmp)) {
+        while (std::getline(file, tmp)) {
             response.append(tmp);
         }
 
         file.close();
 
-        std::string realResponse = HEADER + std::to_string(response.size());
+        std::string realResponse = (_isHtml ? HTML_HEADER : TEXT_HEADER) + std::to_string(response.size());
         realResponse.append("\n\n");
         realResponse.append(response);
 
@@ -34,7 +35,9 @@ public:
 private:
     std::string _root;
     std::string _target;
-    const constexpr static char *HEADER{"HTTP/1.1 200 OK\nContent-Type: text/html\nContent-Length: "};
+    const constexpr static char *HTML_HEADER{"HTTP/1.1 200 OK\nContent-Type: text/html\nContent-Length: "};
+    const constexpr static char *TEXT_HEADER{"HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: "};
+    bool _isHtml{true};
 
 
     void CreateLog() override {

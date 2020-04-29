@@ -111,10 +111,22 @@
 		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.h">
 			<Option target="pa2_server"/>
 		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/execResponse.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/execResponse.h">
+			<Option target="pa2_server"/>
+		</Unit>
 		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
 		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.h">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/notFoundResponse.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/notFoundResponse.h">
 			<Option target="pa2_server"/>
 		</Unit>
 		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.cpp">

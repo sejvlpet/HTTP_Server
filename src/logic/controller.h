@@ -3,10 +3,14 @@
 
 #include <cstring>
 #include <unistd.h>
+#include <sys/stat.h>
+#include <fstream>
 #include "../io/request.h"
 #include "../../helper.h"
 #include "../io/response/fileResponse.h"
 #include "../io/response/dirResponse.h"
+#include "../io/response/execResponse.h"
+#include "../io/response/notFoundResponse.h"
 
 class Controller {
 public:
@@ -32,19 +36,37 @@ private:
         // this version recently fails if trying to read nonexistng folder and returns nothing for
         // not existing file
 
-        if (!_request.IsValid()) {
-            // _response = GetInvalid...
-        } else if (target.empty()) { // no target given => writeOut index.Html
-            _response = std::make_unique<DirResponse>(root);
-        } else if (_parent->ShutDownCalled(target)) {
-            _parent->ShutDown();
-            _response = std::make_unique<FileResponse>(root, "bye.html");
-        } else if(extension.empty()) { // no extension, but some target there is
-            _response = std::make_unique<DirResponse>(root + target);
-        } else if(extension == "html" || extension == "txt") {
-            _response = std::make_unique<FileResponse>(root, target); // set response to write out index.html
-        } else {
-            // todo handle other requests - concrete files, folders, executable and so on
+        if (_request.IsValid()) {
+
+            if (target.empty()) {
+
+                _response = std::make_unique<DirResponse>(root);
+
+            } else if (_parent->ShutDownCalled(target)) {
+
+                _parent->ShutDown();
+                _response = std::make_unique<FileResponse>(root, "bye.html");
+
+            } else if (DirExists(root + '/' + target)) {
+
+                _response = std::make_unique<DirResponse>(root + target);
+
+            } else if (IsExecutable(root + '/' + target)) {
+
+                _response = std::make_unique<ExecResponse>(root, target);
+
+            } else if (FileOk(root + '/' + target)) {
+                if (extension == "html") {
+                    _response = std::make_unique<FileResponse>(root, target);
+                } else {
+                    _response = std::make_unique<FileResponse>(root, target, false);
+                }
+
+            } else {
+
+                _response = std::make_unique<NotFoundResponse>();
+
+            }
         }
 
         _response->WriteOut(_request.GetSocket());
@@ -54,6 +76,31 @@ private:
         _parent->DecWorkers();
     }
 
+    // todo - should be implemented in incognito namespace
+
+    static bool IsExecutable(const std::string &file) {
+        // inspired on https://stackoverflow.com/questions/5719694/how-to-check-if-file-is-executable-in-c
+        struct stat st{};
+
+        if (stat(file.c_str(), &st) < 0)
+            return false;
+        return (st.st_mode & S_IEXEC) != 0;
+    }
+
+    static bool DirExists(const std::string &dir) {
+        // inspired on https://stackoverflow.com/questions/18100097/portable-way-to-check-if-directory-exists-windows-linux-c
+        struct stat info{};
+
+        if (stat(dir.c_str(), &info) != 0)
+            return false;
+        else return (info.st_mode & S_IFDIR) != 0;
+    }
+
+    static bool FileOk(const std::string &file) {
+        std::ifstream ifile;
+        ifile.open(file);
+        return ifile && true;
+    }
 };
 
 

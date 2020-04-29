@@ -84,7 +84,8 @@ private:
                                                         {"logFile", ""}, // if log to file is set and file empty => error
                                                         {"shutdownUrl", "E5gySqfwoPjevP3RYP5o"},
                                                         {"userDefinedShutdownUrl", "E5gySqfwoPjevP3RYP5o"},
-                                                        {"maxPendingRequests", "20"}
+                                                        {"maxPendingRequests", "20"},
+                                                        {"address", "0.0.0.0"}
 
                                                 }};
     std::map<const std::string, const LOG_LOCATION> _locations{{

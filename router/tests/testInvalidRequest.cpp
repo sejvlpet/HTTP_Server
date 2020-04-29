@@ -15,8 +15,9 @@ int main(int argc, char const *argv[]) {
 
     int sock = 0;
     struct sockaddr_in serv_addr;
-    const char *hello = "GET /bye.html HTTP/1.1\n"
-                        "Host: localhost:8080\n"
+
+    // "GET /bye.html HTTP/1.1\n" is missing
+    const char *hello = "Host: localhost:8080\n"
                         "Connection: keep-alive\n"
                         "Pragma: no-cache\n"
                         "Cache-Control: no-cache\n"
@@ -49,11 +50,7 @@ int main(int argc, char const *argv[]) {
         std::cout << "Connection Failed \n";
         return 1;
     }
-    std::string expectedResult = "HTTP/1.1 200 OK\n"
-                                 "Content-Type: text/html\n"
-                                 "Content-Length: 163\n"
-                                 "\n"
-                                 "<!DOCTYPE html><html lang=\"en\"><head>    <meta charset=\"UTF-8\">    <title>Server</title></head><body><h1>    It's been an honor serving for you.</h1></body></html>";
+    std::string expectedResult = "HTTP/1.1 500\nContent-Type: text/plain\nContent-Length: 20\n\nSomething went wrong";
 
     send(sock, hello, strlen(hello), 0);
     read(sock, buffer, expectedResult.size());

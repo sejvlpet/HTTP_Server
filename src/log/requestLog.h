@@ -23,7 +23,7 @@ public:
     }
 
 private:
-    std::vector<std::string> _toLog{"target", "Host", "User-Agent", "Accept"};
+    std::vector<std::string> _toLog{"target", "Host", "User-Agent", "id"};
     const char *HEADER{"Request Log"};
 
     std::string Serialize() const override {
