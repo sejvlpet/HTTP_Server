@@ -1,5 +1,4 @@
-#ifndef PA2_SERVER_CONTROLLER_H
-#define PA2_SERVER_CONTROLLER_H
+#pragma once
 
 #include <cstring>
 #include <unistd.h>
@@ -101,6 +100,3 @@ private:
         return ifile && true;
     }
 };
-
-
-#endif //PA2_SERVER_CONTROLLER_H
