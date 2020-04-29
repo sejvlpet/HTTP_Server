@@ -1,3 +1,42 @@
+CXX := g++
+CXXFLAGS += -Wall -pedantic -std=c++14
+LDLIBS := -lpthread
+BUILD := _build
+SRC := src
+
+all: ${BUILD}/server.bin
+
+${BUILD}:
+	mkdir -p ${BUILD}
+
+${BUILD}/server.bin: ${BUILD} ${SRC}/main.cpp ${BUILD}/server.o ${BUILD}/controller.o # TODO
+	${CXX} ${CXXFLAGS} ${LDLIBS} ${SRC}/main.cpp ${BUILD}/server.o ${BUILD}/controller.o -o ${BUILD}/server.bin
+
+${BUILD}/server.o: ${BUILD} ${SRC}/logic/server.h ${SRC}/logic/server.cpp
+	${CXX} ${CXXFLAGS} -c ${SRC}/logic/server.cpp -o ${BUILD}/server.o
+
+${BUILD}/controller.o: ${BUILD} ${SRC}/logic/controller.h ${SRC}/logic/controller.cpp
+	${CXX} ${CXXFLAGS} -c ${SRC}/logic/controller.cpp -o ${BUILD}/controller.o
+
+${BUILD}/worker.o: ${BUILD} ${SRC}/logic/worker.h ${SRC}/logic/worker.cpp
+	${CXX} ${CXXFLAGS} -c ${SRC}/logic/worker.cpp -o ${BUILD}/worker.o
+
+${BUILD}/logger.o: ${BUILD} ${SRC}/logger/logger.h ${SRC}/logger/logger.cpp
+	${CXX} ${CXXFLAGS} -c ${SRC}/logger/logger.cpp -o ${BUILD}/logger.o
+
+${BUILD}/fileLogger.o: ${BUILD} ${SRC}/fileLogger/fileLogger.h ${SRC}/fileLogger/fileLogger.cpp
+	${CXX} ${CXXFLAGS} -c ${SRC}/fileLogger/fileLogger.cpp -o ${BUILD}/fileLogger.o
+
+clean:
+	rm -rf ${BUILD}
+
+
+
+
+
+
+
+
 # CXX := g++
 # override CXXFLAGS += -Wall -pedantic -std=c++14
 # LDLIBS := -pthread
