@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/helper.h
-cstdio
--
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h
 map
 -
@@ -109,16 +105,26 @@ logger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/fileLogger.h
+utility
+-
+fstream
+-
 logger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
 iostream
 -
+utility
+-
 bits/unique_ptr.h
 -
 ../log/log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.cpp
+controller.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h
 cstring
@@ -131,8 +137,6 @@ fstream
 -
 ../io/request.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h
-../../helper.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/helper.h
 ../io/response/fileResponse.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.h
 ../io/response/dirResponse.h
@@ -159,8 +163,6 @@ thread
 -
 arpa/inet.h
 -
-../../helper.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/helper.h
 server.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h
 worker.h
@@ -193,6 +195,10 @@ map
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h
 ../logger/consoleLogger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.cpp
+worker.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.h
 iostream

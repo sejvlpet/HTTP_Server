@@ -1,8 +1,8 @@
 port:8080
 address:0.0.0.0
-logLocation:CONSOLE
+logLocation:FILE
 root:router
-logLevel:INFO
 logFile:logs.txt
 userDefinedShutdownUrl:shutdown
 maxPendingRequests:10
+logFormat:$HEADER\n$Time: $TIME$\nID: $ID$\n$CUSTOM$

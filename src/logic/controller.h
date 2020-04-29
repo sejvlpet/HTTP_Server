@@ -6,7 +6,6 @@
 #include <sys/stat.h>
 #include <fstream>
 #include "../io/request.h"
-#include "../../helper.h"
 #include "../io/response/fileResponse.h"
 #include "../io/response/dirResponse.h"
 #include "../io/response/execResponse.h"

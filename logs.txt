@@ -1,0 +1,84 @@
+Reponse Log
+returned: default response
+status: 500
+Wed Apr 29 16:04:23 2020
+----------------------
+Request Log
+target: 
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 0
+Wed Apr 29 16:05:45 2020
+----------------------
+Reponse Log
+returned dir: router/
+status: 200
+Wed Apr 29 16:05:45 2020
+----------------------
+Request Log
+target: subfolder
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 1
+Wed Apr 29 16:05:47 2020
+----------------------
+Reponse Log
+returned dir: router/subfolder
+status: 200
+Wed Apr 29 16:05:47 2020
+----------------------
+Request Log
+target: subfolder/subfolder1
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 2
+Wed Apr 29 16:05:52 2020
+----------------------
+Reponse Log
+returned dir: router/subfolder/subfolder1
+status: 200
+Wed Apr 29 16:05:52 2020
+----------------------
+Request Log
+target: subfolder/subfolder1/subfolder2
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 3
+Wed Apr 29 16:05:53 2020
+----------------------
+Reponse Log
+returned dir: router/subfolder/subfolder1/subfolder2
+status: 200
+Wed Apr 29 16:05:53 2020
+----------------------
+Request Log
+target: subfolder/subfolder1/subfolder2
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 0
+Wed Apr 29 21:44:05 2020
+----------------------
+Reponse Log
+returned dir: router/subfolder/subfolder1/subfolder2
+status: 200
+Wed Apr 29 21:44:05 2020
+----------------------
+Request Log
+target: subfolder/subfolder1/subfolder4
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 1
+Wed Apr 29 21:44:09 2020
+----------------------
+Reponse Log
+status: 404
+Wed Apr 29 21:44:09 2020
+----------------------
+Request Log
+Wed Apr 29 21:44:28 2020
+----------------------
+Reponse Log
+returned: default response
+status: 500
+Wed Apr 29 21:44:28 2020
+----------------------

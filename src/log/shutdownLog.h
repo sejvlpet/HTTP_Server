@@ -7,8 +7,8 @@ class ShutDownLog : public Log {
 public:
     ShutDownLog(bool final) : _final(final) {}
 
-    std::string ToString() const override {
-        return std::move(Serialize());
+    std::string ToString(const std::string &format) const override {
+        return Serialize(format);
     }
 
 
@@ -17,7 +17,7 @@ private:
     const char *HEADER_FINAL{"Shutdown final Log"};
     bool _final{false};
 
-    std::string Serialize() const override {
+    std::string Serialize(const std::string &format) const override {
         std::string response;
         response.append(CreateLine(_final ? HEADER_FINAL : HEADER_NOT_FINAL));
         response.append(_customMessage);

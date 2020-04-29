@@ -123,33 +123,6 @@ pa2_server/fast:
 	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/build
 .PHONY : pa2_server/fast
 
-helper.o: helper.cpp.o
-
-.PHONY : helper.o
-
-# target to build an object file
-helper.cpp.o:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/helper.cpp.o
-.PHONY : helper.cpp.o
-
-helper.i: helper.cpp.i
-
-.PHONY : helper.i
-
-# target to preprocess a source file
-helper.cpp.i:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/helper.cpp.i
-.PHONY : helper.cpp.i
-
-helper.s: helper.cpp.s
-
-.PHONY : helper.s
-
-# target to generate assembly for a file
-helper.cpp.s:
-	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/helper.cpp.s
-.PHONY : helper.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -672,9 +645,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... pa2_server"
 	@echo "... edit_cache"
-	@echo "... helper.o"
-	@echo "... helper.i"
-	@echo "... helper.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

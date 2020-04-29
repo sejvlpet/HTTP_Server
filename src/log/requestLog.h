@@ -7,8 +7,8 @@
 
 class RequestLog : public Log {
 public:
-    std::string ToString() const override {
-        return std::move(Serialize());
+    std::string ToString(const std::string &format) const override {
+        return Serialize(format);
     }
 
     void SetCustom(std::map<std::string, std::string> &data) {
@@ -26,7 +26,7 @@ private:
     std::vector<std::string> _toLog{"target", "Host", "User-Agent", "id"};
     const char *HEADER{"Request Log"};
 
-    std::string Serialize() const override {
+    std::string Serialize(const std::string &format) const override {
         std::string response;
         response.append(CreateLine(HEADER));
         response.append((_customMessage));

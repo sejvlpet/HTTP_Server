@@ -10,8 +10,8 @@ public:
         _customMessage = message;
     }
 
-    std::string ToString() const override {
-        return Serialize();
+    std::string ToString(const std::string &format) const override {
+        return Serialize(format);
     }
 
 
@@ -20,7 +20,7 @@ private:
     const char *WARNING_HEADER{"Warning"};
     bool _fatal{true};
 
-    std::string Serialize() const override {
+    std::string Serialize(const std::string &format) const override {
         std::string response;
         response.append(CreateLine(_fatal ? ERROR_HEADER : WARNING_HEADER));
         response.append(CreateLine(_customMessage));

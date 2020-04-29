@@ -80,12 +80,12 @@ private:
                                                         {"port", "8080"},
                                                         {"logLocation", "CONSOLE"}, // todo how to parse string to enum?
                                                         {"root", "router/"}, // todo at least this option has to be passed
-                                                        {"logLevel", "INFO"},
-                                                        {"logFile", ""}, // if log to file is set and file empty => error
+                                                        {"logFile", "default"}, // if log to file is set and file empty => error
                                                         {"shutdownUrl", "E5gySqfwoPjevP3RYP5o"},
                                                         {"userDefinedShutdownUrl", "E5gySqfwoPjevP3RYP5o"},
                                                         {"maxPendingRequests", "20"},
-                                                        {"address", "0.0.0.0"}
+                                                        {"address", "0.0.0.0"},
+                                                        {"logFormat","$HEADER\n$Time: $TIME$\nID: $ID$\n$CUSTOM$"}
 
                                                 }};
     std::map<const std::string, const LOG_LOCATION> _locations{{
@@ -93,18 +93,13 @@ private:
                                                            {"FILE", FILE}
                                                    }};
 
-    std::map<const std::string, const LOG_LEVEL> _levels{{
-                                                     {"INFO", INFO},
-                                                     {"WARN", WARN},
-                                                     {"ERROR", ERROR}
-                                             }};
 
     // members with default values
     bool _shutDown{false}; // sets to true if serer's about to shutDown
     sockaddr_in _address{};
     int _addrLen{0};
     int _serverFd{0};
-    std::unique_ptr<Logger> _logger{std::make_unique<ConsoleLogger>()};
+    std::unique_ptr<Logger> _logger;
 
     // checks validity of options and sets them to our server options
     void SetupOptions(std::map<std::string, std::string> &options);

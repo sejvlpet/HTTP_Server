@@ -15,7 +15,7 @@ public:
     }
 
     // todo this method should be abstracy
-    virtual std::string ToString() const = 0;
+    virtual std::string ToString(const std::string &format) const = 0;
     virtual ~Log()= default;
 
 protected:
@@ -24,7 +24,7 @@ protected:
     const char *SEPARATOR{"----------------------"};
     std::string _customMessage;
 
-    virtual std::string Serialize() const = 0;
+    virtual std::string Serialize(const std::string &format) const = 0;
 
     std::string CreateLine(const std::string &data) const {
         return data + '\n';

@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/pa2_server.dir/helper.cpp.o"
   "CMakeFiles/pa2_server.dir/main.cpp.o"
   "CMakeFiles/pa2_server.dir/src/io/parser.cpp.o"
   "CMakeFiles/pa2_server.dir/src/io/request.cpp.o"

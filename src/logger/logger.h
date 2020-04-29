@@ -1,4 +1,5 @@
 #include <iostream>
+#include <utility>
 #include <bits/unique_ptr.h>
 #include "../log/log.h"
 
@@ -8,6 +9,7 @@
 
 class Logger {
 public:
+    Logger(std::string format) : _format(std::move(format)) {}
     // todo add logic and move to .cpp
     virtual void Log(const std::unique_ptr<class Log> &log) const = 0;
 
@@ -15,6 +17,8 @@ public:
 
     virtual ~Logger()=default;
 
+protected:
+    std::string _format;
 };
 
 

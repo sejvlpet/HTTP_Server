@@ -6,7 +6,6 @@
 #include <iostream>
 #include <thread>
 #include <arpa/inet.h>
-#include "../../helper.h"
 #include "server.h"
 #include "worker.h"
 #include "../log/shutdownLog.h"
@@ -63,11 +62,6 @@ void Server::SetupOptions(std::map<std::string, std::string> &options) {
                     Error("Unknown log location value");
                     return;
                 }
-            } else if (key == "logLevel") {
-                if (_levels.find(value) == _levels.end()) {
-                    Error("Unknown log level value");
-                    return;
-                }
             } else if (key == "logFile") {
                 // todo check rights
             } else if (key == "shutDownUrl") {
@@ -79,6 +73,13 @@ void Server::SetupOptions(std::map<std::string, std::string> &options) {
             Log(ErrorLog("Trying to set invalid option " + key + " with value " + value, false));
         }
     }
+}
+
+// fixme this is copy pasted from controller, have only one implementation
+bool FileOk(const std::string &file) {
+    std::ifstream ifile;
+    ifile.open(file, std::ios_base::app);
+    return ifile && true;
 }
 
 void Server::Setup() {
@@ -115,8 +116,14 @@ void Server::Setup() {
         return;
     }
 
+    // sets default log format and logger to console, so even errors during future log setup con be logged
+    _logger = std::make_unique<ConsoleLogger>(_options["logFormat"]);
     if (_locations[_options["logLocation"]] == FILE) { // console is there by default
-        _logger = std::make_unique<FileLogger>();
+        if(!FileOk(_options["logFile"])) {
+            Error("Cannot write to file");
+            return;
+        }
+        _logger = std::make_unique<FileLogger>(_options["logFormat"], _options["logFile"]);
     }
 
     _setupStatus = OK;

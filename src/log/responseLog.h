@@ -6,8 +6,8 @@
 
 class ResponseLog : public Log {
 public:
-    std::string ToString() const override {
-        return std::move(Serialize());
+    std::string ToString(const std::string &format) const override {
+        return Serialize(format);
     }
 
     void SetCustom(const std::map<std::string, std::string> &data) {
@@ -22,10 +22,16 @@ public:
 private:
     const char *HEADER{"Reponse Log"};
 
-    std::string Serialize() const override {
+    std::string Serialize(const std::string &format) const override {
         std::string response;
         response.append(CreateLine(HEADER));
         response.append(_customMessage);
+
+        // todo format logs
+//        size_t index = response.find("$CUSTOM$");
+//        if (index != std::string::npos) {
+//            response.replace(index, 9, _customMessage);
+//        }
 
         AddCommonPart(response);
         return response;
