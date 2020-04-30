@@ -18,7 +18,7 @@ public:
     // from parsed request setups request
     void Setup(std::map<std::string, std::string> &parsed, int socket) {
         _socket = socket;
-        _params = std::move(parsed); // nobody cares about parsers ownership lol
+        _params = std::move(parsed);
         _params["id"] = std::to_string(_id++);
         CreateLog();
     }
@@ -27,6 +27,7 @@ public:
         return _socket;
     }
 
+    // ASK_1 those getters would make much better sense being const, but map doesn't want to allow it
     bool IsValid() {
         return _params["valid"] == "true";
     }
@@ -43,7 +44,11 @@ public:
         return _params["root"];
     }
 private:
-    int _socket{0}; // fixme deafult value  seems  wrong - but isn't unutilised (or how to spell it) even worse?
+    // BUG - sometimes server sends default response - something went wrong with code 500 to itself
+    // I'm quite sure that it is because of this default set of _socket to zero - how should I solve it?
+    // ASK_1 - should I problem described above solve by not sending anything to socket with number 0, let it be,
+    // or somehow else?
+    int _socket{0};
     std::map<std::string, std::string> _params;
     RequestLog _log;
     static size_t _id;

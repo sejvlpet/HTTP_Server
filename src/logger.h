@@ -10,7 +10,8 @@
 class Logger {
 public:
     Logger(std::string format) : _format(std::move(format)) {}
-    // todo add logic and move to .cpp
+
+    // ASK_0 why there has to be keyword class?
     virtual void Log(const std::unique_ptr<class Log> &log) const = 0;
 
     virtual void Log(const class Log &log) const = 0;
@@ -19,6 +20,8 @@ public:
 
 protected:
     std::string _format;
+
+    virtual void WriteOut(const std::string &msg) const = 0;
 };
 
 

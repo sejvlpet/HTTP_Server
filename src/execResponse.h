@@ -18,7 +18,7 @@ public:
         FILE *pipe = popen((_root + _target).c_str(), "r");
 
         if (!pipe) {
-            // todo somehow handle idk yet
+            // todo somehow handle
         }
 
         // read content of given file

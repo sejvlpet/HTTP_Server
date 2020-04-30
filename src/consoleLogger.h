@@ -7,7 +7,6 @@ class ConsoleLogger : public Logger {
 public:
     ConsoleLogger(const std::string &format) : Logger(format) {}
 
-    // fixme why there has to be keyword class?
     void Log(const std::unique_ptr<class Log> &log) const override {
         std::cout << log->ToString(_format);
     }
@@ -16,6 +15,11 @@ public:
         std::cout << log.ToString(_format);
     }
 
+
+private:
+    void WriteOut(const std::string &msg) const override {
+        std::cout << msg;
+    }
 };
 
 

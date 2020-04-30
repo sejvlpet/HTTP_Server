@@ -1,7 +1,7 @@
 #include "server.h"
 
 int main(int argc, char const *argv[]) {
-    // todo implement config file reading
+    // BUG - I've just found out, that if program is runned twice, the second one segfaults
     Server server;
     if (argc > 1)
         server.ReadOptions(argv[1]);

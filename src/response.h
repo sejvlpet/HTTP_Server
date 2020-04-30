@@ -8,7 +8,6 @@
 
 class Response {
 public:
-    // todo - hopefully unique_ptr returned like this'll thread safe (it really should), if no use shared_ptr
     std::unique_ptr<Log> GetLog() {
         return std::make_unique<ResponseLog>(_log);
     }

@@ -42,14 +42,15 @@ public:
         return --_workersCount;
     }
 
-//     logs message taken as parameter
+    // logs message taken as parameter
+    // passing value by reference seems nicer to me, but as server runs in more threads, it is not always possible
     void Log(const std::unique_ptr<Log> log) const {
         _logger->Log(log);
     }
-
     void Log(const class Log &log) const {
         _logger->Log(log);
     }
+
 
     const std::string &GetRoot() {
         return _options["root"];

@@ -30,13 +30,12 @@ void Server::ReadOptions(const std::string &configFileName) {
         return;
     }
 
-    // read config line by line, and save as key-values pair splitted by :
+    // read config line by line, and save as key-values pair seperated by :
     while (std::getline(file, tmp)) {
         size_t delimeterPos = tmp.find(':');
         if (delimeterPos == std::string::npos) {
-            // error log? warning log? Idk, will see
             Error("Invalid options");
-            return; // or not?
+            return;
         }
         options[tmp.substr(0, delimeterPos)] = tmp.substr(delimeterPos + 1);
     }
@@ -62,8 +61,6 @@ void Server::SetupOptions(std::map<std::string, std::string> &options) {
                     Error("Unknown log location value");
                     return;
                 }
-            } else if (key == "logFile") {
-                // todo check rights
             } else if (key == "shutDownUrl") {
                 Error("Trying to set system option");
                 return;
@@ -137,12 +134,14 @@ void Server::ShutDown() {
 int Server::Listen() {
     if (_setupStatus == SETUP_STATUS::FAIL) return SETUP_FAIL;
 
+    // BUG - tests from browser are not beeing listed well
+    // if you send test from browser, server doesn't hear it and responds late
+    // normally is test response send after another request is recieved
+
     while (true) {
         if (!_shutDown) { // after shutdown any request won't be accepted
             int newSocket;
-            // fixme do something more c++
             if ((newSocket = accept(_serverFd, (sockaddr *) &_address, (socklen_t *) &_addrLen)) < 0) {
-                // listening failed
                 Error("Error in accept");
                 return LISTEN_FAIL;
             }
@@ -154,10 +153,10 @@ int Server::Listen() {
             }
         }
 
-        // fixme - this condition doesn't obviously work :D
+        // BUG - shutting down doesn't work optimally
+        // sometimes, request are recieved or even served even after shut down
         if (_shutDown && _workersCount == 0) break;
     }
-    // fixme log shutting down
     Log(ShutDownLog(true));
     return LISTEN_SUCCESS;
 }

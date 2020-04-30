@@ -6,7 +6,7 @@
 class ErrorLog : public Log {
 public:
     ErrorLog(const std::string &message, bool fatal = true) : _fatal(fatal) {
-        // fixme - base mebers have to be initilazed like that?
+        // ASK_0 - base mebers have to be initilazed like that?
         _customMessage = message;
     }
 

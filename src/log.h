@@ -14,13 +14,11 @@ public:
         _dateTime = std::chrono::system_clock::now();
     }
 
-    // todo this method should be abstracy
     virtual std::string ToString(const std::string &format) const = 0;
     virtual ~Log()= default;
 
 protected:
     std::chrono::time_point<std::chrono::system_clock> _dateTime;
-    const char *HEADER{"Base Log"};
     const char *SEPARATOR{"----------------------"};
     std::string _customMessage;
 

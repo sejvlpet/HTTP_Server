@@ -11,6 +11,7 @@
 #include "execResponse.h"
 #include "notFoundResponse.h"
 
+
 class Controller {
 public:
     void operator()(Server *parent, const Request &request) {
@@ -22,7 +23,7 @@ public:
 private:
     Server *_parent{nullptr};
     Request _request;
-    std::unique_ptr<Response> _response{std::make_unique<Response>()}; // fixme I don't like that unique_ptr
+    std::unique_ptr<Response> _response{std::make_unique<Response>()};
 
     void HandleRequest() {
         std::string target = _request.GetTarget();
@@ -31,9 +32,6 @@ private:
 
         _parent->IncWorkers();
 
-        // todo check rights and permisions
-        // this version recently fails if trying to read nonexistng folder and returns nothing for
-        // not existing file
 
         if (_request.IsValid()) {
 
@@ -75,7 +73,7 @@ private:
         _parent->DecWorkers();
     }
 
-    // todo - should be implemented in incognito namespace
+    // todo - those method has nothing to do with controller - should be only functions and implemented somewhere else
 
     static bool IsExecutable(const std::string &file) {
         // inspired on https://stackoverflow.com/questions/5719694/how-to-check-if-file-is-executable-in-c

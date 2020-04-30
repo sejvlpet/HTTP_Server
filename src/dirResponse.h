@@ -20,7 +20,11 @@ public:
     void WriteOut(int socket) override {
         std::string response = HTML_HEADER, subPath = _root.substr(_root.find_last_of('/') + 1);
         for(const std::string &item : _content) {
+
+            // BUG - if target is given with / in the end, this content is writen out wrongly
+            // removing / from the end if it's there brokes request withou it, I do not know why
             response.append("<a href=\"" + subPath + "/" + item + "\">" + item + "<a\"><br />\n");
+
         }
         response.append(HTML_FOOTER);
 

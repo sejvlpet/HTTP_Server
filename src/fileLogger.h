@@ -15,7 +15,6 @@
 class FileLogger : public Logger {
 public:
     FileLogger(const std::string &format, std::string fileName) : Logger(format), _fileName(std::move(fileName)) {}
-    // fixme why there has to be keyword class?
     void Log(const std::unique_ptr<class Log> &log) const override {
         WriteOut(log->ToString(_format));
     }
@@ -28,7 +27,7 @@ private:
     mutable std::mutex _fileMutex;
 
 
-    void WriteOut(const std::string &msg) const {
+    void WriteOut(const std::string &msg) const override {
         std::lock_guard<std::mutex> guard(_fileMutex);
 
         std::ofstream f(_fileName, std::ios_base::app);
