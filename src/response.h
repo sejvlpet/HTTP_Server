@@ -4,7 +4,7 @@
 #include <bits/unique_ptr.h>
 #include <cstring>
 #include <unistd.h>
-#include "../../log/responseLog.h"
+#include "responseLog.h"
 
 class Response {
 public:

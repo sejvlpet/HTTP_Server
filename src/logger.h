@@ -1,7 +1,7 @@
 #include <iostream>
 #include <utility>
 #include <bits/unique_ptr.h>
-#include "../log/log.h"
+#include "log.h"
 
 #ifndef PA2_SERVER_LOGGER_H
 #define PA2_SERVER_LOGGER_H

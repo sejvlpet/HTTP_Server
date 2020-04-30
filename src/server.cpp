@@ -8,10 +8,10 @@
 #include <arpa/inet.h>
 #include "server.h"
 #include "worker.h"
-#include "../log/shutdownLog.h"
-#include "../log/errorLog.h"
-#include "../logger/consoleLogger.h"
-#include "../logger/fileLogger.h"
+#include "shutdownLog.h"
+#include "errorLog.h"
+#include "consoleLogger.h"
+#include "fileLogger.h"
 
 void Server::Error(const std::string &message) {
     Log(ErrorLog(message));

@@ -5,11 +5,11 @@
 #include <unistd.h>
 #include <sys/stat.h>
 #include <fstream>
-#include "../io/request.h"
-#include "../io/response/fileResponse.h"
-#include "../io/response/dirResponse.h"
-#include "../io/response/execResponse.h"
-#include "../io/response/notFoundResponse.h"
+#include "request.h"
+#include "fileResponse.h"
+#include "dirResponse.h"
+#include "execResponse.h"
+#include "notFoundResponse.h"
 
 class Controller {
 public:

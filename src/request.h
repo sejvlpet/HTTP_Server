@@ -2,8 +2,8 @@
 #define PA2_SERVER_REQUEST_H
 
 #include <map>
-#include "../log/requestLog.h"
-#include "../logic/server.h"
+#include "requestLog.h"
+#include "server.h"
 
 class Request {
 public:

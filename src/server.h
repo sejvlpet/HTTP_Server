@@ -8,8 +8,8 @@
 #include <utility>
 #include <memory>
 #include <map>
-#include "../logger/logger.h"
-#include "../logger/consoleLogger.h"
+#include "logger.h"
+#include "consoleLogger.h"
 
 
 class Server {
