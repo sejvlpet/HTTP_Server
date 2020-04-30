@@ -1,4 +1,4 @@
-#include "src/logic/server.h"
+#include "server.h"
 
 int main(int argc, char const *argv[]) {
     // todo implement config file reading

@@ -84,115 +84,115 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/main.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/consoleLogger.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/consoleLogger.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/parser.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/request.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/dirResponse.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/dirResponse.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/dirResponse.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/errorLog.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/execResponse.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/errorLog.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/execResponse.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/execResponse.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/execResponse.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/fileResponse.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileLogger.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/notFoundResponse.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileLogger.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/notFoundResponse.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileResponse.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileResponse.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/io/response/response.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/errorLog.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/errorLog.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/log.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/main.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/notFoundResponse.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/requestLog.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/notFoundResponse.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/responseLog.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/responseLog.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/shutdownLog.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log/shutdownLog.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/requestLog.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/consoleLogger.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/requestLog.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/fileLogger.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/fileLogger.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/responseLog.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger/logger.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/responseLog.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/server.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/controller.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/server.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/shutdownLog.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/server.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/shutdownLog.h">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.cpp">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
-		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logic/worker.h">
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.h">
 			<Option target="pa2_server"/>
 		</Unit>
 		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/CMakeLists.txt">
