@@ -18,13 +18,15 @@ private:
     bool _final{false};
 
     std::string Serialize(const std::string &format) const override {
-        std::string response;
-        response.append(CreateLine(_final ? HEADER_FINAL : HEADER_NOT_FINAL));
-        response.append(_customMessage);
+        std::string response = format;
+
+        FindAndReplace(response,HEADER_NAME, _final ? HEADER_FINAL : HEADER_NOT_FINAL);
+        FindAndReplace(response,CUSTOM_NAME, _customMessage);
 
         AddCommonPart(response);
         return response;
     }
+
 };
 
 #endif //PA2_SERVER_SHUTDOWNLOG_H

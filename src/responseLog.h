@@ -23,19 +23,16 @@ private:
     const char *HEADER{"Reponse Log"};
 
     std::string Serialize(const std::string &format) const override {
-        std::string response;
-        response.append(CreateLine(HEADER));
-        response.append(_customMessage);
+        std::string response = format;
 
-        // todo format logs
-//        size_t index = response.find("$CUSTOM$");
-//        if (index != std::string::npos) {
-//            response.replace(index, 9, _customMessage);
-//        }
+        FindAndReplace(response,HEADER_NAME, HEADER);
+        FindAndReplace(response,CUSTOM_NAME, _customMessage);
 
         AddCommonPart(response);
+
         return response;
     }
+
 };
 
 

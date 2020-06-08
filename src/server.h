@@ -57,7 +57,8 @@ public:
     }
 
 private:
-    // new implementation
+    const char DELIMETER = ':';
+    const char COMMENT = ';';
     // constants and enums
     enum LOG_LOCATION { // tells where do we want to log
         FILE, CONSOLE
@@ -86,7 +87,7 @@ private:
                                                         {"userDefinedShutdownUrl", "E5gySqfwoPjevP3RYP5o"},
                                                         {"maxPendingRequests", "20"},
                                                         {"address", "0.0.0.0"},
-                                                        {"logFormat","$HEADER\n$Time: $TIME$\nID: $ID$\n$CUSTOM$"}
+                                                        {"logFormat","$HEADER$$NEWLINE$Time: $TIME$$NEWLINE$ID: $ID$$NEWLINE$$CUSTOM$$NEWLINE$$SEPERATOR$"}
 
                                                 }};
     std::map<const std::string, const LOG_LOCATION> _locations{{

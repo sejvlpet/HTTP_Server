@@ -32,12 +32,14 @@ void Server::ReadOptions(const std::string &configFileName) {
 
     // read config line by line, and save as key-values pair seperated by :
     while (std::getline(file, tmp)) {
-        size_t delimeterPos = tmp.find(':');
-        if (delimeterPos == std::string::npos) {
-            Error("Invalid options");
-            return;
+        if (!tmp.empty() && tmp[0] != COMMENT) {
+            size_t delimeterPos = tmp.find(DELIMETER);
+            if (delimeterPos == std::string::npos) {
+                Error("Invalid options");
+                return;
+            }
+            options[tmp.substr(0, delimeterPos)] = tmp.substr(delimeterPos + 1);
         }
-        options[tmp.substr(0, delimeterPos)] = tmp.substr(delimeterPos + 1);
     }
 
     file.close();
@@ -65,7 +67,7 @@ void Server::SetupOptions(std::map<std::string, std::string> &options) {
                 Error("Trying to set system option");
                 return;
             }
-            _options[key] = value; // if everything's fine, set readed value
+            _options[key] = value; // if everything's fine, set loaded value
         } else {
             Log(ErrorLog("Trying to set invalid option " + key + " with value " + value, false));
         }
@@ -116,7 +118,7 @@ void Server::Setup() {
     // sets default log format and logger to console, so even errors during future log setup con be logged
     _logger = std::make_unique<ConsoleLogger>(_options["logFormat"]);
     if (_locations[_options["logLocation"]] == FILE) { // console is there by default
-        if(!FileOk(_options["logFile"])) {
+        if (!FileOk(_options["logFile"])) {
             Error("Cannot write to file");
             return;
         }

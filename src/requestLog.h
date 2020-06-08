@@ -27,11 +27,13 @@ private:
     const char *HEADER{"Request Log"};
 
     std::string Serialize(const std::string &format) const override {
-        std::string response;
-        response.append(CreateLine(HEADER));
-        response.append((_customMessage));
+        std::string response = format;
+
+        FindAndReplace(response,HEADER_NAME, HEADER);
+        FindAndReplace(response,CUSTOM_NAME, _customMessage);
 
         AddCommonPart(response);
+
         return response;
     }
 };

@@ -21,9 +21,10 @@ private:
     bool _fatal{true};
 
     std::string Serialize(const std::string &format) const override {
-        std::string response;
-        response.append(CreateLine(_fatal ? ERROR_HEADER : WARNING_HEADER));
-        response.append(CreateLine(_customMessage));
+        std::string response = format;
+
+        FindAndReplace(response,HEADER_NAME, _fatal ? ERROR_HEADER : WARNING_HEADER);
+        FindAndReplace(response,CUSTOM_NAME, _customMessage);
 
         AddCommonPart(response);
         return response;

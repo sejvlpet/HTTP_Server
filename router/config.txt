@@ -1,8 +1,9 @@
+
 port:8080
 address:0.0.0.0
-logLocation:FILE
+;logLocation:FILE
 root:router
 logFile:router/logs.txt
 userDefinedShutdownUrl:shutdown
 maxPendingRequests:10
-logFormat:$HEADER\n$Time: $TIME$\nID: $ID$\n$CUSTOM$
+;logFormat:insert into Logs (header, log_id, time) values ($HEADER$, $ID$, $TIME$)$NEWLINE$
