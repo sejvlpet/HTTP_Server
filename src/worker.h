@@ -4,48 +4,105 @@
 #include <iostream>
 #include <unistd.h>
 #include <thread>
+#include <sys/stat.h>
 #include "server.h"
-#include "controller.h"
 #include "parser.h"
 #include "request.h"
+#include "response.h"
+#include "dirResponse.h"
+#include "fileResponse.h"
+#include "execResponse.h"
+#include "notFoundResponse.h"
 
-// parses message and let controller handle it in it's own thread
+// fixme - this class should be named controller a recent controller should be a worker - rename
+
+
 class Worker {
 public:
-    static const size_t BUFFER_READ_SIZE{300000};
-
-    // fixme move this to cpp file
-    Worker(Server *parent, int socket) : _parent(parent), _socket(socket) {
-        // read
-        read(socket, _buffer, BUFFER_READ_SIZE);
-        ParseMessage();
-    }
-
-
-    int Run() {
-
-        std::thread thr(Controller(), _parent, _request);
-        thr.detach();
-
-        // fixme return something real
-        return 1;
+    void operator()(Server *parent, const Request &request) {
+        _parent = parent;
+        _request = request;
+        HandleRequest();
     }
 
 private:
     Server *_parent{nullptr};
-    char _buffer[BUFFER_READ_SIZE]{0};
-    int _socket;
     Request _request;
+    std::unique_ptr<Response> _response{std::make_unique<Response>()};
 
-    // fixme move this to cpp file
-    // Parse message and saves it as request object
-    void ParseMessage() {
-        // create instance of parser and give it _request to parse, returns
-        Parser parser(_buffer, _socket, _parent->GetRoot()); // parses request, creates its own instance of request
-        _request = parser.GetRequest(); // here is request instance mover from parser
-        _parent->Log(_request.GetLog()); // log things
+    void HandleRequest() {
+        std::string target = _request.GetTarget();
+        std::string extension = _request.GetExtension();
+        std::string root = _request.GetRoot();
+
+        _parent->IncWorkers();
+
+
+        if (_request.IsValid()) {
+
+            if (target.empty()) {
+
+                _response = std::make_unique<DirResponse>(root);
+
+            } else if (_parent->ShutDownCalled(target)) {
+
+                _parent->ShutDown();
+                _response = std::make_unique<FileResponse>(root, "bye.html");
+
+            } else if (DirExists(root + '/' + target)) {
+
+                _response = std::make_unique<DirResponse>(root + target);
+
+            } else if (IsExecutable(root + '/' + target)) {
+
+                _response = std::make_unique<ExecResponse>(root, target);
+
+            } else if (FileOk(root + '/' + target)) {
+                if (extension == "html") {
+                    _response = std::make_unique<FileResponse>(root, target);
+                } else {
+                    _response = std::make_unique<FileResponse>(root, target, false);
+                }
+
+            } else {
+
+                _response = std::make_unique<NotFoundResponse>();
+
+            }
+        }
+
+        _response->WriteOut(_request.GetSocket());
+        _parent->Log(_response->GetLog());
+
+        close(_request.GetSocket());
+        _parent->DecWorkers();
+    }
+
+    // todo - those method has nothing to do with controller - should be only functions and implemented somewhere else
+
+    static bool IsExecutable(const std::string &file) {
+        // inspired on https://stackoverflow.com/questions/5719694/how-to-check-if-file-is-executable-in-c
+        struct stat st{};
+
+        if (stat(file.c_str(), &st) < 0)
+            return false;
+        return (st.st_mode & S_IEXEC) != 0;
+    }
+
+    static bool DirExists(const std::string &dir) {
+        // inspired on https://stackoverflow.com/questions/18100097/portable-way-to-check-if-directory-exists-windows-linux-c
+        struct stat info{};
+
+        if (stat(dir.c_str(), &info) != 0)
+            return false;
+        else return (info.st_mode & S_IFDIR) != 0;
+    }
+
+    static bool FileOk(const std::string &file) {
+        std::ifstream ifile;
+        ifile.open(file);
+        return ifile && true;
     }
 };
-
 
 #endif //PA2_SERVER_WORKER_H

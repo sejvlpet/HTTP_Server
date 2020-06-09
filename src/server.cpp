@@ -12,6 +12,7 @@
 #include "errorLog.h"
 #include "consoleLogger.h"
 #include "fileLogger.h"
+#include "controller.h"
 
 
 Server::Server() {
@@ -154,8 +155,8 @@ int Server::Listen() {
                 return LISTEN_FAIL;
             }
             if (_workersCount < std::stoi(_options["maxPendingRequests"])) {
-                Worker worker(this, newSocket);
-                worker.Run();
+                Controller controller(this, newSocket);
+                controller.Run();
             } else {
                 Log(ErrorLog("Couldn't handle request", false));
             }

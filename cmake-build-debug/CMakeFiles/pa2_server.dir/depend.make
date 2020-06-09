@@ -15,11 +15,13 @@ CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/fileResponse.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/log.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/logger.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/notFoundResponse.h
+CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/parser.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/request.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/requestLog.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/response.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/responseLog.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/server.h
+CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/worker.h
 
 CMakeFiles/pa2_server.dir/src/dirResponse.cpp.o: ../src/dirResponse.cpp
 CMakeFiles/pa2_server.dir/src/dirResponse.cpp.o: ../src/dirResponse.h
@@ -122,7 +124,6 @@ CMakeFiles/pa2_server.dir/src/shutdownLog.cpp.o: ../src/shutdownLog.cpp
 CMakeFiles/pa2_server.dir/src/shutdownLog.cpp.o: ../src/shutdownLog.h
 
 CMakeFiles/pa2_server.dir/src/worker.cpp.o: ../src/consoleLogger.h
-CMakeFiles/pa2_server.dir/src/worker.cpp.o: ../src/controller.h
 CMakeFiles/pa2_server.dir/src/worker.cpp.o: ../src/dirResponse.h
 CMakeFiles/pa2_server.dir/src/worker.cpp.o: ../src/execResponse.h
 CMakeFiles/pa2_server.dir/src/worker.cpp.o: ../src/fileResponse.h
