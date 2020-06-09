@@ -13,6 +13,13 @@
 #include "consoleLogger.h"
 #include "fileLogger.h"
 
+
+Server::Server() {
+    // setups logger to default - console with default logFormat
+    // this step is needed for errors in setup to be logged
+    _logger = std::make_unique<ConsoleLogger>(_options["logFormat"]);
+}
+
 void Server::Error(const std::string &message) {
     Log(ErrorLog(message));
     _setupStatus = FAIL;
@@ -46,6 +53,7 @@ void Server::ReadOptions(const std::string &configFileName) {
     SetupOptions(options);
 }
 
+// fixme rename this method, it only saves new options, but doesn't setup server - name is confusing
 void Server::SetupOptions(std::map<std::string, std::string> &options) {
     for (auto &pair: options) {
         std::string key = pair.first;
@@ -69,7 +77,7 @@ void Server::SetupOptions(std::map<std::string, std::string> &options) {
             }
             _options[key] = value; // if everything's fine, set loaded value
         } else {
-            Log(ErrorLog("Trying to set invalid option " + key + " with value " + value, false));
+            Log(ErrorLog("Trying to set invalid option \"" + key + "\" with value \"" + value + "\"", false));
         }
     }
 }
@@ -115,8 +123,6 @@ void Server::Setup() {
         return;
     }
 
-    // sets default log format and logger to console, so even errors during future log setup con be logged
-    _logger = std::make_unique<ConsoleLogger>(_options["logFormat"]);
     if (_locations[_options["logLocation"]] == FILE) { // console is there by default
         if (!FileOk(_options["logFile"])) {
             Error("Cannot write to file");

@@ -10,10 +10,6 @@
 logger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.cpp
-controller.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.h
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.h
 cstring
 -
@@ -104,27 +100,15 @@ bits/unique_ptr.h
 log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/main.cpp
-server.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/server.h
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/notFoundResponse.h
 response.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.cpp
-parser.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h
 map
 -
 utility
 -
-request.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.cpp
 request.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
 
@@ -213,10 +197,6 @@ consoleLogger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/shutdownLog.h
 log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.cpp
-worker.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.h
 iostream

@@ -6,4 +6,5 @@ root:router
 logFile:router/logs.txt
 userDefinedShutdownUrl:shutdown
 maxPendingRequests:10
-;logFormat:insert into Logs (header, log_id, time) values ($HEADER$, $ID$, $TIME$)$NEWLINE$
+test:useless
+     logFormat:insert into Logs (header, log_id, time) values ($HEADER$, $ID$, $TIME$)$NEWLINE$
