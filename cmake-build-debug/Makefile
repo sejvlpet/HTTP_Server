@@ -609,6 +609,33 @@ src/shutdownLog.cpp.s:
 	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/shutdownLog.cpp.s
 .PHONY : src/shutdownLog.cpp.s
 
+src/threadPool.o: src/threadPool.cpp.o
+
+.PHONY : src/threadPool.o
+
+# target to build an object file
+src/threadPool.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/threadPool.cpp.o
+.PHONY : src/threadPool.cpp.o
+
+src/threadPool.i: src/threadPool.cpp.i
+
+.PHONY : src/threadPool.i
+
+# target to preprocess a source file
+src/threadPool.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/threadPool.cpp.i
+.PHONY : src/threadPool.cpp.i
+
+src/threadPool.s: src/threadPool.cpp.s
+
+.PHONY : src/threadPool.s
+
+# target to generate assembly for a file
+src/threadPool.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/threadPool.cpp.s
+.PHONY : src/threadPool.cpp.s
+
 src/worker.o: src/worker.cpp.o
 
 .PHONY : src/worker.o
@@ -699,6 +726,9 @@ help:
 	@echo "... src/shutdownLog.o"
 	@echo "... src/shutdownLog.i"
 	@echo "... src/shutdownLog.s"
+	@echo "... src/threadPool.o"
+	@echo "... src/threadPool.i"
+	@echo "... src/threadPool.s"
 	@echo "... src/worker.o"
 	@echo "... src/worker.i"
 	@echo "... src/worker.s"

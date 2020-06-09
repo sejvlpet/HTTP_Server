@@ -19,9 +19,9 @@
 
 class Worker {
 public:
-    void operator()(Server *parent, const Request &request) {
-        _parent = parent;
-        _request = request;
+    Worker(Server *parent, Request request) : _parent(parent), _request(request) {}
+
+    void operator()() {
         HandleRequest();
     }
 
@@ -63,7 +63,10 @@ private:
                 } else {
                     _response = std::make_unique<FileResponse>(root, target, false);
                 }
-
+            } else if(target == "testThread") {
+                // although this branch is for testing purposes only, I believe that this testing is essential
+                sleep(10);
+                _response = std::make_unique<NotFoundResponse>();
             } else {
 
                 _response = std::make_unique<NotFoundResponse>();

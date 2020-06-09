@@ -75,7 +75,13 @@ void Server::SetupOptions(std::map<std::string, std::string> &options) {
             } else if (key == "shutDownUrl") {
                 Error("Trying to set system option");
                 return;
+            } else if (key == "maxThreads") {
+                if(std::stoi(value) <= 0) {
+                    Error("Trying to set invalid count of threads");
+                }
+                return;
             }
+
             _options[key] = value; // if everything's fine, set loaded value
         } else {
             Log(ErrorLog("Trying to set invalid option \"" + key + "\" with value \"" + value + "\"", false));
@@ -147,6 +153,7 @@ int Server::Listen() {
     // if you send test from browser, server doesn't hear it and responds late
     // normally is test response send after another request is recieved
 
+    Controller controller(this, std::stoi(_options["maxThreads"]));
     while (true) {
         if (!_shutDown) { // after shutdown any request won't be accepted
             int newSocket;
@@ -155,8 +162,8 @@ int Server::Listen() {
                 return LISTEN_FAIL;
             }
             if (_workersCount < std::stoi(_options["maxPendingRequests"])) {
-                Controller controller(this, newSocket);
-                controller.Run();
+
+                controller.Run(newSocket);
             } else {
                 Log(ErrorLog("Couldn't handle request", false));
             }

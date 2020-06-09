@@ -12,7 +12,7 @@ class Log {
 public:
     Log() {
         _dateTime = std::chrono::system_clock::now();
-        ++_id;
+        ++_id; // fixme not thread safe
     }
 
     virtual std::string ToString(const std::string &format) const = 0;

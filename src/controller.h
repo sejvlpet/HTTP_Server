@@ -13,6 +13,11 @@
 #include "notFoundResponse.h"
 #include "parser.h"
 #include "worker.h"
+#include "threadPool.h"
+
+
+
+// todo here should be implemented thread pool
 
 
 // parses message and let controller handle it in it's own thread
@@ -21,32 +26,29 @@ public:
     static const size_t BUFFER_READ_SIZE{300000};
 
     // fixme move this to cpp file
-    Controller(Server *parent, int socket) : _parent(parent), _socket(socket) {
-        // read
+    Controller(Server *parent, size_t maxThreads) : _parent(parent), _threadPool(maxThreads) {}
+
+    void Run(int socket) {
         read(socket, _buffer, BUFFER_READ_SIZE);
-        ParseMessage();
-    }
+        Request request =  ParseMessage(socket);
 
-    void Run() {
-
-        std::thread thr(Worker(), _parent, _request);
-        thr.detach();
+        _threadPool.enqueue<Worker>(Worker(_parent, request));
 
     }
 
 private:
     Server *_parent{nullptr};
     char _buffer[BUFFER_READ_SIZE]{0};
-    int _socket;
-    Request _request;
+    ThreadPool _threadPool;
 
     // fixme move this to cpp file
     // Parse message and saves it as request object
-    void ParseMessage() {
+    Request ParseMessage(int socket) {
         // create instance of parser and give it _request to parse, returns
-        Parser parser(_buffer, _socket, _parent->GetRoot()); // parses request, creates its own instance of request
-        _request = parser.GetRequest(); // here is request instance mover from parser
-        _parent->Log(_request.GetLog()); // log things
+        Parser parser(_buffer, socket, _parent->GetRoot()); // parses request, creates its own instance of request
+        Request request = parser.GetRequest(); // here is request instance moved from parser
+        _parent->Log(request.GetLog()); // log things
+        return request;
     }
 };
 

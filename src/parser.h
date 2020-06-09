@@ -28,7 +28,7 @@ private:
     void Parse() {
         _parsed["valid"] = "true";
         SetKeyValues();
-        SetTaret();
+        SetTarget();
         GetExtension();
 
         // notice that _parsed is moved to setup and therefore destroyed here
@@ -36,7 +36,7 @@ private:
         _parsedRequest.Setup(_parsed, _socket);
     }
 
-    void SetTaret() {
+    void SetTarget() {
         if (_parsed.find("request") == _parsed.end()) {
             _parsed["valid"] = "false";
             return;

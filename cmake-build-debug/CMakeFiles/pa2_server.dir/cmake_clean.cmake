@@ -17,6 +17,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pa2_server.dir/src/responseLog.cpp.o"
   "CMakeFiles/pa2_server.dir/src/server.cpp.o"
   "CMakeFiles/pa2_server.dir/src/shutdownLog.cpp.o"
+  "CMakeFiles/pa2_server.dir/src/threadPool.cpp.o"
   "CMakeFiles/pa2_server.dir/src/worker.cpp.o"
   "pa2_server"
   "pa2_server.pdb"
