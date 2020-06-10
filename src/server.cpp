@@ -55,10 +55,10 @@ void Server::ReadOptions(const std::string &configFileName) {
 }
 
 // fixme rename this method, it only saves new options, but doesn't setup server - name is confusing
-void Server::SetupOptions(std::map<std::string, std::string> &options) {
-    for (auto &pair: options) {
-        std::string key = pair.first;
-        std::string value = pair.second;
+void Server::SetupOptions(const std::map<std::string, std::string> &options) {
+    for (const auto &pair: options) {
+        const std::string &key = pair.first;
+        const std::string &value = pair.second;
         if (_options.find(key) != _options.end()) {
             if (key == "port") {
                 if (std::stoi(value) > 65535 || std::stoi(value) < 1024) {
@@ -75,11 +75,11 @@ void Server::SetupOptions(std::map<std::string, std::string> &options) {
             } else if (key == "shutDownUrl") {
                 Error("Trying to set system option");
                 return;
-            } else if (key == "maxThreads") {
-                if(std::stoi(value) <= 0) {
-                    Error("Trying to set invalid count of threads");
+            } else if (key == "maxThreads" || key == "maxQueue") {
+                if (std::stoi(value) <= 0) {
+                    Error("Trying to set invalid count of threads or invalid queue size");
+                    return;
                 }
-                return;
             }
 
             _options[key] = value; // if everything's fine, set loaded value
@@ -153,7 +153,7 @@ int Server::Listen() {
     // if you send test from browser, server doesn't hear it and responds late
     // normally is test response send after another request is recieved
 
-    Controller controller(this, std::stoi(_options["maxThreads"]));
+    Controller controller(this, std::stoi(_options["maxThreads"]), std::stoi(_options["maxQueue"]));
     while (true) {
         if (!_shutDown) { // after shutdown any request won't be accepted
             int newSocket;
@@ -161,12 +161,8 @@ int Server::Listen() {
                 Error("Error in accept");
                 return LISTEN_FAIL;
             }
-            if (_workersCount < std::stoi(_options["maxPendingRequests"])) {
+            controller.Run(newSocket);
 
-                controller.Run(newSocket);
-            } else {
-                Log(ErrorLog("Couldn't handle request", false));
-            }
         }
 
         // BUG - shutting down doesn't work optimally

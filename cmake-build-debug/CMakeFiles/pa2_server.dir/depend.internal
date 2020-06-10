@@ -11,6 +11,7 @@ CMakeFiles/pa2_server.dir/src/controller.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.cpp
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/dirResponse.h
+ /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/errorLog.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/execResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h

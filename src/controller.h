@@ -14,6 +14,7 @@
 #include "parser.h"
 #include "worker.h"
 #include "threadPool.h"
+#include "errorLog.h"
 
 
 
@@ -26,20 +27,24 @@ public:
     static const size_t BUFFER_READ_SIZE{300000};
 
     // fixme move this to cpp file
-    Controller(Server *parent, size_t maxThreads) : _parent(parent), _threadPool(maxThreads) {}
+    Controller(Server *parent, size_t maxThreads, size_t maxQueue) : _parent(parent), _threadPool(maxThreads), _maxQueue(maxQueue) {}
 
     void Run(int socket) {
         read(socket, _buffer, BUFFER_READ_SIZE);
         Request request =  ParseMessage(socket);
 
-        _threadPool.enqueue<Worker>(Worker(_parent, request));
-
+        std::cout << "test " << _threadPool.GetCountOfQueued() << "\n";
+        if(_threadPool.GetCountOfQueued() <= _maxQueue)
+            _threadPool.enqueue<Worker>(Worker(_parent, request));
+        else
+            _parent->Log(ErrorLog("Request timeoted due to queue's full", false));
     }
 
 private:
     Server *_parent{nullptr};
     char _buffer[BUFFER_READ_SIZE]{0};
     ThreadPool _threadPool;
+    size_t _maxQueue;
 
     // fixme move this to cpp file
     // Parse message and saves it as request object
