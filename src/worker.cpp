@@ -7,18 +7,11 @@ void Worker::operator()() {
 }
 
 void Worker::HandleRequest() {
-    // todo refactor
-    std::string target = _request.GetTarget();
-    std::string extension = _request.GetExtension();
-    std::string root = _request.GetRoot();
-
-//    if(target[target.size() - 1 ] == '/')
-//        target.pop_back();
-
     _parent->IncWorkers();
-
-
     if (_request.IsValid()) {
+        std::string target = _request.GetTarget();
+        std::string extension = _request.GetExtension();
+        std::string root = _request.GetRoot();
 
         if (target.empty()) {
 

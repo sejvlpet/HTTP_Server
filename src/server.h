@@ -73,7 +73,7 @@ private:
                                                         {"userDefinedShutdownUrl", "E5gySqfwoPjevP3RYP5o"},
                                                         {"address", "0.0.0.0"},
                                                         {"logFormat","$HEADER$$NEWLINE$Time: $TIME$$NEWLINE$$CUSTOM$$NEWLINE$$SEPERATOR$"},
-                                                        {"maxThreads", "10"},
+                                                        {"maxThreads", "4"},
                                                         {"maxQueue", "100"}
 
                                                 }};

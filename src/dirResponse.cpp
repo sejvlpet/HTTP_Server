@@ -13,8 +13,12 @@ DirResponse::DirResponse(std::string root) : _root(std::move(root)) {
 void DirResponse::WriteOut(int socket) {
     std::string response = HTML_HEADER, subPath = _root.substr(_root.find_last_of('/') + 1);
 
+    std::string add;
+    if(_root.empty() || _root[_root.size() - 1] != '/')
+        add = subPath + "/";
+
     for (const std::string &item : _content) {
-        response.append("<a href=\""  + subPath + "/" + item + "\">" + item + "<a\"><br />\n");
+        response.append("<a href=\"" + add  + item + "\">" + item + "<a\"><br />\n");
     }
     response.append(HTML_FOOTER);
 
