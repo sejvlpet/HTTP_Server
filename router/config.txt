@@ -8,3 +8,5 @@ userDefinedShutdownUrl:shutdown
 maxPendingRequests:10
 test:useless
      logFormat:insert into Logs (header, log_id, time) values ($HEADER$, $ID$, $TIME$)$NEWLINE$
+maxThreads:4
+maxQueue:10
