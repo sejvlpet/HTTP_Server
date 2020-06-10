@@ -10,6 +10,7 @@ CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/consoleLogger.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/controller.cpp
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/controller.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/dirResponse.h
+CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/errorLog.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/execResponse.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/fileResponse.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/log.h

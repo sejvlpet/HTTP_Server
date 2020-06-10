@@ -88,10 +88,10 @@ private:
                                                         {"logFile", "default"}, // if log to file is set and file empty => error
                                                         {"shutdownUrl", "E5gySqfwoPjevP3RYP5o"},
                                                         {"userDefinedShutdownUrl", "E5gySqfwoPjevP3RYP5o"},
-                                                        {"maxPendingRequests", "20"},
                                                         {"address", "0.0.0.0"},
                                                         {"logFormat","$HEADER$$NEWLINE$Time: $TIME$$NEWLINE$ID: $ID$$NEWLINE$$CUSTOM$$NEWLINE$$SEPERATOR$"},
-                                                        {"maxThreads", "4"}
+                                                        {"maxThreads", "4"},
+                                                        {"maxQueue", "10"}
 
                                                 }};
     std::map<const std::string, const LOG_LOCATION> _locations{{
@@ -108,7 +108,7 @@ private:
     std::unique_ptr<Logger> _logger;
 
     // checks validity of options and sets them to our server options
-    void SetupOptions(std::map<std::string, std::string> &options);
+    void SetupOptions(const std::map<std::string, std::string> &options);
     // logs Error and sets status
     void Error(const std::string &message);
 
