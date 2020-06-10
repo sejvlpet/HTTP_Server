@@ -2,11 +2,11 @@
 port:8080
 address:0.0.0.0
 ;logLocation:FILE
-root:router
+;root:router
 logFile:router/logs.txt
 userDefinedShutdownUrl:shutdown
 maxPendingRequests:10
 test:useless
      logFormat:insert into Logs (header, time) values ($HEADER$, $TIME$)$NEWLINE$
-maxThreads:4
-maxQueue:100
+maxThreads:3
+maxQueue:3

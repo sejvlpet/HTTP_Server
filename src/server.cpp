@@ -65,13 +65,6 @@ void Server::SetupOptions(const std::map<std::string, std::string> &options) {
                     Error("Invalid port number");
                     return;
                 }
-            } else if (key == "root") {
-                // NOTE - is it enough like that? Or should I test accessibility and shit?
-                if (!dirExists(value)) {
-                    Error("Invalid root");
-                    return;
-                }
-
             } else if (key == "logLocation") {
                 if (_locations.find(value) == _locations.end()) {
                     Error("Unknown log location value");
@@ -91,6 +84,14 @@ void Server::SetupOptions(const std::map<std::string, std::string> &options) {
         } else {
             Log(ErrorLog("Trying to set invalid option \"" + key + "\" with value \"" + value + "\"", false));
         }
+    }
+
+    // NOTE - is it enough like that? Or should I test accessibility and shit?
+    // root is tested outside of loop, because even that default one has to be tested (inside of the loop only changed
+    // options are tested)
+    if (!dirExists(_options.at("root"))) {
+        Error("Invalid root");
+        return;
     }
 }
 

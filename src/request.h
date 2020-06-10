@@ -15,7 +15,6 @@ public:
 
     int GetSocket() const;
 
-    // ASK_1 those getters would make much better sense being const, but map doesn't want to allow it
     bool IsValid() const;
 
     const std::string &GetTarget() const;
@@ -30,6 +29,8 @@ private:
     // or somehow else?
 
     // NOTE I'll ignore that, it doesn't happen that often
+
+    // NOTE 2 - bug happens only in some explorers, I won't try solve it
     int _socket{0};
     std::map<std::string, std::string> _params;
     RequestLog _log;

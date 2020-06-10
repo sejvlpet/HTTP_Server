@@ -27,11 +27,14 @@ debug: all
 clean:
 	-rm -f *.o ${BINARY}
 	-rm -f *.o ${OBJS}
-help:
-	@cat README.txt
 
+run:
+	./$(BINARY)
 
-# fixme - write this somehow better
+doc:
+	Doxyfile src/*
+	doxygen Doxyfile
+
 tests:
 	mkdir ${TESTDIR}/bin
 	${CXX} ${CXXFLAGS} -o ${TESTDIR}/bin/helloWorld ${TESTDIR}/helloWorld.cpp

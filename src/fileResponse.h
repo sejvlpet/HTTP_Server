@@ -11,7 +11,7 @@ class FileResponse : public Response {
 public:
     FileResponse(std::string root, std::string target, bool isHtml = true);
 
-    void WriteOut(int socket) override;;
+    void WriteOut(int socket) override;
 
 
 private:

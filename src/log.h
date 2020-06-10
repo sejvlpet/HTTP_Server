@@ -38,7 +38,6 @@ private:
     const char *NEWLINE_NAME{"$NEWLINE$"};
     const char *TIME_NAME{"$TIME$"};
     const char *SEPARATOR_NAME{"$SEPERATOR$"};
-    // ASK_1 - not sure if is this good choice, new_line could also be just char
     const char *NEW_LINE{"\n"};
 
     std::string TimeToString() const;

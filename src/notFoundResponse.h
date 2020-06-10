@@ -11,7 +11,7 @@ private:
     const char *NOT_FOUND{"HTTP/1.1 404\nContent-Type: text/html\nContent-Length: 36\n\nNot found<br> <a href=\"/\"> Home </a>"};
 
 
-    void CreateLog() override;;
+    void CreateLog() override;
 
 };
 
