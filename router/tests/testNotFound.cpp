@@ -13,7 +13,7 @@ const int PORT = 8080;
 
 int main(int argc, char const *argv[]) {
 
-    int sock = 0;
+    int sock = 10;
     struct sockaddr_in serv_addr;
 
     const char *hello = "GET /idontexist.html HTTP/1.1\n"

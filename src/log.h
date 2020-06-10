@@ -12,8 +12,9 @@ class Log {
 public:
     Log() {
         _dateTime = std::chrono::system_clock::now();
-        ++_id; // fixme not thread safe
     }
+
+//    Log(std::string customMessage) : Log(), _customMessage(std::move(customMessage)) {}
 
     virtual std::string ToString(const std::string &format) const = 0;
     virtual ~Log()= default;
@@ -25,7 +26,6 @@ protected:
     const char *CUSTOM_NAME{"$CUSTOM$"};
 
     std::string _customMessage;
-    static size_t _id;
 
     virtual std::string Serialize(const std::string &format) const = 0;
 
@@ -35,7 +35,6 @@ protected:
 
     void AddCommonPart(std::string &response) const {
         FindAndReplace(response,TIME_NAME, TimeToString());
-        FindAndReplace(response,ID_NAME, std::to_string(_id));
 
         ReplaceNewLines(response);
         FindAndReplace(response, SEPARATOR_NAME, CreateLine(SEPARATOR));
@@ -53,7 +52,6 @@ protected:
 
 private:
     const char *NEWLINE_NAME{"$NEWLINE$"};
-    const char *ID_NAME{"$ID$"};
     const char *TIME_NAME{"$TIME$"};
     const char *SEPARATOR_NAME{"$SEPERATOR$"};
     // ASK_1 - not sure if is this good choice, new_line could also be just char

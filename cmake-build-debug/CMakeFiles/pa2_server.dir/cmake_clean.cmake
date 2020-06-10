@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/pa2_server.dir/src/byeResponse.cpp.o"
   "CMakeFiles/pa2_server.dir/src/consoleLogger.cpp.o"
   "CMakeFiles/pa2_server.dir/src/controller.cpp.o"
   "CMakeFiles/pa2_server.dir/src/dirResponse.cpp.o"
@@ -6,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pa2_server.dir/src/execResponse.cpp.o"
   "CMakeFiles/pa2_server.dir/src/fileLogger.cpp.o"
   "CMakeFiles/pa2_server.dir/src/fileResponse.cpp.o"
+  "CMakeFiles/pa2_server.dir/src/helper.cpp.o"
   "CMakeFiles/pa2_server.dir/src/log.cpp.o"
   "CMakeFiles/pa2_server.dir/src/logger.cpp.o"
   "CMakeFiles/pa2_server.dir/src/main.cpp.o"

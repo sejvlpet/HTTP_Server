@@ -8,8 +8,8 @@
 
 class Response {
 public:
-    std::unique_ptr<Log> GetLog() {
-        return std::make_unique<ResponseLog>(_log);
+    Log &GetLog() {
+        return _log;
     }
 
     virtual void WriteOut(int socket) {

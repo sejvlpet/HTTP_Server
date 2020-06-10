@@ -71,11 +71,12 @@ private:
 
         for (char c : _buffer) {
             if (c == ':' && readKey) readKey = false; // : means end of key and start of value,
-                // we have to also check if is' reached while reading key (so it isn't part of value)
-            else if (c == '\n' && key.size() > 0) {
+                // we have to also check if is reached while reading key (so it isn't part of value)
+            else if (c == '\n' && !key.empty()) {
                 readKey = true; // \n means end of line => end of one req param (no matter where found)
-                // save key-value to map and continue with (hopefully) emptied key and value
-                // I have no idea why, but the most needed part of request is in part with protocol name
+                // save key-value to map and continue with emptied key and value
+                // I have no idea why, but the most needed part (at least for me) of request is in part with protocol name
+                // and has to be operated out like that
                 if (!reqfound && key.find("HTTP/1.1") != std::string::npos) {
                     _parsed["request"] = std::move(key);
                     reqfound = true;

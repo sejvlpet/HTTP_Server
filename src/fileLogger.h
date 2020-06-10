@@ -1,12 +1,6 @@
 #ifndef PA2_SERVER_FILELOGGER_H
 #define PA2_SERVER_FILELOGGER_H
-
-#include <utility>
-#include <fstream>
 #include <mutex>
-#include <unistd.h>
-
-
 #include "logger.h"
 
 /**
@@ -14,25 +8,16 @@
  */
 class FileLogger : public Logger {
 public:
-    FileLogger(const std::string &format, std::string fileName) : Logger(format), _fileName(std::move(fileName)) {}
-    void Log(const std::unique_ptr<class Log> &log) const override {
-        WriteOut(log->ToString(_format));
-    }
-    void Log(const class Log &log) const override {
-        WriteOut(log.ToString(_format));
-    }
+    FileLogger(const std::string &format, std::string fileName);
+
+    void Log(const class Log &log) const override;
 
 private:
     std::string _fileName;
     mutable std::mutex _fileMutex;
 
 
-    void WriteOut(const std::string &msg) const override {
-        std::lock_guard<std::mutex> guard(_fileMutex);
-
-        std::ofstream f(_fileName, std::ios_base::app);
-        f.write(msg.data(), msg.size());
-    }
+    void WriteOut(const std::string &msg) const override;
 };
 
 

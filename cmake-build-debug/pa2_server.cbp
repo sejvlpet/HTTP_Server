@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/byeResponse.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/byeResponse.h">
+			<Option target="pa2_server"/>
+		</Unit>
 		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/consoleLogger.cpp">
 			<Option target="pa2_server"/>
 		</Unit>
@@ -124,6 +130,12 @@
 			<Option target="pa2_server"/>
 		</Unit>
 		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileResponse.h">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/helper.cpp">
+			<Option target="pa2_server"/>
+		</Unit>
+		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/helper.h">
 			<Option target="pa2_server"/>
 		</Unit>
 		<Unit filename="/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.cpp">

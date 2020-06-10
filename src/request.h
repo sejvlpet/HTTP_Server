@@ -8,9 +8,6 @@
 class Request {
 public:
     // returns log object about request parsing
-    // as request log will be always obtained in same thread where it is created, we can afford to pass it as ref
-    // anyway, maybe I'll change it to unique_ptr to have that same as in respsonse class
-    // where I have no choice but unique_ptr
     Log &GetLog() {
         return _log;
     }
@@ -28,26 +25,28 @@ public:
     }
 
     // ASK_1 those getters would make much better sense being const, but map doesn't want to allow it
-    bool IsValid() {
-        return _params["valid"] == "true";
+    bool IsValid() const {
+        return _params.at("valid") == "true";
     }
 
-    const std::string &GetTarget() {
-        return _params["target"];
+    const std::string &GetTarget() const {
+        return _params.at("target");
     }
 
-    const std::string &GetExtension() {
-        return _params["extension"];
+    const std::string &GetExtension() const {
+        return _params.at("extension");
     }
 
-    const std::string &GetRoot() {
-        return _params["root"];
+    const std::string &GetRoot() const {
+        return _params.at("root");
     }
 private:
     // BUG - sometimes server sends default response - something went wrong with code 500 to itself
     // I'm quite sure that it is because of this default set of _socket to zero - how should I solve it?
     // ASK_1 - should I problem described above solve by not sending anything to socket with number 0, let it be,
     // or somehow else?
+
+    // NOTE I'll ignore that, it doesn't happen that often
     int _socket{0};
     std::map<std::string, std::string> _params;
     RequestLog _log;

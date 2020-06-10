@@ -10,6 +10,7 @@
 #include <map>
 #include "logger.h"
 #include "consoleLogger.h"
+#include "helper.h"
 
 
 class Server {
@@ -32,32 +33,17 @@ public:
 
     void ShutDown();
 
-    // fixme due to work with map, this cannot be const
-    bool ShutDownCalled(const std::string &reqUrl) {
-        return _options["shutdownUrl"] == reqUrl || _options["userDefinedShutdownUrl"] == reqUrl;
-    }
+    bool ShutDownCalled(const std::string &reqUrl) const;
 
-    int IncWorkers() { // increments worker counts and returns it
-        return ++_workersCount;
-    }
+    int IncWorkers();
 
-    int DecWorkers() { // increments worker counts and returns it
-        return --_workersCount;
-    }
+    int DecWorkers();
 
     // logs message taken as parameter
     // passing value by reference seems nicer to me, but as server runs in more threads, it is not always possible
-    void Log(const std::unique_ptr<Log> log) const {
-        _logger->Log(log);
-    }
-    void Log(const class Log &log) const {
-        _logger->Log(log);
-    }
+    void Log(const class Log &log) const;
 
-
-    const std::string &GetRoot() {
-        return _options["root"];
-    }
+    const std::string &GetRoot() const;
 
 private:
     const char DELIMETER = ':';
@@ -66,9 +52,6 @@ private:
     enum LOG_LOCATION { // tells where do we want to log
         FILE, CONSOLE
     };
-    enum LOG_LEVEL { // tells what should be logged
-        INFO, WARN, ERROR
-    };
 
     const static int LISTEN_SUCCESS{0}; // value to be return from listen if succeeds
     const static int LISTEN_FAIL{1}; // to be return if fails, generally if server's not setuped well before listening
@@ -76,7 +59,7 @@ private:
     const std::vector<std::string> STATIC_EXTENSIONS; // extensions to be treated as static
     const std::vector<std::string> DYNAMIC_EXTENSIONS; // extensions to be treated as dynamic
 
-    int _workersCount{0}; // recent count of request being processed
+    int _workersCount{0}; // recent count of request being processed or in queue
 
 
     // options for configurtion with ther default values
@@ -89,9 +72,9 @@ private:
                                                         {"shutdownUrl", "E5gySqfwoPjevP3RYP5o"},
                                                         {"userDefinedShutdownUrl", "E5gySqfwoPjevP3RYP5o"},
                                                         {"address", "0.0.0.0"},
-                                                        {"logFormat","$HEADER$$NEWLINE$Time: $TIME$$NEWLINE$ID: $ID$$NEWLINE$$CUSTOM$$NEWLINE$$SEPERATOR$"},
-                                                        {"maxThreads", "4"},
-                                                        {"maxQueue", "10"}
+                                                        {"logFormat","$HEADER$$NEWLINE$Time: $TIME$$NEWLINE$$CUSTOM$$NEWLINE$$SEPERATOR$"},
+                                                        {"maxThreads", "10"},
+                                                        {"maxQueue", "100"}
 
                                                 }};
     std::map<const std::string, const LOG_LOCATION> _locations{{

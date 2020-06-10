@@ -9,10 +9,7 @@
 
 class Logger {
 public:
-    Logger(std::string format) : _format(std::move(format)) {}
-
-    // ASK_0 why there has to be keyword class?
-    virtual void Log(const std::unique_ptr<class Log> &log) const = 0;
+    Logger(std::string format);
 
     virtual void Log(const class Log &log) const = 0;
 

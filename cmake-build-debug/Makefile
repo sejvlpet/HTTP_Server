@@ -123,6 +123,33 @@ pa2_server/fast:
 	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/build
 .PHONY : pa2_server/fast
 
+src/byeResponse.o: src/byeResponse.cpp.o
+
+.PHONY : src/byeResponse.o
+
+# target to build an object file
+src/byeResponse.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/byeResponse.cpp.o
+.PHONY : src/byeResponse.cpp.o
+
+src/byeResponse.i: src/byeResponse.cpp.i
+
+.PHONY : src/byeResponse.i
+
+# target to preprocess a source file
+src/byeResponse.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/byeResponse.cpp.i
+.PHONY : src/byeResponse.cpp.i
+
+src/byeResponse.s: src/byeResponse.cpp.s
+
+.PHONY : src/byeResponse.s
+
+# target to generate assembly for a file
+src/byeResponse.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/byeResponse.cpp.s
+.PHONY : src/byeResponse.cpp.s
+
 src/consoleLogger.o: src/consoleLogger.cpp.o
 
 .PHONY : src/consoleLogger.o
@@ -311,6 +338,33 @@ src/fileResponse.s: src/fileResponse.cpp.s
 src/fileResponse.cpp.s:
 	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/fileResponse.cpp.s
 .PHONY : src/fileResponse.cpp.s
+
+src/helper.o: src/helper.cpp.o
+
+.PHONY : src/helper.o
+
+# target to build an object file
+src/helper.cpp.o:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/helper.cpp.o
+.PHONY : src/helper.cpp.o
+
+src/helper.i: src/helper.cpp.i
+
+.PHONY : src/helper.i
+
+# target to preprocess a source file
+src/helper.cpp.i:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/helper.cpp.i
+.PHONY : src/helper.cpp.i
+
+src/helper.s: src/helper.cpp.s
+
+.PHONY : src/helper.s
+
+# target to generate assembly for a file
+src/helper.cpp.s:
+	$(MAKE) -f CMakeFiles/pa2_server.dir/build.make CMakeFiles/pa2_server.dir/src/helper.cpp.s
+.PHONY : src/helper.cpp.s
 
 src/log.o: src/log.cpp.o
 
@@ -672,6 +726,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... pa2_server"
 	@echo "... edit_cache"
+	@echo "... src/byeResponse.o"
+	@echo "... src/byeResponse.i"
+	@echo "... src/byeResponse.s"
 	@echo "... src/consoleLogger.o"
 	@echo "... src/consoleLogger.i"
 	@echo "... src/consoleLogger.s"
@@ -693,6 +750,9 @@ help:
 	@echo "... src/fileResponse.o"
 	@echo "... src/fileResponse.i"
 	@echo "... src/fileResponse.s"
+	@echo "... src/helper.o"
+	@echo "... src/helper.i"
+	@echo "... src/helper.s"
 	@echo "... src/log.o"
 	@echo "... src/log.i"
 	@echo "... src/log.s"

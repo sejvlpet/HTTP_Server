@@ -3,5 +3,3 @@
 //
 
 #include "log.h"
-
-size_t Log::_id = 0;

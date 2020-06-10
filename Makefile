@@ -3,9 +3,9 @@ override CXXFLAGS += -Wall -pedantic -std=c++14
 LDLIBS := -pthread
 SRC := src
 OBJS := ${SRC}/consoleLogger.o ${SRC}/controller.o ${SRC}/dirResponse.o ${SRC}/errorLog.o ${SRC}/execResponse.o \
- ${SRC}/fileLogger.o ${SRC}/fileResponse.o ${SRC}/log.o ${SRC}/logger.o ${SRC}/notFoundResponse.o ${SRC}/parser.o \
+ ${SRC}/fileLogger.o ${SRC}/fileResponse.o ${SRC}/byeResponse.o ${SRC}/log.o ${SRC}/logger.o ${SRC}/notFoundResponse.o ${SRC}/parser.o \
  ${SRC}/request.o ${SRC}/requestLog.o ${SRC}/response.o ${SRC}/responseLog.o ${SRC}/server.o ${SRC}/shutdownLog.o \
- ${SRC}/worker.o ${SRC}/main.o
+ ${SRC}/worker.o ${SRC}/main.o ${SRC}/helper.o ${SRC}/threadPool.o
 
 TESTDIR := router/tests
 BINARY := sejvlpet
@@ -38,6 +38,7 @@ tests:
 	${CXX} ${CXXFLAGS} -o ${TESTDIR}/bin/testBye ${TESTDIR}/testBye.cpp
 	${CXX} ${CXXFLAGS} -o ${TESTDIR}/bin/testInvalidRequest ${TESTDIR}/testInvalidRequest.cpp
 	${CXX} ${CXXFLAGS} -o ${TESTDIR}/bin/testNotFound ${TESTDIR}/testNotFound.cpp
+	${CXX} ${CXXFLAGS} -o ${TESTDIR}/bin/testThreadPool ${TESTDIR}/testThreadPool.cpp
 
 cleanTests:
 	-rm -f -r ${TESTDIR}/bin
