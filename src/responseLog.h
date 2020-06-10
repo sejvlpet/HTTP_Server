@@ -6,32 +6,14 @@
 
 class ResponseLog : public Log {
 public:
-    std::string ToString(const std::string &format) const override {
-        return Serialize(format);
-    }
+    std::string ToString(const std::string &format) const override;
 
-    void SetCustom(const std::map<std::string, std::string> &data) {
-        // saves everything
-        for(const auto &l : data) {
-            _customMessage.append(CreateLine(
-                    l.first + ": " + l.second
-            ));
-        }
-    }
+    void SetCustom(const std::map<std::string, std::string> &data);
 
 private:
     const char *HEADER{"Reponse Log"};
 
-    std::string Serialize(const std::string &format) const override {
-        std::string response = format;
-
-        FindAndReplace(response,HEADER_NAME, HEADER);
-        FindAndReplace(response,CUSTOM_NAME, _customMessage);
-
-        AddCommonPart(response);
-
-        return response;
-    }
+    std::string Serialize(const std::string &format) const override;
 
 };
 

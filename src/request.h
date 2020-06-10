@@ -8,38 +8,21 @@
 class Request {
 public:
     // returns log object about request parsing
-    Log &GetLog() {
-        return _log;
-    }
+    Log &GetLog();
 
     // from parsed request setups request
-    void Setup(std::map<std::string, std::string> &parsed, int socket) {
-        _socket = socket;
-        _params = std::move(parsed);
-        _params["id"] = std::to_string(_id++);
-        CreateLog();
-    }
+    void Setup(std::map<std::string, std::string> &parsed, int socket);
 
-    int GetSocket() const {
-        return _socket;
-    }
+    int GetSocket() const;
 
     // ASK_1 those getters would make much better sense being const, but map doesn't want to allow it
-    bool IsValid() const {
-        return _params.at("valid") == "true";
-    }
+    bool IsValid() const;
 
-    const std::string &GetTarget() const {
-        return _params.at("target");
-    }
+    const std::string &GetTarget() const;
 
-    const std::string &GetExtension() const {
-        return _params.at("extension");
-    }
+    const std::string &GetExtension() const;
 
-    const std::string &GetRoot() const {
-        return _params.at("root");
-    }
+    const std::string &GetRoot() const;
 private:
     // BUG - sometimes server sends default response - something went wrong with code 500 to itself
     // I'm quite sure that it is because of this default set of _socket to zero - how should I solve it?
@@ -52,9 +35,7 @@ private:
     RequestLog _log;
     static size_t _id;
 
-    void CreateLog() {
-       _log.SetCustom(_params);
-    }
+    void CreateLog();
 };
 
 

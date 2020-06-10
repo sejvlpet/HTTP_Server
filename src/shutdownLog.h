@@ -5,11 +5,9 @@
 
 class ShutDownLog : public Log {
 public:
-    ShutDownLog(bool final) : _final(final) {}
+    ShutDownLog(bool final);
 
-    std::string ToString(const std::string &format) const override {
-        return Serialize(format);
-    }
+    std::string ToString(const std::string &format) const override;
 
 
 private:
@@ -17,15 +15,7 @@ private:
     const char *HEADER_FINAL{"Shutdown final Log"};
     bool _final{false};
 
-    std::string Serialize(const std::string &format) const override {
-        std::string response = format;
-
-        FindAndReplace(response,HEADER_NAME, _final ? HEADER_FINAL : HEADER_NOT_FINAL);
-        FindAndReplace(response,CUSTOM_NAME, _customMessage);
-
-        AddCommonPart(response);
-        return response;
-    }
+    std::string Serialize(const std::string &format) const override;
 
 };
 

@@ -7,35 +7,15 @@
 
 class RequestLog : public Log {
 public:
-    std::string ToString(const std::string &format) const override {
-        return Serialize(format);
-    }
+    std::string ToString(const std::string &format) const override;
 
-    void SetCustom(std::map<std::string, std::string> &data) {
-        if (data["valid"] == "false") _customMessage.append(CreateLine("This request was invalid"));
-        else {
-            for (const std::string &l : _toLog) {
-                _customMessage.append(CreateLine(
-                        l + ": " + data[l]
-                ));
-            }
-        }
-    }
+    void SetCustom(std::map<std::string, std::string> &data);
 
 private:
     std::vector<std::string> _toLog{"target", "Host", "User-Agent", "id"};
     const char *HEADER{"Request Log"};
 
-    std::string Serialize(const std::string &format) const override {
-        std::string response = format;
-
-        FindAndReplace(response,HEADER_NAME, HEADER);
-        FindAndReplace(response,CUSTOM_NAME, _customMessage);
-
-        AddCommonPart(response);
-
-        return response;
-    }
+    std::string Serialize(const std::string &format) const override;
 };
 
 

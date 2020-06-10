@@ -8,27 +8,16 @@
 
 class Response {
 public:
-    Log &GetLog() {
-        return _log;
-    }
+    Log &GetLog();
 
-    virtual void WriteOut(int socket) {
-        write(socket, HELLO, strlen(HELLO));
-        CreateLog();
-    };
+    virtual void WriteOut(int socket);;
 
     virtual ~Response()=default;
 
 protected:
     ResponseLog _log;
 
-    virtual void CreateLog() {
-        std::map<std::string, std::string> res;
-        res["status"] = "500";
-        res["returned"] = "default response";
-
-        _log.SetCustom(res);
-    };
+    virtual void CreateLog();;
 
 private:
     const char *HELLO{"HTTP/1.1 500\nContent-Type: text/plain\nContent-Length: 20\n\nSomething went wrong"};

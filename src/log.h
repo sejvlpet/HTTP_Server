@@ -10,11 +10,7 @@
 
 class Log {
 public:
-    Log() {
-        _dateTime = std::chrono::system_clock::now();
-    }
-
-//    Log(std::string customMessage) : Log(), _customMessage(std::move(customMessage)) {}
+    Log();
 
     virtual std::string ToString(const std::string &format) const = 0;
     virtual ~Log()= default;
@@ -29,24 +25,12 @@ protected:
 
     virtual std::string Serialize(const std::string &format) const = 0;
 
-    std::string CreateLine(const std::string &data) const {
-        return data + '\n';
-    }
+    std::string CreateLine(const std::string &data) const;
 
-    void AddCommonPart(std::string &response) const {
-        FindAndReplace(response,TIME_NAME, TimeToString());
-
-        ReplaceNewLines(response);
-        FindAndReplace(response, SEPARATOR_NAME, CreateLine(SEPARATOR));
-    }
+    void AddCommonPart(std::string &response) const;
 
 
-    void FindAndReplace(std::string &message, const std::string &key, const std::string &value) const {
-        size_t index = message.find(key);
-        if (index != std::string::npos) {
-            message.replace(index, key.length(), value);
-        }
-    }
+    void FindAndReplace(std::string &message, const std::string &key, const std::string &value) const;
 
 
 
@@ -57,22 +41,9 @@ private:
     // ASK_1 - not sure if is this good choice, new_line could also be just char
     const char *NEW_LINE{"\n"};
 
-    std::string TimeToString() const {
-        std::time_t t = std::chrono::system_clock::to_time_t(_dateTime);
-        std::string ts = std::ctime(&t);
-        ts.resize(ts.size() - 1);
-        return ts;
-    }
+    std::string TimeToString() const;
 
-    void ReplaceNewLines(std::string &message) const {
-        std::string::size_type start = 0;
-
-        // finds next occurence of newline
-        while ((start = message.find(NEWLINE_NAME, start)) != std::string::npos) {
-            message.replace(start, strlen(NEWLINE_NAME), NEW_LINE);
-            start += 1;
-        }
-    }
+    void ReplaceNewLines(std::string &message) const;
 
 };
 
