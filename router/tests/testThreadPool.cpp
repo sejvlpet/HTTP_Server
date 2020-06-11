@@ -95,12 +95,12 @@ int main(int argc, char const *argv[]) {
 
     int res = 0;
 
-    for(size_t i = 0; i < 3; ++i) {
+    for(size_t i = 0; i < 9; ++i) {
         res += req(0, helloThread, true);
     }
     req(100, hello);
 
-    for(size_t i = 0; i < 3; ++i) {
+    for(size_t i = 0; i < 9; ++i) {
         res += req(0, helloThread, true);
     }
     req(100, hello);

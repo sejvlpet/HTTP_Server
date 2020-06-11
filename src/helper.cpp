@@ -1,7 +1,3 @@
-//
-// Created by petrsejvl on 10.06.20.
-//
-
 #include "helper.h"
 #include <fstream>
 #include <sys/stat.h>

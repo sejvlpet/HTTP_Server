@@ -2,10 +2,7 @@
 #define PA2_SERVER_EXECRESPONSE_H
 
 
-#include <utility>
-#include <fstream>
-#include <cstring>
-#include <unistd.h>
+
 #include "response.h"
 
 class ExecResponse : public Response {

@@ -14,33 +14,29 @@ response.h
 logger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
 
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.cpp
+controller.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.h
+parser.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h
+errorLog.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/errorLog.h
+
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.h
 threadPool.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/threadPool.h
-request.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/dirResponse.h
-dirent.h
--
-vector
--
 response.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
+vector
+-
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/errorLog.h
 log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/execResponse.h
-utility
--
-fstream
--
-cstring
--
-unistd.h
--
 response.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
 
@@ -51,14 +47,6 @@ logger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileResponse.h
-utility
--
-fstream
--
-cstring
--
-unistd.h
--
 response.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
 
@@ -67,24 +55,12 @@ string
 -
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
-ctime
--
 chrono
 -
 string
 -
-iostream
--
-cstring
--
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
-iostream
--
-utility
--
-bits/unique_ptr.h
--
 log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
 
@@ -92,21 +68,21 @@ log.h
 response.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
 
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.cpp
+parser.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h
-map
--
-utility
--
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h
+request.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.cpp
 request.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
-map
--
 requestLog.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/requestLog.h
-server.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/server.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/requestLog.h
 map
@@ -147,6 +123,8 @@ thread
 -
 arpa/inet.h
 -
+fstream
+-
 server.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/server.h
 shutdownLog.h
@@ -186,6 +164,10 @@ helper.h
 log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
 
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/threadPool.cpp
+threadPool.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/threadPool.h
+
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/threadPool.h
 condition_variable
 -
@@ -201,6 +183,10 @@ thread
 -
 queue
 -
+worker.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.h
+
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.cpp
 worker.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.h
 

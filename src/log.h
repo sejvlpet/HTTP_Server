@@ -1,12 +1,8 @@
 #ifndef PA2_SERVER_LOG_H
 #define PA2_SERVER_LOG_H
 
-#include <ctime>
 #include <chrono>
 #include <string>
-#include <iostream>
-#include <cstring>
-
 
 class Log {
 public:

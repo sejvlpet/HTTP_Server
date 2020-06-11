@@ -1,3 +1,4 @@
+#include <iostream>
 #include "consoleLogger.h"
 
 ConsoleLogger::ConsoleLogger(const std::string &format) : Logger(format) {}

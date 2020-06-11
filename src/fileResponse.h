@@ -1,10 +1,7 @@
 #ifndef PA2_SERVER_FILERESPONSE_H
 #define PA2_SERVER_FILERESPONSE_H
 
-#include <utility>
-#include <fstream>
-#include <cstring>
-#include <unistd.h>
+
 #include "response.h"
 
 class FileResponse : public Response {

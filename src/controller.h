@@ -2,7 +2,6 @@
 #define PA2_SERVER_CONTROLLER_H
 
 #include "threadPool.h"
-#include "request.h"
 
 // parses message and lets worker handle it in it's own thread
 class Controller {

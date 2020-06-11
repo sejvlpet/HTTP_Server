@@ -1,7 +1,3 @@
-//
-// Created by petrsejvl on 10.06.20.
-//
-
 #ifndef PA2_SERVER_HELPER_H
 #define PA2_SERVER_HELPER_H
 #include <string>

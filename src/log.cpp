@@ -1,4 +1,5 @@
 #include "log.h"
+#include <cstring>
 
 Log::Log() {
     _dateTime = std::chrono::system_clock::now();

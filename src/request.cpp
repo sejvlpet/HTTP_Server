@@ -17,6 +17,8 @@ int Request::GetSocket() const {
     return _socket;
 }
 
+// fixme maybe should be in try-catch
+
 bool Request::IsValid() const {
     return _params.at("valid") == "true";
 }

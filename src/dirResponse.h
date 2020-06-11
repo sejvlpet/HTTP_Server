@@ -1,9 +1,8 @@
 #ifndef PA2_SERVER_DIRRESPONSE_H
 #define PA2_SERVER_DIRRESPONSE_H
 
-#include <dirent.h>
-#include <vector>
 #include "response.h"
+#include <vector>
 
 class DirResponse : public Response {
 public:

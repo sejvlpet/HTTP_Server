@@ -1,9 +1,7 @@
 #ifndef PA2_SERVER_REQUEST_H
 #define PA2_SERVER_REQUEST_H
 
-#include <map>
 #include "requestLog.h"
-#include "server.h"
 
 class Request {
 public:

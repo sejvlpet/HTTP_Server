@@ -1,7 +1,3 @@
-//
-// Created by petrsejvl on 10.06.20.
-//
-
 #ifndef PA2_SERVER_BYERESPONSE_H
 #define PA2_SERVER_BYERESPONSE_H
 
@@ -9,10 +5,7 @@
 
 class ByeResponse : public Response {
 public:
-    void WriteOut(int socket) override {
-        write(socket, BYE, strlen(BYE));
-        CreateLog();
-};
+    void WriteOut(int socket) override;
 
 
 private:
@@ -32,12 +25,7 @@ private:
             "</html>"};
 
 
-    void CreateLog() override {
-        std::map<std::string, std::string> res;
-        res["status"] = "200";
-
-        _log.SetCustom(res);
-    };
+    void CreateLog() override;
 
 };
 

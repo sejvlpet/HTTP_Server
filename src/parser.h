@@ -1,8 +1,5 @@
 #ifndef PA2_SERVER_PARSER_H
 #define PA2_SERVER_PARSER_H
-
-#include <map>
-#include <utility>
 #include "request.h"
 
 class Parser {

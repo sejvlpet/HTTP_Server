@@ -5,6 +5,7 @@
 #include <iostream>
 #include <thread>
 #include <arpa/inet.h>
+#include <fstream>
 #include "server.h"
 #include "shutdownLog.h"
 #include "errorLog.h"
@@ -126,12 +127,14 @@ void Server::Setup() {
         return;
     }
 
-    if (_locations[_options["logLocation"]] == FILE) { // consoleLogger is there by default
+    if (_locations[_options["logLocation"]] == FILE) {
         if (!fileOk(_options["logFile"])) {
             Error("Cannot write to file");
             return;
         }
         _logger = std::make_unique<FileLogger>(_options["logFormat"], _options["logFile"]);
+    } else {
+        _logger = std::make_unique<ConsoleLogger>(_options["logFormat"]);
     }
 
     _setupStatus = OK;
@@ -181,7 +184,7 @@ int Server::Listen() {
     return LISTEN_SUCCESS;
 }
 
-int Server::DecWorkers() { // increments worker counts and returns it
+int Server::DecWorkers() { // decrements worker counts and returns it
     return --_workersCount;
 }
 

@@ -83,24 +83,16 @@ CMakeFiles/pa2_server.dir/src/notFoundResponse.cpp.o: ../src/notFoundResponse.h
 CMakeFiles/pa2_server.dir/src/notFoundResponse.cpp.o: ../src/response.h
 CMakeFiles/pa2_server.dir/src/notFoundResponse.cpp.o: ../src/responseLog.h
 
-CMakeFiles/pa2_server.dir/src/parser.cpp.o: ../src/consoleLogger.h
-CMakeFiles/pa2_server.dir/src/parser.cpp.o: ../src/helper.h
 CMakeFiles/pa2_server.dir/src/parser.cpp.o: ../src/log.h
-CMakeFiles/pa2_server.dir/src/parser.cpp.o: ../src/logger.h
 CMakeFiles/pa2_server.dir/src/parser.cpp.o: ../src/parser.cpp
 CMakeFiles/pa2_server.dir/src/parser.cpp.o: ../src/parser.h
 CMakeFiles/pa2_server.dir/src/parser.cpp.o: ../src/request.h
 CMakeFiles/pa2_server.dir/src/parser.cpp.o: ../src/requestLog.h
-CMakeFiles/pa2_server.dir/src/parser.cpp.o: ../src/server.h
 
-CMakeFiles/pa2_server.dir/src/request.cpp.o: ../src/consoleLogger.h
-CMakeFiles/pa2_server.dir/src/request.cpp.o: ../src/helper.h
 CMakeFiles/pa2_server.dir/src/request.cpp.o: ../src/log.h
-CMakeFiles/pa2_server.dir/src/request.cpp.o: ../src/logger.h
 CMakeFiles/pa2_server.dir/src/request.cpp.o: ../src/request.cpp
 CMakeFiles/pa2_server.dir/src/request.cpp.o: ../src/request.h
 CMakeFiles/pa2_server.dir/src/request.cpp.o: ../src/requestLog.h
-CMakeFiles/pa2_server.dir/src/request.cpp.o: ../src/server.h
 
 CMakeFiles/pa2_server.dir/src/requestLog.cpp.o: ../src/log.h
 CMakeFiles/pa2_server.dir/src/requestLog.cpp.o: ../src/requestLog.cpp
