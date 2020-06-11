@@ -67,8 +67,8 @@ void Parser::SetKeyValues() {
                 _parsed["request"] = std::move(key);
                 reqfound = true;
             } else _parsed[std::move(key)] = std::move(value);
-            key.empty();
-            value.empty(); // just in case...
+            key.erase();
+            value.erase(); // just in case...
         } else if (!isspace(c)) {
             if (readKey) key.push_back(c);
             else value.push_back(c);

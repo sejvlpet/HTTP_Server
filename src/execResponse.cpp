@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <c++/7/cstring>
 #include "execResponse.h"
 
 void ExecResponse::WriteOut(int socket) {
@@ -17,10 +18,13 @@ void ExecResponse::WriteOut(int socket) {
             response += buffer;
     }
 
-
-    std::string realResponse = HEADER + std::to_string(response.size());
+    std::string realResponse = HEADER;
+    if(response.size() > 0)
+        realResponse += std::to_string(response.size());
+    else
+        realResponse += std::to_string(strlen(NO_OUTPUT));
     realResponse.append("\n\n");
-    realResponse.append(response);
+    realResponse.append(response.size() > 0 ? response : NO_OUTPUT);
 
     write(socket, realResponse.c_str(), realResponse.size());
 

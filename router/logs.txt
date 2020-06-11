@@ -22,3 +22,37 @@ insert into Logs (header, time) values ("Reponse Log", "Thu Jun 11 10:58:01 2020
 insert into Logs (header, time) values ("Request Log", "Thu Jun 11 10:58:01 2020")
 insert into Logs (header, time) values ("Reponse Log", "Thu Jun 11 10:58:01 2020")
 insert into Logs (header, time) values ("Reponse Log", "Thu Jun 11 10:58:01 2020")
+insert into Logs (header, time, custom) values ("Request Log", "Thu Jun 11 21:13:51 2020", "target: tests/bin/
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 0
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Thu Jun 11 21:13:51 2020", "returned dir: router/tests/bin/
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Thu Jun 11 21:13:53 2020", "target: tests/bin/testBye
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 1
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Thu Jun 11 21:13:53 2020", "returned testcase: tests/bin/testBye
+")
+insert into Logs (header, time, custom) values ("Request Log", "Thu Jun 11 21:17:21 2020", "target: tests/bin/testBye
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 0
+")
+insert into Logs (header, time, custom) values ("Request Log", "Thu Jun 11 21:25:27 2020", "target: tests/bin/testBye
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 0
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Thu Jun 11 21:25:27 2020", "returned testcase: tests/bin/testBye
+")
+insert into Logs (header, time, custom) values ("Request Log", "Thu Jun 11 21:27:45 2020", "target: tests/bin/testBye
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 1
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Thu Jun 11 21:27:45 2020", "returned testcase: tests/bin/testBye
+")

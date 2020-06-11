@@ -1,5 +1,5 @@
 CXX := g++
-override CXXFLAGS += -Wall -pedantic -std=c++14
+override CXXFLAGS += -Wall -pedantic -std=c++17
 LDLIBS := -pthread
 SRC := src
 OBJS := ${SRC}/consoleLogger.o ${SRC}/controller.o ${SRC}/dirResponse.o ${SRC}/errorLog.o ${SRC}/execResponse.o \

@@ -34,7 +34,7 @@ void Worker::HandleRequest() {
             _parent->ShutDown();
             _response = std::make_unique<ByeResponse>();
 
-        } else if (dirExists(root + '/' + target)) {
+        } else if (dirOk(root + '/' + target)) {
 
             _response = std::make_unique<DirResponse>(root + target);
 

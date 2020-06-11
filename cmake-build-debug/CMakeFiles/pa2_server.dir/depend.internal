@@ -13,17 +13,11 @@ CMakeFiles/pa2_server.dir/src/consoleLogger.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/byeResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.cpp
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/dirResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/errorLog.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/execResponse.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileResponse.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/helper.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/notFoundResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/requestLog.h
@@ -105,19 +99,13 @@ CMakeFiles/pa2_server.dir/src/responseLog.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/responseLog.cpp
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/responseLog.h
 CMakeFiles/pa2_server.dir/src/server.cpp.o
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/byeResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/consoleLogger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/dirResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/errorLog.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/execResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileLogger.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/helper.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/notFoundResponse.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/requestLog.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
@@ -132,15 +120,8 @@ CMakeFiles/pa2_server.dir/src/shutdownLog.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/shutdownLog.cpp
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/shutdownLog.h
 CMakeFiles/pa2_server.dir/src/threadPool.cpp.o
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/byeResponse.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/dirResponse.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/execResponse.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileResponse.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/helper.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/notFoundResponse.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/requestLog.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h

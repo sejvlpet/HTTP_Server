@@ -85,18 +85,16 @@ void Server::SetupOptions(const std::map<std::string, std::string> &options) {
             Log(ErrorLog("Trying to set invalid option \"" + key + "\" with value \"" + value + "\"", false));
         }
     }
-
-    // NOTE - is it enough like that? Or should I test accessibility and shit?
-    // root is tested outside of loop, because even that default one has to be tested (inside of the loop only changed
-    // options are tested)
-    if (!dirExists(_options.at("root"))) {
-        Error("Invalid root");
-        return;
-    }
 }
 
 
 void Server::Setup() {
+    // as a first steup of setup, test if root is accessible
+    if (!dirOk(_options.at("root"))) {
+        Error("Invalid root");
+        return;
+    }
+
     if ((_serverFd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
         Error("Problem with socket");
         return;

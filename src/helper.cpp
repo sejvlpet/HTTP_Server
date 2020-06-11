@@ -1,6 +1,11 @@
 #include "helper.h"
 #include <fstream>
 #include <sys/stat.h>
+#include <dirent.h>
+#include <iostream>
+#include <fstream>
+#include <iostream>
+#include <filesystem>
 
 
 bool fileOk(const std::string &file) {
@@ -18,11 +23,12 @@ bool isExecutable(const std::string &file) {
     return (st.st_mode & S_IEXEC) != 0;
 }
 
-bool dirExists(const std::string &dir) {
-    // inspired on https://stackoverflow.com/questions/18100097/portable-way-to-check-if-directory-exists-windows-linux-c
-    struct stat info{};
-
-    if( stat( dir.c_str(), &info ) != 0 )
+bool dirOk(const std::string &dir) {
+    try {
+        const auto &p = std::filesystem::directory_iterator(dir);
+    } catch (...) {
         return false;
-    else return (info.st_mode & S_IFDIR) != 0;
+    }
+
+    return true;
 }
