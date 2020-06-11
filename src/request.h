@@ -33,6 +33,7 @@ private:
     std::map<std::string, std::string> _params;
     RequestLog _log;
     static size_t _id;
+    std::string _invalidKeyVal{""};
 
     void CreateLog();
 };

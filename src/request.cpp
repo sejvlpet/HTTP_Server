@@ -17,22 +17,37 @@ int Request::GetSocket() const {
     return _socket;
 }
 
-// fixme maybe should be in try-catch
 
 bool Request::IsValid() const {
-    return _params.at("valid") == "true";
+    try {
+        return _params.at("valid") == "true";
+    } catch (...) {
+        return false;
+    }
 }
 
 const std::string &Request::GetTarget() const {
-    return _params.at("target");
+    try {
+        return _params.at("target");
+    } catch (...) {
+        return _invalidKeyVal;
+    }
 }
 
 const std::string &Request::GetExtension() const {
-    return _params.at("extension");
+    try {
+        return _params.at("extension");
+    } catch (...) {
+        return _invalidKeyVal;
+    }
 }
 
 const std::string &Request::GetRoot() const {
-    return _params.at("root");
+    try {
+        return _params.at("root");
+    } catch (...) {
+        return _invalidKeyVal;
+    }
 }
 
 void Request::CreateLog() {
