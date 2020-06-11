@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "execResponse.h"
 
 void ExecResponse::WriteOut(int socket) {

@@ -68,15 +68,7 @@ log.h
 response.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.cpp
-parser.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h
-request.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.cpp
 request.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
 
@@ -93,12 +85,6 @@ log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
-bits/unique_ptr.h
--
-cstring
--
-unistd.h
--
 responseLog.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/responseLog.h
 
@@ -117,10 +103,6 @@ netinet/in.h
 -
 cstring
 -
-iostream
--
-thread
--
 arpa/inet.h
 -
 fstream
@@ -131,12 +113,14 @@ shutdownLog.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/shutdownLog.h
 errorLog.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/errorLog.h
-consoleLogger.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/consoleLogger.h
 fileLogger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileLogger.h
 controller.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.h
+consoleLogger.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/consoleLogger.h
+helper.h
+/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/helper.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/server.h
 netinet/in.h
@@ -145,20 +129,12 @@ string
 -
 vector
 -
-set
--
-utility
--
 memory
 -
 map
 -
 logger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
-consoleLogger.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/consoleLogger.h
-helper.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/helper.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/shutdownLog.h
 log.h
@@ -183,10 +159,6 @@ thread
 -
 queue
 -
-worker.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.cpp
 worker.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.h
 

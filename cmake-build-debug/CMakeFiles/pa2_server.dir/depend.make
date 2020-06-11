@@ -13,7 +13,6 @@ CMakeFiles/pa2_server.dir/src/consoleLogger.cpp.o: ../src/log.h
 CMakeFiles/pa2_server.dir/src/consoleLogger.cpp.o: ../src/logger.h
 
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/byeResponse.h
-CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/consoleLogger.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/controller.cpp
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/controller.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o: ../src/dirResponse.h
@@ -70,8 +69,6 @@ CMakeFiles/pa2_server.dir/src/logger.cpp.o: ../src/log.h
 CMakeFiles/pa2_server.dir/src/logger.cpp.o: ../src/logger.cpp
 CMakeFiles/pa2_server.dir/src/logger.cpp.o: ../src/logger.h
 
-CMakeFiles/pa2_server.dir/src/main.cpp.o: ../src/consoleLogger.h
-CMakeFiles/pa2_server.dir/src/main.cpp.o: ../src/helper.h
 CMakeFiles/pa2_server.dir/src/main.cpp.o: ../src/log.h
 CMakeFiles/pa2_server.dir/src/main.cpp.o: ../src/logger.h
 CMakeFiles/pa2_server.dir/src/main.cpp.o: ../src/main.cpp
@@ -135,7 +132,6 @@ CMakeFiles/pa2_server.dir/src/shutdownLog.cpp.o: ../src/shutdownLog.cpp
 CMakeFiles/pa2_server.dir/src/shutdownLog.cpp.o: ../src/shutdownLog.h
 
 CMakeFiles/pa2_server.dir/src/threadPool.cpp.o: ../src/byeResponse.h
-CMakeFiles/pa2_server.dir/src/threadPool.cpp.o: ../src/consoleLogger.h
 CMakeFiles/pa2_server.dir/src/threadPool.cpp.o: ../src/dirResponse.h
 CMakeFiles/pa2_server.dir/src/threadPool.cpp.o: ../src/execResponse.h
 CMakeFiles/pa2_server.dir/src/threadPool.cpp.o: ../src/fileResponse.h
@@ -154,7 +150,6 @@ CMakeFiles/pa2_server.dir/src/threadPool.cpp.o: ../src/threadPool.h
 CMakeFiles/pa2_server.dir/src/threadPool.cpp.o: ../src/worker.h
 
 CMakeFiles/pa2_server.dir/src/worker.cpp.o: ../src/byeResponse.h
-CMakeFiles/pa2_server.dir/src/worker.cpp.o: ../src/consoleLogger.h
 CMakeFiles/pa2_server.dir/src/worker.cpp.o: ../src/dirResponse.h
 CMakeFiles/pa2_server.dir/src/worker.cpp.o: ../src/execResponse.h
 CMakeFiles/pa2_server.dir/src/worker.cpp.o: ../src/fileResponse.h

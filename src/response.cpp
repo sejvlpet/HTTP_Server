@@ -1,4 +1,7 @@
 #include "response.h"
+#include <unistd.h>
+#include <cstring>
+
 
 Log &Response::GetLog() {
     return _log;

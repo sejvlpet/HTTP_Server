@@ -2,16 +2,15 @@
 #include <unistd.h>
 #include <netinet/in.h>
 #include <cstring>
-#include <iostream>
-#include <thread>
 #include <arpa/inet.h>
 #include <fstream>
 #include "server.h"
 #include "shutdownLog.h"
 #include "errorLog.h"
-#include "consoleLogger.h"
 #include "fileLogger.h"
 #include "controller.h"
+#include "consoleLogger.h"
+#include "helper.h"
 
 
 Server::Server() {

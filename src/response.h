@@ -1,9 +1,6 @@
 #ifndef PA2_SERVER_RESPONSE_H
 #define PA2_SERVER_RESPONSE_H
 
-#include <bits/unique_ptr.h>
-#include <cstring>
-#include <unistd.h>
 #include "responseLog.h"
 
 class Response {

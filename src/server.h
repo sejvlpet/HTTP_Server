@@ -4,13 +4,10 @@
 #include <netinet/in.h>
 #include <string>
 #include <vector>
-#include <set>
-#include <utility>
 #include <memory>
 #include <map>
 #include "logger.h"
-#include "consoleLogger.h"
-#include "helper.h"
+
 
 
 class Server {
@@ -20,7 +17,6 @@ public:
     };
     SETUP_STATUS _setupStatus{DEFAULT};
     const static int SETUP_FAIL{1};
-    const static std::set<std::string> IGNORE_LIST;
 
     // default const setups things needed from the very begging - at least logger
     Server();

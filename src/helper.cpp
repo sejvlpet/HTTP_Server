@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sys/stat.h>
 
+
 bool fileOk(const std::string &file) {
     std::ifstream ifile;
     ifile.open(file);
@@ -21,7 +22,7 @@ bool dirExists(const std::string &dir) {
     // inspired on https://stackoverflow.com/questions/18100097/portable-way-to-check-if-directory-exists-windows-linux-c
     struct stat info{};
 
-    if (stat(dir.c_str(), &info) != 0)
+    if( stat( dir.c_str(), &info ) != 0 )
         return false;
     else return (info.st_mode & S_IFDIR) != 0;
 }

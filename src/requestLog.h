@@ -1,6 +1,5 @@
 #ifndef PA2_SERVER_REQUESTLOG_H
 #define PA2_SERVER_REQUESTLOG_H
-
 #include <map>
 #include <vector>
 #include "log.h"

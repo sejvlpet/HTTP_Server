@@ -1,3 +1,5 @@
+#include <cstring>
+#include <unistd.h>
 #include "notFoundResponse.h"
 
 void NotFoundResponse::WriteOut(int socket) {

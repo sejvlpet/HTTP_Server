@@ -1,5 +1,6 @@
 #include "fileResponse.h"
 #include <fstream>
+#include <unistd.h>
 
 FileResponse::FileResponse(std::string root, std::string target, bool isHtml) :
         _root(std::move(root)), _target(std::move(target)), _isHtml(isHtml) {}

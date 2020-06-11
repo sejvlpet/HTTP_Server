@@ -1,5 +1,6 @@
 #include "dirResponse.h"
 #include <dirent.h>
+#include <unistd.h>
 
 DirResponse::DirResponse(std::string root) : _root(std::move(root)) {
 

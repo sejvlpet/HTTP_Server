@@ -1,3 +1,5 @@
+#include <cstring>
+#include <unistd.h>
 #include "byeResponse.h"
 
 void ByeResponse::WriteOut(int socket) {

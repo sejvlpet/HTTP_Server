@@ -1,4 +1,16 @@
+#include <iostream>
+#include <unistd.h>
+#include <thread>
+#include <utility>
 #include "worker.h"
+#include "parser.h"
+#include "dirResponse.h"
+#include "fileResponse.h"
+#include "execResponse.h"
+#include "notFoundResponse.h"
+#include "helper.h"
+#include "byeResponse.h"
+
 
 Worker::Worker(Server *parent, Request request) : _parent(parent), _request(std::move(request)) {}
 

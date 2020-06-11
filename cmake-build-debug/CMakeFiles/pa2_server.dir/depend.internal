@@ -14,7 +14,6 @@ CMakeFiles/pa2_server.dir/src/consoleLogger.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
 CMakeFiles/pa2_server.dir/src/controller.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/byeResponse.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/consoleLogger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.cpp
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/controller.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/dirResponse.h
@@ -71,8 +70,6 @@ CMakeFiles/pa2_server.dir/src/logger.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.cpp
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
 CMakeFiles/pa2_server.dir/src/main.cpp.o
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/consoleLogger.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/helper.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/main.cpp
@@ -136,7 +133,6 @@ CMakeFiles/pa2_server.dir/src/shutdownLog.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/shutdownLog.h
 CMakeFiles/pa2_server.dir/src/threadPool.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/byeResponse.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/consoleLogger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/dirResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/execResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileResponse.h
@@ -155,7 +151,6 @@ CMakeFiles/pa2_server.dir/src/threadPool.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.h
 CMakeFiles/pa2_server.dir/src/worker.cpp.o
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/byeResponse.h
- /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/consoleLogger.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/dirResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/execResponse.h
  /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileResponse.h
