@@ -36,7 +36,7 @@ doc:
 	doxygen Doxyfile
 
 tests:
-	mkdir ${TESTDIR}/bin
+	mkdir -p ${TESTDIR}/bin
 	${CXX} ${CXXFLAGS} -o ${TESTDIR}/bin/helloWorld ${TESTDIR}/helloWorld.cpp
 	${CXX} ${CXXFLAGS} -o ${TESTDIR}/bin/testBye ${TESTDIR}/testBye.cpp
 	${CXX} ${CXXFLAGS} -o ${TESTDIR}/bin/testInvalidRequest ${TESTDIR}/testInvalidRequest.cpp
