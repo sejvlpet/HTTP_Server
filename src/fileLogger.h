@@ -4,19 +4,24 @@
 #include "logger.h"
 
 /**
- * Writes logs to file given in configuration, thread safe
+ * Handles logging to file given in configuration, thread safe
  */
 class FileLogger : public Logger {
 public:
     FileLogger(const std::string &format, std::string fileName);
 
+    /**
+     * @copydoc Logger::Log()
+     */
     void Log(const class Log &log) const override;
 
 private:
     std::string _fileName;
     mutable std::mutex _fileMutex;
 
-
+    /**
+     *@copydoc Logger::WriteOut()
+     */
     void WriteOut(const std::string &msg) const override;
 };
 

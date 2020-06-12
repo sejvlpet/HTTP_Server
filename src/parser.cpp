@@ -17,9 +17,10 @@ void Parser::Parse() {
     SetTarget();
     GetExtension();
 
-    // notice that _parsed is moved to setup and therefore destroyed here
     std::string add = (!_root.empty() && _root[_root.size() - 1] != '/') ?  "/" : "";
     _parsed["root"] = _root + add;
+
+    // notice that _parsed is moved to setup and therefore destroyed here
     _parsedRequest.Setup(_parsed, _socket);
 }
 

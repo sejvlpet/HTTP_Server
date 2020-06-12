@@ -35,7 +35,7 @@ void Log::ReplaceNewLines(std::string &message) const {
 
     // finds next occurence of newline
     while ((start = message.find(NEWLINE_NAME, start)) != std::string::npos) {
-        message.replace(start, strlen(NEWLINE_NAME), NEW_LINE);
+        message.replace(start, strlen(NEWLINE_NAME), NEWLINE);
         start += 1;
     }
 }

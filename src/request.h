@@ -3,22 +3,46 @@
 
 #include "requestLog.h"
 
+/**
+ * Keeps informations and functionality of accpeted request
+ */
 class Request {
 public:
-    // returns log object about request parsing
+    /**
+     * @return Returns refernce to Log object
+     */
     Log &GetLog();
 
-    // from parsed request setups request
+    /**
+     * Setups from itself from parameters
+     * @param parsed key:value map of request
+     * @param socket socket number
+     */
     void Setup(std::map<std::string, std::string> &parsed, int socket);
 
+    /**
+     * @return socket number
+     */
     int GetSocket() const;
 
+    /**
+     * @return true if request is valid, false otherwise
+     */
     bool IsValid() const;
 
+    /**
+     * @return referecne to target
+     */
     const std::string &GetTarget() const;
 
+    /**
+     * @return referecne to extension
+     */
     const std::string &GetExtension() const;
 
+    /**
+     * @return referecne to root
+     */
     const std::string &GetRoot() const;
 private:
     // BUG - sometimes server sends default response - something went wrong with code 500 to itself
@@ -29,11 +53,11 @@ private:
     // NOTE I'll ignore that, it doesn't happen that often
 
     // NOTE 2 - bug happens only in some explorers, I won't try solve it
-    int _socket{0};
-    std::map<std::string, std::string> _params;
-    RequestLog _log;
-    static size_t _id;
-    std::string _invalidKeyVal{""};
+    int _socket{0}; //<! socket number
+    std::map<std::string, std::string> _params; //<! request saved in map
+    RequestLog _log; //<! log object
+    static size_t _id; //<! id of request
+    std::string _invalidKeyVal{""}; //<! if anyone tries to get value by invalid key from _params, this shall be returned instead
 
     void CreateLog();
 };

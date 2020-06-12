@@ -3,11 +3,19 @@
 
 #include "threadPool.h"
 
-// parses message and lets worker handle it in it's own thread
+/**
+ * Reads request from socket and creates workers to threadpool
+ */
 class Controller {
 public:
-    static const size_t BUFFER_READ_SIZE{300000};
+    static const size_t BUFFER_READ_SIZE{300000}; //<! size of buffer
 
+    /**
+     * saves parametrs as members
+     * @param parent pointer to parent server
+     * @param maxThreads count of threads
+     * @param maxQueue max queue size
+     */
     Controller(Server *parent, size_t maxThreads, size_t maxQueue);
 
     void Run(int socket);

@@ -3,8 +3,14 @@
 
 #include "response.h"
 
+/**
+ * Response returned after invoking server shutdown
+ */
 class ByeResponse : public Response {
 public:
+    /**
+     * @copydoc Response::WriteOut()
+     */
     void WriteOut(int socket) override;
 
 
@@ -22,9 +28,11 @@ private:
             "    It's been an honor serving for you.\n"
             "</h1>\n"
             "</body>\n"
-            "</html>"};
+            "</html>"}; //<! response
 
-
+    /**
+     * @copydoc Response::CreateLog()
+     */
     void CreateLog() override;
 
 };

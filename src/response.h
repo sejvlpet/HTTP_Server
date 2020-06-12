@@ -2,18 +2,31 @@
 #define PA2_SERVER_RESPONSE_H
 
 #include "responseLog.h"
-
+/**
+ * Base class for responses, used as default response
+ */
 class Response {
 public:
+    /**
+     * returns reference to log object
+     * @return reference to log object
+     */
     Log &GetLog();
 
+    /**
+     * accepts socket number and writes response there
+     * @param socket
+     */
     virtual void WriteOut(int socket);
 
-    virtual ~Response()=default;
+    virtual ~Response() = default;
 
 protected:
-    ResponseLog _log;
+    ResponseLog _log; //<! log object for response
 
+    /**
+     * Creates log object and saves it to _log member
+     */
     virtual void CreateLog();
 
 private:

@@ -30,7 +30,7 @@ void ExecResponse::WriteOut(int socket) {
 
     pclose(pipe);
 
-    _res["returned testcase"] = _target;
+    _res["runned: "] = _target;
     CreateLog();
 }
 

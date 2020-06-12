@@ -15,46 +15,78 @@ class Server {
 public:
     enum SETUP_STATUS {
         OK, FAIL, DEFAULT
-    };
-    SETUP_STATUS _setupStatus{DEFAULT};
-    const static int SETUP_FAIL{1};
+    }; //<! possible states after setup
+    SETUP_STATUS _setupStatus{DEFAULT}; //<!default setup status
+    const static int SETUP_FAIL{1}; //<! code for setup fail
 
-    // default const setups things needed from the very begging - at least logger
+    /**
+     * default const setups things needed from the very begging
+     */
     Server();
-    // simply reads options from config file
+
+    /**
+     * simply reads options from config file
+     * @param configFileName filer with config
+     */
     void ReadOptions(const std::string &configFileName);
-    // methods
-    void Setup(); // from options saved in members setups server
 
-    int Listen(); // listen on configured port, if setup failed returns proper constant
+    /**
+     * from options saved in members setups server
+     */
+    void Setup();
 
+    /**
+     * listen on configured port, if setup failed returns proper constant
+     * @return result of listening
+     */
+    int Listen();
+
+    /**
+     * Logs and sets shutdown indicating member to true
+     */
     void ShutDown();
 
+    /**
+     * @param reqUrl Url to be tested
+     * @return true if given reqUrl should invoke shutdown
+     */
     bool ShutDownCalled(const std::string &reqUrl) const;
 
+    /**
+     * Incremets worker count, thread sage
+     * @return returns new count of workers
+     */
     int IncWorkers();
 
+    /**
+     * Decrements count of worker, thread safe
+     * @return new count of workers
+     */
     int DecWorkers();
 
-    // logs message taken as parameter
-    // passing value by reference seems nicer to me, but as server runs in more threads, it is not always possible
+    /**
+     * logs message taken as parameter
+     * @param log Log to be logged
+     */
     void Log(const class Log &log) const;
 
+    /**
+     * @return refernce to root directory
+     */
     const std::string &GetRoot() const;
 
 private:
-    const char DELIMETER = ':';
-    const char COMMENT = ';';
+    const char DELIMETER = ':'; //<! delimiter in cofig file
+    const char COMMENT = ';'; //<! comment in cofig file
     // constants and enums
-    enum LOG_LOCATION { // tells where do we want to log
+    enum LOG_LOCATION {
         FILE, CONSOLE
-    };
+    }; //<! tells where do we want to log
 
-    const static int LISTEN_SUCCESS{0}; // value to be return from listen if succeeds
-    const static int LISTEN_FAIL{1}; // to be return if fails, generally if server's not setuped well before listening
+    const static int LISTEN_SUCCESS{0}; //<! value to be return from listen if succeeds
+    const static int LISTEN_FAIL{1}; //<! to be return if fails, generally if server's not setuped well before listening
 
-    // options for configurtion with ther default values
-    std::map<std::string, std::string> _options{{
+    std::map<std::string, std::string>  _options{{
                                                         {"port", "8080"},
                                                         {"logLocation", "CONSOLE"},
                                                         {"root", "router/"},
@@ -65,27 +97,34 @@ private:
                                                         {"logFormat","$HEADER$$NEWLINE$Time: $TIME$$NEWLINE$$CUSTOM$$NEWLINE$$SEPERATOR$"},
                                                         {"maxThreads", "10"},
                                                         {"maxQueue", "100"}
+                                                }}; //<! options for configurtion with their default values
 
-                                                }};
     std::map<const std::string, const LOG_LOCATION> _locations{{
                                                            {"CONSOLE", CONSOLE},
                                                            {"FILE", FILE}
-                                                   }};
+                                                   }}; //<! translater from Enum to string
 
 
     // members with default values
-    bool _shutDown{false}; // sets to true if serer's about to shutDown
-    sockaddr_in _address{};
-    int _addrLen{0};
-    int _serverFd{0};
-    std::unique_ptr<Logger> _logger;
-    mutable std::mutex _serverMutex;
-    int _workersCount{0}; // recent count of request being processed or in queue
+    bool _shutDown{false}; //<! sets to true if serer's about to shutDown
+    sockaddr_in _address{}; //<! address of socket
+    int _addrLen{0}; //<! length of address
+    int _serverFd{0}; //<! server fd
+    std::unique_ptr<Logger> _logger; //<! object handling logginf
+    mutable std::mutex _serverMutex; //<! mutex if thread safety is needed
+    int _workersCount{0}; //<! recent count of request being processed or in queue
 
 
-    // checks validity of options and sets them to our server options
+    /**
+     * checks validity of options and sets them to our server options
+     * @param options options to be setupted
+     */
     void SetupOptions(const std::map<std::string, std::string> &options);
-    // logs Error and sets status
+
+    /**
+     * logs Error and sets status
+     * @param message message to be logged
+     */
     void Error(const std::string &message);
 
 };

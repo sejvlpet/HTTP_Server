@@ -11,15 +11,30 @@
 #include <queue>
 #include "worker.h"
 
-// inspired by https://www.youtube.com/watch?v=eWTGtp3HXiw
+/**
+ * inspired by https://www.youtube.com/watch?v=eWTGtp3HXiw
+ * Thread pool with queue acceptes task and then executes them in seperate thread which are recyclatd
+ */
 class ThreadPool {
 public:
     using Task = std::function<void()>;
 
-    explicit ThreadPool(size_t numThreads);
+    /**
+     * Calls setup with given numThreads
+     * @param numThreads count of threads to be used
+     */
+    ThreadPool(size_t numThreads);
 
+    /**
+     * Stops and joins threads
+     */
     ~ThreadPool();
 
+    /**
+     * Method to accept and add worker to queue
+     * @tparam T templated type to be stored in queue
+     * @param worker object to be stored in queue
+     */
 template<class T>
     void Enqueue(T worker) {
         // todo find out what the hell is that
@@ -34,16 +49,23 @@ template<class T>
 
         _eventVar.notify_one();
     }
+    /**
+     * @return count of object in queue
+     */
     size_t GetCountOfQueued() const;
 
 private:
-    std::vector<std::thread> _threads;
+    std::vector<std::thread> _threads; //<! vector of thread
     std::condition_variable _eventVar; // fixme I have no idea what does this thing do
-    std::mutex _eventMutex;
-    bool _stopping = false;
+    std::mutex _eventMutex; //<! mutex for thread safety
+    bool _stopping = false; //<! set to true if thread pool should stop
 
-    std::queue<Task> _tasks;
+    std::queue<Task> _tasks; //<! queue of tasks
 
+    /**
+     * Fills vector of threads, in each threads runs lambda fucntion which waits for signal (to end or work);
+     * @param numThreads count of threads
+     */
     void Setup(size_t numThreads);
 };
 
