@@ -9,7 +9,7 @@ port:8080
 address:0.0.0.0
 
 ; specify where you want to save your logs, either CONSOLE (setuped by default) or FILE
-logLocation:FILE
+;logLocation:FILE
 
 ; root directory for server
 ;root:router
@@ -21,7 +21,7 @@ logFile:router/logs.txt
 userDefinedShutdownUrl:shutdown
 
 ; specify your log format
-logFormat:insert into Logs (header, time, custom) values ("$HEADER$", "$TIME$", "$CUSTOM$")$NEWLINE$
+; logFormat:insert into Logs (header, time, custom) values ("$HEADER$", "$TIME$", "$CUSTOM$")$NEWLINE$
 
 ; number of threads
 maxThreads:10

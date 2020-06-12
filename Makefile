@@ -51,6 +51,8 @@ tests:
 	${CXX} -o ${TESTDIR}/bin/testNotFound ${TESTDIR}/testNotFound.cpp
 	${CXX} -o ${TESTDIR}/bin/testThreadPool ${TESTDIR}/testThreadPool.cpp
 	${CXX} -o ${TESTDIR}/bin/testPermissions ${TESTDIR}/testPermissions.cpp
+	${CXX} -o ${TESTDIR}/bin/testInvalidExecutable ${TESTDIR}/testInvalidExecutable.cpp
+
 
 cleanTests:
 	-rm -f -r ${TESTDIR}/bin

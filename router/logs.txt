@@ -715,3 +715,1546 @@ id: 32
 insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 12:53:32 2020", "returned dir: router/tests
 status: 200
 ")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 12:56:46 2020", "target: tests/dirNoPermission
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 33
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 12:56:46 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:01:36 2020", "target: tests/bin/
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 34
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:01:36 2020", "returned dir: router/tests/bin/
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:01:37 2020", "target: tests/bin/
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 35
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:01:37 2020", "returned dir: router/tests/bin/
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:01:37 2020", "target: tests/bin/
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 36
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:01:37 2020", "returned dir: router/tests/bin/
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:01:47 2020", "target: tests/bin/
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 37
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:01:47 2020", "returned dir: router/tests/bin/
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:02:04 2020", "target: tests/bin/
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 38
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:02:04 2020", "returned dir: router/tests/bin/
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:05:29 2020", "target: bye.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 39
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:05:29 2020", "returned file: bye.html
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:03 2020", "target: bye.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 40
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:03 2020", "returned file: bye.html
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:03 2020", "This request was invalid
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:03 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 42
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:04 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: tests/dirNoPermission
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 43
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:04 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 44
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 45
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 46
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 47
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 48
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 49
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 50
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 51
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 52
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 53
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:04 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 54
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 55
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 56
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 57
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 58
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 59
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 60
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 61
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 62
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:04 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 63
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:14 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:14 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:14 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:14 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:14 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:14 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:14 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:14 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:14 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:14 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:14 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:24 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:24 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:24 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:24 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:24 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:24 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:24 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:24 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:38 2020", "target: bye.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 64
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:38 2020", "returned file: bye.html
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:38 2020", "This request was invalid
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:38 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 66
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:39 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: tests/dirNoPermission
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 67
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:39 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 68
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 69
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 70
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 71
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 72
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 73
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 74
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 75
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 76
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 77
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:39 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 78
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 79
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 80
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 81
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 82
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 83
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 84
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 85
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 86
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:39 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 87
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:49 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:49 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:49 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:49 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:49 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:49 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:49 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:49 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:49 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:49 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:49 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:50 2020", "target: tests/bin
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 88
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:50 2020", "returned dir: router/tests/bin
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:55 2020", "target: tests/
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 89
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:55 2020", "returned dir: router/tests/
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:07:57 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 90
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:57 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:59 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:59 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:59 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:59 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:59 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:59 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:59 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:07:59 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:08:15 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 91
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:08:15 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 92
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:08:15 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:08:15 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:08:26 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 93
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:08:26 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:08:26 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 94
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:08:26 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:08:42 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 95
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:08:42 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:10:18 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 96
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:10:18 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:10:28 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 97
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:10:28 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:10:43 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 98
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:10:43 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:10:49 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 99
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:10:49 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:10:59 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 100
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:10:59 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:11:00 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 101
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:11:00 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:11:15 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 102
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:11:15 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:11:15 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 103
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:11:15 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:11:27 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 104
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:11:27 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:11:35 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 105
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:11:35 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:11:46 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 106
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:11:46 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:11:46 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 107
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:11:46 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:12:23 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 108
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:12:23 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:13:39 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 109
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:13:39 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:13:53 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 110
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:13:53 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:13:53 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 111
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:13:53 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:14:05 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 112
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:14:05 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:14:36 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 113
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:14:36 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:14:57 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 114
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:14:57 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:57 2020", "target: bye.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 115
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:16:57 2020", "returned file: bye.html
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:57 2020", "This request was invalid
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:16:57 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 117
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:16:58 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: tests/dirNoPermission
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 118
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:16:58 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 119
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 120
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 121
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 122
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 123
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 124
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 125
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 126
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 127
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 128
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:16:58 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 129
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 130
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 131
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 132
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 133
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 134
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 135
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 136
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 137
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:16:58 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 138
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:08 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:08 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:08 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:08 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:08 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:08 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:08 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:08 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:08 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:08 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:08 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:18 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:18 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:18 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:18 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:18 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:18 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:18 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:18 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:17:21 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 139
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:17:21 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:18:01 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 140
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:18:01 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:18:53 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 141
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:18:53 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:18:55 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 142
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:18:55 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:19:06 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 143
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:19:06 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:19:15 2020", "target: tests
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 144
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:19:15 2020", "returned dir: router/tests
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:19:26 2020", "target: tests
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 145
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:19:26 2020", "returned dir: router/tests
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:15 2020", "target: bye.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 146
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:15 2020", "returned file: bye.html
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:15 2020", "This request was invalid
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:15 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 148
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:16 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: tests/dirNoPermission
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 149
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:16 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 150
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 151
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 152
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 153
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 154
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 155
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 156
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 157
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 158
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 159
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:16 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 160
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 161
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 162
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 163
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 164
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 165
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 166
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 167
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 168
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:21:16 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 169
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:26 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:26 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:26 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:26 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:26 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:26 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:26 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:26 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:26 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:26 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:26 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:36 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:36 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:36 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:36 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:36 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:36 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:36 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:21:36 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:00 2020", "target: bye.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 170
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:00 2020", "returned file: bye.html
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:01 2020", "This request was invalid
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:01 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:01 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 172
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:01 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:01 2020", "target: tests/dirNoPermission
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 173
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:01 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 174
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 175
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 176
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 177
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 178
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 179
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 180
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 181
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 182
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 183
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:02 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 184
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 185
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 186
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 187
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 188
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 189
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 190
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 191
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 192
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:02 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 193
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:12 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:12 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:12 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:12 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:12 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:12 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:12 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:12 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:12 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:12 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:12 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:21 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 194
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:21 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:22 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:22 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:22 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:22 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:22 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:22 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:22 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:22 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:25 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 195
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:25 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:35 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 196
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:35 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:52 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 197
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:52 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:23:52 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 198
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:23:52 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:24:24 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 0
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:24:24 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:24:37 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 1
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:24:37 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:39 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 2
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:39 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:44 2020", "target: bye.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 3
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:44 2020", "returned file: bye.html
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:44 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 4
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:44 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:44 2020", "This request was invalid
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:44 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 6
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:45 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: tests/dirNoPermission
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 7
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:45 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 8
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 9
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 10
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 11
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 12
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 13
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 14
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 15
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 16
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 17
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:45 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 18
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 19
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 20
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 21
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 22
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 23
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 24
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 25
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 26
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:25:45 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 27
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:55 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:55 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:55 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:55 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:55 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:55 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:55 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:55 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:55 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:55 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:25:55 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:08 2020", "target: bye.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 0
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:08 2020", "returned file: bye.html
+status: 200
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:08 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 1
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:08 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:09 2020", "This request was invalid
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:09 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:09 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 3
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:09 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:09 2020", "target: tests/dirNoPermission
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 4
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:09 2020", "returned: default response
+status: 500
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 5
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 6
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 7
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 8
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 9
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 10
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 11
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 12
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 13
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 14
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:10 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 15
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 16
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 17
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 18
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 19
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 20
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 21
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 22
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: testThread
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 23
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:28:10 2020", "target: idontexist.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 24
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:20 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:20 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:20 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:20 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:20 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:20 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:20 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:20 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:20 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:20 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:20 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:30 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:30 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:30 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:30 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:30 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:30 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:30 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:28:30 2020", "status: 404
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:33:59 2020", "target: tests/run.sh
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 25
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:33:59 2020", "returned testcase: tests/run.sh
+")
+insert into Logs (header, time, custom) values ("Request Log", "Fri Jun 12 13:34:02 2020", "target: tests
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 26
+")
+insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:34:02 2020", "returned dir: router/tests
+status: 200
+")

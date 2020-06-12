@@ -182,9 +182,11 @@ int Server::Listen() {
 }
 
 int Server::DecWorkers() { // decrements worker counts and returns it
+    std::lock_guard<std::mutex> guard(_serverMutex);
     return --_workersCount;
 }
 
 int Server::IncWorkers() { // increments worker counts and returns it
+    std::lock_guard<std::mutex> guard(_serverMutex);
     return ++_workersCount;
 }

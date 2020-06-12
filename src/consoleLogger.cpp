@@ -8,5 +8,6 @@ void ConsoleLogger::Log(const class Log &log) const {
 }
 
 void ConsoleLogger::WriteOut(const std::string &msg) const {
+    std::lock_guard<std::mutex> guard(_consMutex);
     std::cout << msg;
 }

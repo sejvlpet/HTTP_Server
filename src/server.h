@@ -6,6 +6,7 @@
 #include <vector>
 #include <memory>
 #include <map>
+#include <mutex>
 #include "logger.h"
 
 
@@ -51,12 +52,6 @@ private:
 
     const static int LISTEN_SUCCESS{0}; // value to be return from listen if succeeds
     const static int LISTEN_FAIL{1}; // to be return if fails, generally if server's not setuped well before listening
-    const std::vector<std::string> TEST_CASES; // vector of unit test scenario names
-    const std::vector<std::string> STATIC_EXTENSIONS; // extensions to be treated as static
-    const std::vector<std::string> DYNAMIC_EXTENSIONS; // extensions to be treated as dynamic
-
-    int _workersCount{0}; // recent count of request being processed or in queue
-
 
     // options for configurtion with ther default values
     std::map<std::string, std::string> _options{{
@@ -84,6 +79,9 @@ private:
     int _addrLen{0};
     int _serverFd{0};
     std::unique_ptr<Logger> _logger;
+    mutable std::mutex _serverMutex;
+    int _workersCount{0}; // recent count of request being processed or in queue
+
 
     // checks validity of options and sets them to our server options
     void SetupOptions(const std::map<std::string, std::string> &options);
