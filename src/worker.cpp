@@ -34,10 +34,12 @@ void Worker::HandleRequest() {
             _parent->ShutDown();
             _response = std::make_unique<ByeResponse>();
 
-        } else if (dirOk(root + '/' + target)) {
+        } else if (isDir(root + '/' + target)) {
+            if (dirOk(root + '/' + target)) {
 
-            _response = std::make_unique<DirResponse>(root + target);
+                _response = std::make_unique<DirResponse>(root + target);
 
+            }
         } else if (isExecutable(root + '/' + target)) {
 
             _response = std::make_unique<ExecResponse>(root, target);

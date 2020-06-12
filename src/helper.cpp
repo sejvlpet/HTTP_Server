@@ -32,3 +32,12 @@ bool dirOk(const std::string &dir) {
 
     return true;
 }
+
+bool isDir(const std::string &dir) {
+    // inspired on https://stackoverflow.com/questions/18100097/portable-way-to-check-if-directory-exists-windows-linux-c
+    struct stat info{};
+
+    if (stat(dir.c_str(), &info) != 0)
+        return false;
+    else return (info.st_mode & S_IFDIR) != 0;
+}
