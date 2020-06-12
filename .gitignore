@@ -1,0 +1,4 @@
+*.o
+/sejvlpet
+router/tests/dirNoPermission
+.gitignore

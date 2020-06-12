@@ -5,30 +5,28 @@
 
 class ErrorLog : public Log {
 public:
-    ErrorLog(const std::string &message, bool fatal = true) : _fatal(fatal) {
-        // ASK_0 - base mebers have to be initilazed like that?
-        _customMessage = message;
-    }
+    /**
+     * stores members
+     * @param message Custom message
+     * @param fatal indicates whether is error to be logged fatal or not
+     */
+    ErrorLog(const std::string &message, bool fatal = true);
 
-    std::string ToString(const std::string &format) const override {
-        return Serialize(format);
-    }
+    /**
+     * @copydoc Log::ToString()
+     */
+    std::string ToString(const std::string &format) const override;
 
 
 private:
-    const char *ERROR_HEADER{"Error"};
-    const char *WARNING_HEADER{"Warning"};
-    bool _fatal{true};
+    const char *ERROR_HEADER{"Error"}; //<! header for case of fatal error
+    const char *WARNING_HEADER{"Warning"}; //<! header for case of non fatal error
+    bool _fatal{true}; //<! indicates whether is error fatal or not
 
-    std::string Serialize(const std::string &format) const override {
-        std::string response = format;
-
-        FindAndReplace(response,HEADER_NAME, _fatal ? ERROR_HEADER : WARNING_HEADER);
-        FindAndReplace(response,CUSTOM_NAME, _customMessage);
-
-        AddCommonPart(response);
-        return response;
-    }
+    /**
+     * @copydoc Log::Serialize()
+     */
+    std::string Serialize(const std::string &format) const override;
 };
 
 

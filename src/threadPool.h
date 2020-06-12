@@ -1,7 +1,3 @@
-//
-// Created by petrsejvl on 09.06.20.
-//
-
 #ifndef PA2_SERVER_THREADPOOL_H
 #define PA2_SERVER_THREADPOOL_H
 
@@ -13,36 +9,38 @@
 #include <vector>
 #include <thread>
 #include <queue>
-#include "request.h"
 #include "worker.h"
 
-// inspired by https://www.youtube.com/watch?v=eWTGtp3HXiw
+/**
+ * inspired by https://www.youtube.com/watch?v=eWTGtp3HXiw
+ * Thread pool with queue acceptes task and then executes them in seperate thread which are recyclatd
+ */
 class ThreadPool {
 public:
     using Task = std::function<void()>;
 
-    explicit ThreadPool(std::size_t numThreads) {
-        Setup(numThreads);
-    }
+    /**
+     * Calls setup with given numThreads
+     * @param numThreads count of threads to be used
+     */
+    ThreadPool(size_t numThreads);
 
-    ~ThreadPool() {
-        {
-            std::unique_lock<std::mutex> lock{_eventMutex};
-            _stopping = true;
-        }
+    /**
+     * Stops and joins threads
+     */
+    ~ThreadPool();
 
-        _eventVar.notify_all();
-
-        for (auto &thread : _threads)
-            thread.join();
-    }
-
-    template<class T>
-    void enqueue(T worker) {
+    /**
+     * Method to accept and add worker to queue
+     * @tparam T templated type to be stored in queue
+     * @param worker object to be stored in queue
+     */
+template<class T>
+    void Enqueue(T worker) {
         // todo find out what the hell is that
         auto wrapper = std::make_shared<std::packaged_task<decltype(worker())()>>(std::move(worker));
         {
-            // fixme - is this really needed? It'd make sense only if notify_one would be expensive
+            // we take task from queue in its own scope so mutex can be locked as little as possible
             std::unique_lock<std::mutex> lock{_eventMutex};
             _tasks.emplace([=] {
                 (*wrapper)();
@@ -51,44 +49,27 @@ public:
 
         _eventVar.notify_one();
     }
-
-    size_t GetCountOfQueued() const {
-        return _tasks.size();
-    }
+    /**
+     * @return count of object in queue
+     */
+    size_t GetCountOfQueued() const;
 
 private:
-    std::vector<std::thread> _threads;
+    std::vector<std::thread> _threads; //<! vector of thread
     std::condition_variable _eventVar; // fixme I have no idea what does this thing do
-    std::mutex _eventMutex;
-    bool _stopping = false;
+    std::mutex _eventMutex; //<! mutex for thread safety
+    bool _stopping = false; //<! set to true if thread pool should stop
 
-    std::queue<Task> _tasks;
+    std::queue<Task> _tasks; //<! queue of tasks
 
-
-    void Setup(size_t numThreads) {
-        for (size_t i = 0; i < numThreads; ++i) {
-            _threads.emplace_back([=] {
-                while (true) {
-                    Task task;
-
-                    {
-                        // todo write some senseful comment about reason for this scope
-                        std::unique_lock<std::mutex> lock{_eventMutex};
-
-                        _eventVar.wait(lock, [=] { return _stopping || !_tasks.empty(); });
-
-                        if (_stopping && _tasks.empty())
-                            break;
-
-                        task = std::move(_tasks.front());
-                        _tasks.pop();
-                    }
-                    task();
-                }
-            });
-        }
-    }
+    /**
+     * Fills vector of threads, in each threads runs lambda fucntion which waits for signal (to end or work);
+     * @param numThreads count of threads
+     */
+    void Setup(size_t numThreads);
 };
 
 
 #endif //PA2_SERVER_THREADPOOL_H
+
+

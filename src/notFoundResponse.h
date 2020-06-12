@@ -3,24 +3,24 @@
 
 #include "response.h"
 
+/**
+ * Handles response for case where target wasn't found on server
+ */
 class NotFoundResponse : public Response {
 public:
-    void WriteOut(int socket) override {
-        write(socket, NOT_FOUND, strlen(NOT_FOUND));
-        CreateLog();
-    };
-
+    /**
+     * @copydoc Response::WriteOut()
+     */
+    void WriteOut(int socket) override;
 
 private:
-    const char *NOT_FOUND{"HTTP/1.1 404\nContent-Type: text/html\nContent-Length: 36\n\nNot found<br> <a href=\"/\"> Home </a>"};
+    const char *NOT_FOUND{
+            "HTTP/1.1 404\nContent-Type: text/html\nContent-Length: 36\n\nNot found<br> <a href=\"/\"> Home </a>"}; // <! response
 
-
-    void CreateLog() override {
-        std::map<std::string, std::string> res;
-        res["status"] = "404";
-
-        _log.SetCustom(res);
-    };
+    /**
+     * @copydoc Response::WriteOut()
+     */
+    void CreateLog() override;
 
 };
 

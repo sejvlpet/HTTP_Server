@@ -1,34 +1,33 @@
 #ifndef PA2_SERVER_RESPONSE_H
 #define PA2_SERVER_RESPONSE_H
 
-#include <bits/unique_ptr.h>
-#include <cstring>
-#include <unistd.h>
 #include "responseLog.h"
-
+/**
+ * Base class for responses, used as default response
+ */
 class Response {
 public:
-    std::unique_ptr<Log> GetLog() {
-        return std::make_unique<ResponseLog>(_log);
-    }
+    /**
+     * returns reference to log object
+     * @return reference to log object
+     */
+    Log &GetLog();
 
-    virtual void WriteOut(int socket) {
-        write(socket, HELLO, strlen(HELLO));
-        CreateLog();
-    };
+    /**
+     * accepts socket number and writes response there
+     * @param socket
+     */
+    virtual void WriteOut(int socket);
 
-    virtual ~Response()=default;
+    virtual ~Response() = default;
 
 protected:
-    ResponseLog _log;
+    ResponseLog _log; //<! log object for response
 
-    virtual void CreateLog() {
-        std::map<std::string, std::string> res;
-        res["status"] = "500";
-        res["returned"] = "default response";
-
-        _log.SetCustom(res);
-    };
+    /**
+     * Creates log object and saves it to _log member
+     */
+    virtual void CreateLog();
 
 private:
     const char *HELLO{"HTTP/1.1 500\nContent-Type: text/plain\nContent-Length: 20\n\nSomething went wrong"};

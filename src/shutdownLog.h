@@ -5,27 +5,26 @@
 
 class ShutDownLog : public Log {
 public:
-    ShutDownLog(bool final) : _final(final) {}
+    /**
+     * @param final true if shutdown is final and not just requested
+     */
+    ShutDownLog(bool final);
 
-    std::string ToString(const std::string &format) const override {
-        return Serialize(format);
-    }
+    /**
+     * @copydoc Log::ToString()
+     */
+    std::string ToString(const std::string &format) const override;
 
 
 private:
-    const char *HEADER_NOT_FINAL{"Shutdown called Log"};
-    const char *HEADER_FINAL{"Shutdown final Log"};
-    bool _final{false};
+    const char *HEADER_NOT_FINAL{"Shutdown called Log"}; //<! header if shutdown isn't final
+    const char *HEADER_FINAL{"Shutdown final Log"}; //<! header if shutdown is final
+    bool _final{false}; //<! indicates whether shoutdown is final or not
 
-    std::string Serialize(const std::string &format) const override {
-        std::string response = format;
-
-        FindAndReplace(response,HEADER_NAME, _final ? HEADER_FINAL : HEADER_NOT_FINAL);
-        FindAndReplace(response,CUSTOM_NAME, _customMessage);
-
-        AddCommonPart(response);
-        return response;
-    }
+    /**
+     * @copydoc Log::Serialize()
+     */
+    std::string Serialize(const std::string &format) const override;
 
 };
 

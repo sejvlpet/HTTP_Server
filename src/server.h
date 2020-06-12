@@ -4,112 +4,127 @@
 #include <netinet/in.h>
 #include <string>
 #include <vector>
-#include <set>
-#include <utility>
 #include <memory>
 #include <map>
+#include <mutex>
 #include "logger.h"
-#include "consoleLogger.h"
+
 
 
 class Server {
 public:
     enum SETUP_STATUS {
         OK, FAIL, DEFAULT
-    };
-    SETUP_STATUS _setupStatus{DEFAULT};
-    const static int SETUP_FAIL{1};
-    const static std::set<std::string> IGNORE_LIST;
+    }; //<! possible states after setup
+    SETUP_STATUS _setupStatus{DEFAULT}; //<!default setup status
+    const static int SETUP_FAIL{1}; //<! code for setup fail
 
-    // default const setups things needed from the very begging - at least logger
+    /**
+     * default const setups things needed from the very begging
+     */
     Server();
-    // simply reads options from config file
+
+    /**
+     * simply reads options from config file
+     * @param configFileName filer with config
+     */
     void ReadOptions(const std::string &configFileName);
-    // methods
-    void Setup(); // from options saved in members setups server
 
-    int Listen(); // listen on configured port, if setup failed returns proper constant
+    /**
+     * from options saved in members setups server
+     */
+    void Setup();
 
+    /**
+     * listen on configured port, if setup failed returns proper constant
+     * @return result of listening
+     */
+    int Listen();
+
+    /**
+     * Logs and sets shutdown indicating member to true
+     */
     void ShutDown();
 
-    // fixme due to work with map, this cannot be const
-    bool ShutDownCalled(const std::string &reqUrl) {
-        return _options["shutdownUrl"] == reqUrl || _options["userDefinedShutdownUrl"] == reqUrl;
-    }
+    /**
+     * @param reqUrl Url to be tested
+     * @return true if given reqUrl should invoke shutdown
+     */
+    bool ShutDownCalled(const std::string &reqUrl) const;
 
-    int IncWorkers() { // increments worker counts and returns it
-        return ++_workersCount;
-    }
+    /**
+     * Incremets worker count, thread sage
+     * @return returns new count of workers
+     */
+    int IncWorkers();
 
-    int DecWorkers() { // increments worker counts and returns it
-        return --_workersCount;
-    }
+    /**
+     * Decrements count of worker, thread safe
+     * @return new count of workers
+     */
+    int DecWorkers();
 
-    // logs message taken as parameter
-    // passing value by reference seems nicer to me, but as server runs in more threads, it is not always possible
-    void Log(const std::unique_ptr<Log> log) const {
-        _logger->Log(log);
-    }
-    void Log(const class Log &log) const {
-        _logger->Log(log);
-    }
+    /**
+     * logs message taken as parameter
+     * @param log Log to be logged
+     */
+    void Log(const class Log &log) const;
 
-
-    const std::string &GetRoot() {
-        return _options["root"];
-    }
+    /**
+     * @return refernce to root directory
+     */
+    const std::string &GetRoot() const;
 
 private:
-    const char DELIMETER = ':';
-    const char COMMENT = ';';
+    const char DELIMETER = ':'; //<! delimiter in cofig file
+    const char COMMENT = ';'; //<! comment in cofig file
     // constants and enums
-    enum LOG_LOCATION { // tells where do we want to log
+    enum LOG_LOCATION {
         FILE, CONSOLE
-    };
-    enum LOG_LEVEL { // tells what should be logged
-        INFO, WARN, ERROR
-    };
+    }; //<! tells where do we want to log
 
-    const static int LISTEN_SUCCESS{0}; // value to be return from listen if succeeds
-    const static int LISTEN_FAIL{1}; // to be return if fails, generally if server's not setuped well before listening
-    const std::vector<std::string> TEST_CASES; // vector of unit test scenario names
-    const std::vector<std::string> STATIC_EXTENSIONS; // extensions to be treated as static
-    const std::vector<std::string> DYNAMIC_EXTENSIONS; // extensions to be treated as dynamic
+    const static int LISTEN_SUCCESS{0}; //<! value to be return from listen if succeeds
+    const static int LISTEN_FAIL{1}; //<! to be return if fails, generally if server's not setuped well before listening
 
-    int _workersCount{0}; // recent count of request being processed
-
-
-    // options for configurtion with ther default values
-    // todo add test options
-    std::map<std::string, std::string> _options{{
+    std::map<std::string, std::string>  _options{{
                                                         {"port", "8080"},
-                                                        {"logLocation", "CONSOLE"}, // todo how to parse string to enum?
-                                                        {"root", "router/"}, // todo at least this option has to be passed
+                                                        {"logLocation", "CONSOLE"},
+                                                        {"root", "router/"},
                                                         {"logFile", "default"}, // if log to file is set and file empty => error
                                                         {"shutdownUrl", "E5gySqfwoPjevP3RYP5o"},
                                                         {"userDefinedShutdownUrl", "E5gySqfwoPjevP3RYP5o"},
                                                         {"address", "0.0.0.0"},
-                                                        {"logFormat","$HEADER$$NEWLINE$Time: $TIME$$NEWLINE$ID: $ID$$NEWLINE$$CUSTOM$$NEWLINE$$SEPERATOR$"},
-                                                        {"maxThreads", "4"},
-                                                        {"maxQueue", "10"}
+                                                        {"logFormat","$HEADER$$NEWLINE$Time: $TIME$$NEWLINE$$CUSTOM$$NEWLINE$$SEPERATOR$"},
+                                                        {"maxThreads", "10"},
+                                                        {"maxQueue", "100"}
+                                                }}; //<! options for configurtion with their default values
 
-                                                }};
     std::map<const std::string, const LOG_LOCATION> _locations{{
                                                            {"CONSOLE", CONSOLE},
                                                            {"FILE", FILE}
-                                                   }};
+                                                   }}; //<! translater from Enum to string
 
 
     // members with default values
-    bool _shutDown{false}; // sets to true if serer's about to shutDown
-    sockaddr_in _address{};
-    int _addrLen{0};
-    int _serverFd{0};
-    std::unique_ptr<Logger> _logger;
+    bool _shutDown{false}; //<! sets to true if serer's about to shutDown
+    sockaddr_in _address{}; //<! address of socket
+    int _addrLen{0}; //<! length of address
+    int _serverFd{0}; //<! server fd
+    std::unique_ptr<Logger> _logger; //<! object handling logginf
+    mutable std::mutex _serverMutex; //<! mutex if thread safety is needed
+    int _workersCount{0}; //<! recent count of request being processed or in queue
 
-    // checks validity of options and sets them to our server options
+
+    /**
+     * checks validity of options and sets them to our server options
+     * @param options options to be setupted
+     */
     void SetupOptions(const std::map<std::string, std::string> &options);
-    // logs Error and sets status
+
+    /**
+     * logs Error and sets status
+     * @param message message to be logged
+     */
     void Error(const std::string &message);
 
 };

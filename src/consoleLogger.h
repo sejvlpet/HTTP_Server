@@ -1,25 +1,34 @@
 #ifndef PA2_SERVER_CONSOLELOGGER_H
 #define PA2_SERVER_CONSOLELOGGER_H
 
+#include <mutex>
 #include "logger.h"
 
+/**
+ * Handles logging on std::cout, thread safe
+ */
 class ConsoleLogger : public Logger {
 public:
-    ConsoleLogger(const std::string &format) : Logger(format) {}
+    /**
+     * saves format
+     * @param format Format option
+     */
+    ConsoleLogger(const std::string &format);
 
-    void Log(const std::unique_ptr<class Log> &log) const override {
-        std::cout << log->ToString(_format);
-    }
-
-    void Log(const class Log &log) const override {
-        std::cout << log.ToString(_format);
-    }
+    /**
+     * @copydoc Logger::Log()
+     */
+    void Log(const class Log &log) const override;
 
 
 private:
-    void WriteOut(const std::string &msg) const override {
-        std::cout << msg;
-    }
+    mutable std::mutex _consMutex;
+
+    /**
+     *@copydoc Logger::WriteOut()
+     */
+    void WriteOut(const std::string &msg) const override;
+
 };
 
 

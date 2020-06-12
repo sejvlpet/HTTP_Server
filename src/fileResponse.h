@@ -1,35 +1,14 @@
 #ifndef PA2_SERVER_FILERESPONSE_H
 #define PA2_SERVER_FILERESPONSE_H
 
-#include <utility>
-#include <fstream>
-#include <cstring>
-#include <unistd.h>
+
 #include "response.h"
 
 class FileResponse : public Response {
 public:
-    FileResponse(std::string root, std::string target, bool isHtml = true) :
-            _root(std::move(root)), _target(std::move(target)), _isHtml(isHtml) {}
+    FileResponse(std::string root, std::string target, bool isHtml = true);
 
-    void WriteOut(int socket) override {
-        std::string response, tmp;
-        std::ifstream file(_root + "/" + _target);
-
-        // read content of given file
-        while (std::getline(file, tmp)) {
-            response.append(tmp);
-        }
-
-        file.close();
-
-        std::string realResponse = (_isHtml ? HTML_HEADER : TEXT_HEADER) + std::to_string(response.size());
-        realResponse.append("\n\n");
-        realResponse.append(response);
-
-        write(socket, realResponse.c_str(), realResponse.size());
-        CreateLog();
-    };
+    void WriteOut(int socket) override;
 
 
 private:
@@ -40,13 +19,7 @@ private:
     bool _isHtml{true};
 
 
-    void CreateLog() override {
-        std::map<std::string, std::string> res;
-        res["status"] = "200";
-        res["returned file"] = _target;
-
-        _log.SetCustom(res);
-    }
+    void CreateLog() override;
 };
 
 

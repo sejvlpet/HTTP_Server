@@ -1,61 +1,65 @@
 #ifndef PA2_SERVER_REQUEST_H
 #define PA2_SERVER_REQUEST_H
 
-#include <map>
 #include "requestLog.h"
-#include "server.h"
 
+/**
+ * Keeps informations and functionality of accpeted request
+ */
 class Request {
 public:
-    // returns log object about request parsing
-    // as request log will be always obtained in same thread where it is created, we can afford to pass it as ref
-    // anyway, maybe I'll change it to unique_ptr to have that same as in respsonse class
-    // where I have no choice but unique_ptr
-    Log &GetLog() {
-        return _log;
-    }
+    /**
+     * @return Returns refernce to Log object
+     */
+    Log &GetLog();
 
-    // from parsed request setups request
-    void Setup(std::map<std::string, std::string> &parsed, int socket) {
-        _socket = socket;
-        _params = std::move(parsed);
-        _params["id"] = std::to_string(_id++);
-        CreateLog();
-    }
+    /**
+     * Setups from itself from parameters
+     * @param parsed key:value map of request
+     * @param socket socket number
+     */
+    void Setup(std::map<std::string, std::string> &parsed, int socket);
 
-    int GetSocket() const {
-        return _socket;
-    }
+    /**
+     * @return socket number
+     */
+    int GetSocket() const;
 
-    // ASK_1 those getters would make much better sense being const, but map doesn't want to allow it
-    bool IsValid() {
-        return _params["valid"] == "true";
-    }
+    /**
+     * @return true if request is valid, false otherwise
+     */
+    bool IsValid() const;
 
-    const std::string &GetTarget() {
-        return _params["target"];
-    }
+    /**
+     * @return referecne to target
+     */
+    const std::string &GetTarget() const;
 
-    const std::string &GetExtension() {
-        return _params["extension"];
-    }
+    /**
+     * @return referecne to extension
+     */
+    const std::string &GetExtension() const;
 
-    const std::string &GetRoot() {
-        return _params["root"];
-    }
+    /**
+     * @return referecne to root
+     */
+    const std::string &GetRoot() const;
 private:
     // BUG - sometimes server sends default response - something went wrong with code 500 to itself
     // I'm quite sure that it is because of this default set of _socket to zero - how should I solve it?
     // ASK_1 - should I problem described above solve by not sending anything to socket with number 0, let it be,
     // or somehow else?
-    int _socket{0};
-    std::map<std::string, std::string> _params;
-    RequestLog _log;
-    static size_t _id;
 
-    void CreateLog() {
-       _log.SetCustom(_params);
-    }
+    // NOTE I'll ignore that, it doesn't happen that often
+
+    // NOTE 2 - bug happens only in some explorers, I won't try solve it
+    int _socket{0}; //<! socket number
+    std::map<std::string, std::string> _params; //<! request saved in map
+    RequestLog _log; //<! log object
+    static size_t _id; //<! id of request
+    std::string _invalidKeyVal{""}; //<! if anyone tries to get value by invalid key from _params, this shall be returned instead
+
+    void CreateLog();
 };
 
 

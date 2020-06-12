@@ -1,41 +1,33 @@
 #ifndef PA2_SERVER_REQUESTLOG_H
 #define PA2_SERVER_REQUESTLOG_H
-
 #include <map>
 #include <vector>
 #include "log.h"
 
+/**
+ * Handles logs of request
+ */
 class RequestLog : public Log {
 public:
-    std::string ToString(const std::string &format) const override {
-        return Serialize(format);
-    }
+    /**
+     * @copydoc Log::ToString()
+     */
+    std::string ToString(const std::string &format) const override;
 
-    void SetCustom(std::map<std::string, std::string> &data) {
-        if (data["valid"] == "false") _customMessage.append(CreateLine("This request was invalid"));
-        else {
-            for (const std::string &l : _toLog) {
-                _customMessage.append(CreateLine(
-                        l + ": " + data[l]
-                ));
-            }
-        }
-    }
+    /**
+     * From maps sets custom log message
+     * @param data key:value map with informations
+     */
+    void SetCustom(const std::map<std::string, std::string> &data);
 
 private:
-    std::vector<std::string> _toLog{"target", "Host", "User-Agent", "id"};
-    const char *HEADER{"Request Log"};
+    std::vector<std::string> _toLog{"target", "Host", "User-Agent", "id"}; //<! things to be saved in custom message
+    const char *HEADER{"Request Log"}; //<! header
 
-    std::string Serialize(const std::string &format) const override {
-        std::string response = format;
-
-        FindAndReplace(response,HEADER_NAME, HEADER);
-        FindAndReplace(response,CUSTOM_NAME, _customMessage);
-
-        AddCommonPart(response);
-
-        return response;
-    }
+    /**
+     * @copydoc Log::Serialize()
+     */
+    std::string Serialize(const std::string &format) const override;
 };
 
 
