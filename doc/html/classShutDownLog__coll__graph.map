@@ -1,3 +1,0 @@
-<map id="ShutDownLog" name="ShutDownLog">
-<area shape="rect" id="node2" href="$classLog.html" title="{Log\n|# _dateTime\l# SEPARATOR\l# HEADER_NAME\l# CUSTOM_NAME\l# _customMessage\l&#45; NEWLINE_NAME\l&#45; TIME_NAME\l&#45; SEPARATOR_NAME\l&#45; NEWLINE\l|+ Log()\l+ ToString()\l+ ~Log()\l# Serialize()\l# CreateLine()\l# AddCommonPart()\l# FindAndReplace()\l&#45; TimeToString()\l&#45; ReplaceNewLines()\l}" alt="" coords="9,5,168,317"/>
-</map>

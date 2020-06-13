@@ -1,6 +1,0 @@
-<map id="fileOk" name="fileOk">
-<area shape="rect" id="node2" href="$classServer.html#aace4535f64a86a7e4b54a03299d1eb8e" title="Server::Setup" alt="" coords="139,5,242,32"/>
-<area shape="rect" id="node4" href="$classWorker.html#aebd985a4d9a0ac5185ab43f7b3773a39" title="Worker::HandleRequest" alt="" coords="109,56,272,83"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089" title="main" alt="" coords="358,5,409,32"/>
-<area shape="rect" id="node5" href="$classWorker.html#a866b25ed879589d80aa8df26a201225c" title="Worker::operator()" alt="" coords="320,56,447,83"/>
-</map>

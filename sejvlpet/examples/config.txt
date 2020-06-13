@@ -1,0 +1,33 @@
+; Sample configuration file - contains all possible options (some of them commented)
+; write your options as key:value pair without any whitespaces or anything else
+; options which won't strictly follow this format won't be accepted
+
+; port number for server to listen (insert int in valid range)
+port:8080
+
+; url for server to listen
+address:0.0.0.0
+
+; specify where you want to save your logs, either CONSOLE (setuped by default) or FILE
+;logLocation:FILE
+
+; root directory for server
+root:examples
+
+; file where logs shall be saved if logLocation is FILE
+logFile:router/logs.txt
+
+; here you can specify url on which shutdown should be evoked
+userDefinedShutdownUrl:shutdown
+
+; specify your log format
+; logFormat:insert into Logs (header, time, custom) values ("$HEADER$", "$TIME$", "$CUSTOM$")$NEWLINE$
+
+; number of threads
+maxThreads:10
+
+; max size of queue for pending requests
+maxQueue:100
+
+; example of redundant option
+test:useless

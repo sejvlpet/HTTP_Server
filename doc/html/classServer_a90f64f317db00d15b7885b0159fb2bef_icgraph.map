@@ -1,7 +1,0 @@
-<map id="Server::Error" name="Server::Error">
-<area shape="rect" id="node2" href="$classServer.html#a30b4d3aa72db8a829b84a25e8892cd21" title="Server::ReadOptions" alt="" coords="344,26,488,53"/>
-<area shape="rect" id="node4" href="$classServer.html#ad25c0fb09e5d129b1d84f470025ece26" title="Server::SetupOptions" alt="" coords="149,26,296,53"/>
-<area shape="rect" id="node5" href="$classServer.html#aace4535f64a86a7e4b54a03299d1eb8e" title="Server::Setup" alt="" coords="365,77,467,104"/>
-<area shape="rect" id="node6" href="$classServer.html#a4ecd5fcdd47dfb9f2eea11a4580d9039" title="Server::Listen" alt="" coords="171,128,274,154"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089" title="main" alt="" coords="536,77,587,104"/>
-</map>

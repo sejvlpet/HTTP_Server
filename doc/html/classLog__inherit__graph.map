@@ -1,6 +1,0 @@
-<map id="Log" name="Log">
-<area shape="rect" id="node2" href="$classErrorLog.html" title="{ErrorLog\n|&#45; ERROR_HEADER\l&#45; WARNING_HEADER\l&#45; _fatal\l|+ ErrorLog()\l+ ToString()\l&#45; Serialize()\l}" alt="" coords="5,365,165,501"/>
-<area shape="rect" id="node3" href="$classRequestLog.html" title="{RequestLog\n|&#45; _toLog\l&#45; HEADER\l|+ ToString()\l+ SetCustom()\l&#45; Serialize()\l}" alt="" coords="190,373,298,494"/>
-<area shape="rect" id="node4" href="$classResponseLog.html" title="{ResponseLog\n|&#45; HEADER\l|+ ToString()\l+ SetCustom()\l&#45; Serialize()\l}" alt="" coords="322,380,430,487"/>
-<area shape="rect" id="node5" href="$classShutDownLog.html" title="{ShutDownLog\n|&#45; HEADER_NOT_FINAL\l&#45; HEADER_FINAL\l&#45; _final\l|+ ShutDownLog()\l+ ToString()\l&#45; Serialize()\l}" alt="" coords="454,365,621,501"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="Logger" name="Logger">
-<area shape="rect" id="node2" href="$classConsoleLogger.html" title="{ConsoleLogger\n|&#45; _consMutex\l|+ ConsoleLogger()\l+ Log()\l&#45; WriteOut()\l}" alt="" coords="5,182,135,289"/>
-<area shape="rect" id="node3" href="$classFileLogger.html" title="{FileLogger\n|&#45; _fileName\l&#45; _fileMutex\l|+ FileLogger()\l+ Log()\l&#45; WriteOut()\l}" alt="" coords="159,175,261,296"/>
-</map>

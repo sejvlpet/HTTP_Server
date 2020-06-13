@@ -1,7 +1,0 @@
-<map id="Controller::Run" name="Controller::Run">
-<area shape="rect" id="node2" href="$classController.html#a42d756ab5d166ea7a281cc5fccaeecbe" title="Controller::ParseMessage" alt="" coords="164,5,337,32"/>
-<area shape="rect" id="node4" href="$classServer.html#a32e138908cc9bfe87d96e7072ec46d30" title="Server::Log" alt="" coords="446,56,535,83"/>
-<area shape="rect" id="node5" href="$classThreadPool.html#a8479fa9e02d81a606b2041360acdb7ca" title="ThreadPool::GetCountOfQueued" alt="" coords="385,132,596,159"/>
-<area shape="rect" id="node6" href="$classThreadPool.html#a3cd365598aae272e91bb239e99d9fd05" title="ThreadPool::Enqueue" alt="" coords="177,157,324,184"/>
-<area shape="rect" id="node3" href="$classServer.html#adcb6d09347602dcc8fa981309440eea4" title="Server::GetRoot" alt="" coords="432,5,549,32"/>
-</map>

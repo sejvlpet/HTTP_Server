@@ -1,4 +1,0 @@
-<map id="Response" name="Response">
-<area shape="rect" id="node2" href="$classResponseLog.html" title="{ResponseLog\n|&#45; HEADER\l|+ ToString()\l+ SetCustom()\l&#45; Serialize()\l}" alt="" coords="31,367,139,473"/>
-<area shape="rect" id="node3" href="$classLog.html" title="{Log\n|# _dateTime\l# SEPARATOR\l# HEADER_NAME\l# CUSTOM_NAME\l# _customMessage\l&#45; NEWLINE_NAME\l&#45; TIME_NAME\l&#45; SEPARATOR_NAME\l&#45; NEWLINE\l|+ Log()\l+ ToString()\l+ ~Log()\l# Serialize()\l# CreateLine()\l# AddCommonPart()\l# FindAndReplace()\l&#45; TimeToString()\l&#45; ReplaceNewLines()\l}" alt="" coords="5,5,164,317"/>
-</map>
