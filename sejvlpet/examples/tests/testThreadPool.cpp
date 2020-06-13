@@ -60,6 +60,8 @@ int req(int sock, const char *hello, bool thread = false) {
 }
 
 int main(int argc, char const *argv[]) {
+    std::cout << "Test thread pool\n";
+
 
     const char *hello = "GET /idontexist.html HTTP/1.1\n"
                         "Host: localhost:8080\n"

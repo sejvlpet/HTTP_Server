@@ -64,12 +64,14 @@ compileTests:
 	mkdir -p ${TESTBINARIES}
 # 	${CXX} -o ${TESTS}
 	${CXX} -o ${TESTBINARIES}/helloWorld ${TESTDIR}/helloWorld.cpp
-	${CXX} -o ${TESTBINARIES}/testBye ${TESTDIR}/testBye.cpp
+	${CXX} -o ${TESTBINARIES}/testFile ${TESTDIR}/testFile.cpp
 	${CXX} -o ${TESTBINARIES}/testInvalidRequest ${TESTDIR}/testInvalidRequest.cpp
 	${CXX} -o ${TESTBINARIES}/testNotFound ${TESTDIR}/testNotFound.cpp
 	${CXX} -o ${TESTBINARIES}/testThreadPool ${TESTDIR}/testThreadPool.cpp
 	${CXX} -o ${TESTBINARIES}/testPermissions ${TESTDIR}/testPermissions.cpp
 	${CXX} -o ${TESTBINARIES}/testInvalidExecutable ${TESTDIR}/testInvalidExecutable.cpp
+	${CXX} -o ${TESTBINARIES}/testDir ${TESTDIR}/testDir.cpp
+	${CXX} -o ${TESTBINARIES}/testExecutable ${TESTDIR}/testExecutable.cpp
 
 
 cleanTests:

@@ -12,6 +12,7 @@
 const int PORT = 8080;
 
 int main(int argc, char const *argv[]) {
+    std::cout << "Test not found\n";
 
     int sock = 10;
     struct sockaddr_in serv_addr;

@@ -12,6 +12,8 @@
 const int PORT = 8080;
 
 int main(int argc, char const *argv[]) {
+    std::cout << "Test invalid executable\n";
+
 
     int sock = 0;
     struct sockaddr_in serv_addr;
