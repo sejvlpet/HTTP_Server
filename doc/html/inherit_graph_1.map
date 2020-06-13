@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classLog.html" title="Log" alt="" coords="5,81,48,108"/>
+<area shape="rect" id="node2" href="$classErrorLog.html" title="ErrorLog" alt="" coords="113,5,183,32"/>
+<area shape="rect" id="node3" href="$classRequestLog.html" title="RequestLog" alt="" coords="102,56,194,83"/>
+<area shape="rect" id="node4" href="$classResponseLog.html" title="ResponseLog" alt="" coords="97,107,199,133"/>
+<area shape="rect" id="node5" href="$classShutDownLog.html" title="ShutDownLog" alt="" coords="96,157,200,184"/>
+</map>

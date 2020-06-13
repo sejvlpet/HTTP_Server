@@ -1,0 +1,6 @@
+<map id="dirOk" name="dirOk">
+<area shape="rect" id="node2" href="$classServer.html#aace4535f64a86a7e4b54a03299d1eb8e" title="Server::Setup" alt="" coords="137,5,239,32"/>
+<area shape="rect" id="node4" href="$classWorker.html#aebd985a4d9a0ac5185ab43f7b3773a39" title="Worker::HandleRequest" alt="" coords="107,56,269,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089" title="main" alt="" coords="355,5,406,32"/>
+<area shape="rect" id="node5" href="$classWorker.html#a866b25ed879589d80aa8df26a201225c" title="Worker::operator()" alt="" coords="317,56,444,83"/>
+</map>

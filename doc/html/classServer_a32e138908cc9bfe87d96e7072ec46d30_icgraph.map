@@ -1,0 +1,13 @@
+<map id="Server::Log" name="Server::Log">
+<area shape="rect" id="node2" href="$classController.html#ad6c824d86daf2aaadfc4a775669dc329" title="Controller::Run" alt="" coords="390,43,501,70"/>
+<area shape="rect" id="node3" href="$classServer.html#a4ecd5fcdd47dfb9f2eea11a4580d9039" title="Server::Listen" alt="" coords="595,119,698,146"/>
+<area shape="rect" id="node5" href="$classController.html#a42d756ab5d166ea7a281cc5fccaeecbe" title="Controller::ParseMessage" alt="" coords="143,43,316,70"/>
+<area shape="rect" id="node6" href="$classServer.html#a90f64f317db00d15b7885b0159fb2bef" title="Server::Error" alt="" coords="181,195,277,222"/>
+<area shape="rect" id="node8" href="$classServer.html#ad25c0fb09e5d129b1d84f470025ece26" title="Server::SetupOptions" alt="" coords="372,297,519,323"/>
+<area shape="rect" id="node10" href="$classServer.html#a067f8d186f02d98eb0bed10726fe9017" title="Server::ShutDown" alt="" coords="165,297,294,323"/>
+<area shape="rect" id="node11" href="$classWorker.html#aebd985a4d9a0ac5185ab43f7b3773a39" title="Worker::HandleRequest" alt="" coords="364,347,527,374"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089" title="main" alt="" coords="767,195,817,222"/>
+<area shape="rect" id="node7" href="$classServer.html#a30b4d3aa72db8a829b84a25e8892cd21" title="Server::ReadOptions" alt="" coords="575,246,719,273"/>
+<area shape="rect" id="node9" href="$classServer.html#aace4535f64a86a7e4b54a03299d1eb8e" title="Server::Setup" alt="" coords="595,195,698,222"/>
+<area shape="rect" id="node12" href="$classWorker.html#a866b25ed879589d80aa8df26a201225c" title="Worker::operator()" alt="" coords="583,347,710,374"/>
+</map>

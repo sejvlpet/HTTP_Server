@@ -1,0 +1,12 @@
+<map id="src/controller.h" name="src/controller.h">
+<area shape="rect" id="node2" href="$threadPool_8h.html" title="threadPool.h" alt="" coords="375,80,470,107"/>
+<area shape="rect" id="node24" href="$errorLog_8h.html" title="errorLog.h" alt="" coords="743,80,823,107"/>
+<area shape="rect" id="node10" href="$worker_8h.html" title="worker.h" alt="" coords="476,155,548,181"/>
+<area shape="rect" id="node11" href="$server_8h.html" title="server.h" alt="" coords="477,229,547,256"/>
+<area shape="rect" id="node20" href="$request_8h.html" title="request.h" alt="" coords="627,229,703,256"/>
+<area shape="rect" id="node22" href="$response_8h.html" title="response.h" alt="" coords="841,229,927,256"/>
+<area shape="rect" id="node17" href="$logger_8h.html" title="logger.h" alt="" coords="794,304,862,331"/>
+<area shape="rect" id="node18" href="$log_8h.html" title="log.h" alt="" coords="803,379,853,405"/>
+<area shape="rect" id="node21" href="$requestLog_8h.html" title="requestLog.h" alt="" coords="673,304,770,331"/>
+<area shape="rect" id="node23" href="$responseLog_8h.html" title="responseLog.h" alt="" coords="887,304,993,331"/>
+</map>

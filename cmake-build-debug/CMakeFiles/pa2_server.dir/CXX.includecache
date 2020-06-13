@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/byeResponse.h
-response.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/consoleLogger.h
 mutex
 -
@@ -32,29 +28,15 @@ threadPool.h
 errorLog.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/errorLog.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/dirResponse.h
-response.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
-vector
--
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/errorLog.h
 log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/execResponse.h
-response.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileLogger.h
 mutex
 -
 logger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileResponse.h
-response.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/helper.h
 string
@@ -70,25 +52,11 @@ string
 log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/main.cpp
-iostream
--
-server.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/server.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/notFoundResponse.h
-response.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/response.h
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h
 request.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/request.h
-requestLog.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/requestLog.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/requestLog.cpp
 requestLog.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/requestLog.h
 
@@ -154,10 +122,6 @@ mutex
 logger.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/logger.h
 
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/shutdownLog.cpp
-shutdownLog.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/shutdownLog.h
-
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/shutdownLog.h
 log.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/log.h
@@ -179,32 +143,6 @@ queue
 -
 worker.h
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.h
-
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.cpp
-iostream
--
-unistd.h
--
-thread
--
-utility
--
-worker.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.h
-parser.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/parser.h
-dirResponse.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/dirResponse.h
-fileResponse.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/fileResponse.h
-execResponse.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/execResponse.h
-notFoundResponse.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/notFoundResponse.h
-helper.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/helper.h
-byeResponse.h
-/home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/byeResponse.h
 
 /home/petrsejvl/Dropbox/pa2/server2/pa2_server/src/worker.h
 server.h

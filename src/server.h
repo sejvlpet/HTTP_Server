@@ -102,7 +102,7 @@ private:
     std::map<const std::string, const LOG_LOCATION> _locations{{
                                                            {"CONSOLE", CONSOLE},
                                                            {"FILE", FILE}
-                                                   }}; //<! translater from Enum to string
+                                                   }}; //<! translator from Enum to string
 
 
     // members with default values

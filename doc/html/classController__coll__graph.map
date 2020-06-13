@@ -1,0 +1,4 @@
+<map id="Controller" name="Controller">
+<area shape="rect" id="node2" href="$classServer.html" title="{Server\n|+ _setupStatus\l+ SETUP_FAIL\l&#45; DELIMETER\l&#45; COMMENT\l&#45; _options\l&#45; _locations\l&#45; _shutDown\l&#45; _address\l&#45; _addrLen\l&#45; _serverFd\l&#45; _logger\l&#45; _serverMutex\l&#45; _workersCount\l&#45; LISTEN_SUCCESS\l&#45; LISTEN_FAIL\l|+ Server()\l+ ReadOptions()\l+ Setup()\l+ Listen()\l+ ShutDown()\l+ ShutDownCalled()\l+ IncWorkers()\l+ DecWorkers()\l+ Log()\l+ GetRoot()\l&#45; SetupOptions()\l&#45; Error()\l}" alt="" coords="5,5,156,449"/>
+<area shape="rect" id="node3" href="$classThreadPool.html" title="{ThreadPool\n|&#45; _threads\l&#45; _eventVar\l&#45; _eventMutex\l&#45; _stopping\l&#45; _tasks\l|+ ThreadPool()\l+ ~ThreadPool()\l+ Enqueue()\l+ GetCountOfQueued()\l&#45; Setup()\l}" alt="" coords="181,130,338,325"/>
+</map>
