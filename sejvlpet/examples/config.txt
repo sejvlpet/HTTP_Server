@@ -7,7 +7,7 @@ port:8080
 
 ; NOTE should fail in bind with such address, but doesn't
 ; url for server to listen
-;address:800.0.0.0
+address:800.0.0.0
 
 ; specify where you want to save your logs, either CONSOLE (setuped by default) or FILE
 ;logLocation:FILE
