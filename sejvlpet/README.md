@@ -38,9 +38,9 @@ Kde lze využít polymorfismus? (doporučené)
 * K funcionalitě jsou implementovány unit testy - spustíte je pomocí make runTests (testy nejsou úplně standalone - například pro test spustitelného souboru je třeba daný soubor mít, konkrétně zkompilovat examples/tests/helloWorld.cpp jako examples/tests/helloWorld, pro test nepřístupného adresáře je třeba takový adresář vytvořit (vizte testInvalidPermissions.cpp))
 
 ## Polymorfismus
-* Logy - každá údalost která se loguje si vytvoří instanci příslušného potomka
-třídy Log, ta je pak předáná (resp. pointer/reference na ni) až loggeru, která z virtuální metodu ToString získá řetězec 
-a zaloguje jej
+* Logy - každá udalost která se loguje si vytvoří instanci příslušného potomka
+třídy Log, ta je pak předáná (resp. reference na ni) až loggeru, která z virtuální metody ToString získá řetězec 
+a zaloguje jej)
 * Logger - server má členskou proměnou která je typu std::unique_ptr na Logger a v rámci setupu
 serveru je naplněna dítětem zvoleným v konfiguraci (FileLogger nebo ConsoleLogger). Při logování se pak
 volají přetížené metody těchto tříd
