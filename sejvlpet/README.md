@@ -35,7 +35,7 @@ Kde lze využít polymorfismus? (doporučené)
 * Server implementuje a pro práci ve více vláknech využívá thread pool. Díky tomu je teda schopen obsluhovat více požadavků najednou. Počet vláken je nastavitelný v konfiguračním souboru stejně jako velikost fronty pro požadavky čekající na vyřízení.
 * Když dojde Worker ve thread poolu na řadu, rozhodne na základě requestu jak se zachovat - vytvoří příslušnou response a zajistí její vrácení.
 * Během běhu serveru probíhá logování.
-* K funcionalitě jsou implementovány unit testy - spustíte je pomocí make runTests (testy nejsou úplně standalone - například pro test spustitelného souboru je třeba daný soubor mít, konkrétně zkompilovat examples/tests/helloWorld.cpp jako examples/tests/helloWorld, pro test nepřístupného adresáře je třeba takový adresář vytvořit(vize testInvalidPermissions.cpp))
+* K funcionalitě jsou implementovány unit testy - spustíte je pomocí make runTests (testy nejsou úplně standalone - například pro test spustitelného souboru je třeba daný soubor mít, konkrétně zkompilovat examples/tests/helloWorld.cpp jako examples/tests/helloWorld, pro test nepřístupného adresáře je třeba takový adresář vytvořit (vizte testInvalidPermissions.cpp))
 
 ## Polymorfismus
 * Logy - každá údalost která se loguje si vytvoří instanci příslušného potomka
