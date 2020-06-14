@@ -29,9 +29,13 @@ Kde lze využít polymorfismus? (doporučené)
 * Styl logování: jednoduchá hlavička, kompletní požadavek (např. pouze pro chybové stavy), statistika přístupů, ...
 
 ## Specifikované zadání
-* Server bude pracovat ve více vláknech
-* V rámci generování obsahu pomocí externích skriptů budou implementovány unit testy posílající
-requesty na server a porovnávající obdržené odpovědi s očekávanými
+* Program lze spustit se vstupním parametrem - konfiguračním souborem. Pokud program tento soubor dostane, podle definovaných pravidel se z něj pokusí vyčíst a nastavit si dané hodnoty, pokud nedostane, pokračuje s defaultními. Pro ukázku konfiguračního souboru vizte examples/config.txt.
+* Po získání konfiguračních hodnot se pomocí nich server pokusí připravit na poslouchání na síti. V případě selhání se vypíše log chyby (z důvodu možnosti chyby v rámci nastavování logů jako takových se ze začátku logguje pouze s defaultním nastavením). Pokud vše vyjde jak má, server začne poslouchat na dané adrese a portu.
+* V reakci na request předá server socket Controlleru - ten zajistí parsování requestu a se sparsovaným requestem vytvoří workera kterého předá do thread poolu.
+* Server implementuje a pro práci ve více vláknech využívá thread pool. Díky tomu je teda schopen obsluhovat více požadavků najednou. Počet vláken je nastavitelný v konfiguračním souboru stejně jako velikost fronty pro požadavky čekající na vyřízení.
+* Když dojde Worker ve thread poolu na řadu, rozhodne na základě requestu jak se zachovat - vytvoří příslušnou response a zajistí její vrácení.
+* Během běhu serveru probíhá logování.
+* K funcionalitě jsou implementovány unit testy - spustíte je pomocí make runTests (testy nejsou úplně standalone - například pro test spustitelného souboru je třeba daný soubor mít, konkrétně zkompilovat examples/tests/helloWorld.cpp jako examples/tests/helloWorld, pro test nepřístupného adresáře je třeba takový adresář vytvořit(vize testInvalidPermissions.cpp))
 
 ## Polymorfismus
 * Logy - každá údalost která se loguje si vytvoří instanci příslušného potomka
@@ -43,12 +47,4 @@ volají přetížené metody těchto tříd
 * Response - Třída controller rozhodne jaká response je třeba zapsat podle toho si vytvoří potomka třídy
 Response, na které se pak zavolá virtuální metoda WriteOut vypisující příslušnou odpověd
 
-## Poznámka
-* Budete-li chtít mít možnost spustit unit testy, využije příkaz `$ make tests`, který zkompiluje testy
-a spustitelné soubory uloží do router/tests/bin, spustit je můžete z prohlížeče
-    * V rámci unit testů je bug - server test obvykle "nezaregistruje ihned" a odpoví na něj až s jiným
-    voláním
-* BUG - protože implementaci stále obsahuje bugy, tak jsem ty o kterých vím označil v takto v komentářích
-* ASK_X - Věci které bych ještě chtěl projít, čím menší X, tím menší priorita
-* Do implemntaci by měla ještě přijít práce s thready pomocí thread poolu a možnost vlastní konfigurace
-podoby logů, také dojde pravděpodobně k refactoringu celkové struktury
+## Poznámky pro testery jsou v kodu oznacene *
