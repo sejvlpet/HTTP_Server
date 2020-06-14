@@ -5,6 +5,7 @@
 ; port number for server to listen (insert int in valid range)
 port:8080
 
+; NOTE should fail in bind with such address, but doesn't
 ; url for server to listen
 ;address:800.0.0.0
 
