@@ -16,7 +16,6 @@ public:
     enum SETUP_STATUS {
         OK, FAIL, DEFAULT
     }; //<! possible states after setup
-    SETUP_STATUS _setupStatus{DEFAULT}; //<!default setup status
     const static int SETUP_FAIL{1}; //<! code for setup fail
 
     /**
@@ -75,6 +74,11 @@ public:
      */
     const std::string &GetRoot() const;
 
+    /**
+     * @return server setup status
+     */
+    SETUP_STATUS GetStatus() const;
+
 private:
     const char DELIMETER = ':'; //<! delimiter in cofig file
     const char COMMENT = ';'; //<! comment in cofig file
@@ -85,6 +89,8 @@ private:
 
     const static int LISTEN_SUCCESS{0}; //<! value to be return from listen if succeeds
     const static int LISTEN_FAIL{1}; //<! to be return if fails, generally if server's not setuped well before listening
+
+    SETUP_STATUS _setupStatus{DEFAULT}; //<!default setup status
 
     std::map<std::string, std::string>  _options{{
                                                         {"port", "8080"},

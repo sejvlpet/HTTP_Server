@@ -6,7 +6,7 @@
  * OK, server can start listenig
  * @param argc
  * @param argv
- * @return
+ * @return 0 for success, 1 for fail
  */
 int main(int argc, char const *argv[]) {
     // NOTE - there was a note about bug - if runned twice at once, program was segfaulting
@@ -16,7 +16,7 @@ int main(int argc, char const *argv[]) {
     if (argc > 1)
         server.ReadOptions(argv[1]);
     server.Setup();
-    if (server._setupStatus == Server::SETUP_STATUS::FAIL) {
+    if (server.GetStatus() == Server::SETUP_STATUS::FAIL) {
         return Server::SETUP_FAIL;
     }
     return server.Listen();

@@ -4,8 +4,6 @@
 #include <cstring>
 #include <arpa/inet.h>
 #include <fstream>
-#include <sstream>
-#include <cmath>
 #include "server.h"
 #include "shutdownLog.h"
 #include "errorLog.h"
@@ -27,7 +25,7 @@ bool Server::ShutDownCalled(const std::string &reqUrl) const {
 
 void Server::Error(const std::string &message) {
     Log(ErrorLog(message));
-    _setupStatus = FAIL;
+    _setupStatus = SETUP_STATUS::FAIL;
     _shutDown = true; // in case of error in the future
 }
 
@@ -91,6 +89,8 @@ void Server::SetupOptions(const std::map<std::string, std::string> &options) {
 
 
 void Server::Setup() {
+    if(GetStatus() == Server::SETUP_STATUS::FAIL)
+        return;
     // as a first steup of setup, test if root is accessible
     if (!dirOk(_options.at("root"))) {
         Error("Invalid root");
@@ -188,25 +188,6 @@ int Server::Listen() {
     return LISTEN_SUCCESS;
 }
 
-// unsigned int Server::TranslateAddress() const {
-//     std::istringstream stream;
-//     stream.str(_options.at("address"));
-
-//     unsigned int result = 0;
-//     unsigned int power = 0;
-
-//     while(stream.good())
-//     {
-//         std::string substr;
-//         getline(stream, substr, '.' );
-//         int num = std::stoi(substr, nullptr, 10);
-//         result += (unsigned  int)(num * pow(2, power));
-//         power += 8;
-//     }
-//     return result;
-// }
-
-
 int Server::DecWorkers() { // decrements worker counts and returns it
     std::lock_guard<std::mutex> guard(_serverMutex);
     return --_workersCount;
@@ -215,4 +196,9 @@ int Server::DecWorkers() { // decrements worker counts and returns it
 int Server::IncWorkers() { // increments worker counts and returns it
     std::lock_guard<std::mutex> guard(_serverMutex);
     return ++_workersCount;
+}
+
+
+Server::SETUP_STATUS Server::GetStatus() const {
+    return _setupStatus;
 }
