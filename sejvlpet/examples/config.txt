@@ -5,9 +5,8 @@
 ; port number for server to listen (insert int in valid range)
 port:8080
 
-; NOTE should fail in bind with such address, but doesn't
-; url for server to listen
-;address:800.0.0.0
+; url for server to listen - insert like x.x.x.x, where x is int in range from 0 to 255 
+address:0.0.0.0
 
 ; specify where you want to save your logs, either CONSOLE (setuped by default) or FILE
 ;logLocation:FILE
