@@ -17,7 +17,7 @@ int main(int argc, char const *argv[]) {
 
     int sock = 0;
     struct sockaddr_in serv_addr;
-    const char *hello = "GET /tests/bin/helloWorld HTTP/1.1\n"
+    const char *hello = "GET /tests/helloWorld HTTP/1.1\n"
                         "Host: localhost:8080\n"
                         "Connection: keep-alive\n"
                         "Pragma: no-cache\n"
