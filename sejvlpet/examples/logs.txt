@@ -2258,3 +2258,21 @@ id: 26
 insert into Logs (header, time, custom) values ("Reponse Log", "Fri Jun 12 13:34:02 2020", "returned dir: router/tests
 status: 200
 ")
+Request Log
+Time: Sun Jun 14 12:24:28 2020
+target: 
+Host: localhost:8080
+User-Agent: Mozilla/5.0(X11;Linuxx86_64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/80.0.3987.163Safari/537.36
+id: 0
+
+----------------------
+Reponse Log
+Time: Sun Jun 14 12:24:28 2020
+returned dir: examples/
+status: 200
+
+----------------------
+Shutdown final Log
+Time: Sun Jun 14 12:24:42 2020
+
+----------------------

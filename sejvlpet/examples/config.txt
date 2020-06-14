@@ -6,7 +6,7 @@
 port:8080
 
 ; url for server to listen
-address:0.0.0.0
+;address:800.0.0.0
 
 ; specify where you want to save your logs, either CONSOLE (setuped by default) or FILE
 ;logLocation:FILE
@@ -15,7 +15,7 @@ address:0.0.0.0
 root:examples
 
 ; file where logs shall be saved if logLocation is FILE
-logFile:router/logs.txt
+logFile:examples/logs.txt
 
 ; here you can specify url on which shutdown should be evoked
 userDefinedShutdownUrl:shutdown

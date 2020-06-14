@@ -117,6 +117,7 @@ void Server::Setup() {
         Error("Error in bind");
         return;
     }
+
     if (listen(_serverFd, 10) < 0) {
         Error("Error in listen");
         _setupStatus = FAIL;
@@ -163,6 +164,7 @@ int Server::Listen() {
 
 
     Controller controller(this, std::stoi(_options["maxThreads"]), std::stoi(_options["maxQueue"]));
+    std::cout << "Listennig on " << _options["address"] << ":" << _options["port"] << '\n';
     while (true) {
         // BUG - shutting down doesn't work optimally
         // NOTE - do I have to solve this? It seems like a quite acceptable bug to me, after shutdown's called
