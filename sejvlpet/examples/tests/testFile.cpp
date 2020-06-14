@@ -29,7 +29,7 @@ int main(int argc, char const *argv[]) {
                         "Sec-Fetch-Mode: navigate\n"
                         "Sec-Fetch-User: ?1\n"
                         "Accept-Encoding: gzip, deflate, br\n"
-                        "Accept-Language: en-US,en;q=0.9";;
+                        "Accept-Language: en-US,en;q=0.9";
     char buffer[4096] = {0};
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
         std::cout << "\n Socket creation error \n";

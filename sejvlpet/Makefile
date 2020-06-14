@@ -46,8 +46,6 @@ compile: ${OBJS}
 /%.o: /%.cpp
 	${CXX} ${CXXFLAGS} -c -o $*.o $*.cpp
 
-# /%: ${TESTDIR}/%.cpp
-# 	${CXX} -o $*.o $*.cpp
 
 cleanAll: clean cleanTests
 
@@ -62,7 +60,6 @@ run:
 
 compileTests:
 	mkdir -p ${TESTBINARIES}
-# 	${CXX} -o ${TESTS}
 	${CXX} -o ${TESTBINARIES}/helloWorld ${TESTDIR}/helloWorld.cpp
 	${CXX} -o ${TESTBINARIES}/testFile ${TESTDIR}/testFile.cpp
 	${CXX} -o ${TESTBINARIES}/testInvalidRequest ${TESTDIR}/testInvalidRequest.cpp

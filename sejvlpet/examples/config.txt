@@ -24,7 +24,7 @@ userDefinedShutdownUrl:shutdown
 ; logFormat:insert into Logs (header, time, custom) values ("$HEADER$", "$TIME$", "$CUSTOM$")$NEWLINE$
 
 ; number of threads
-maxThreads:10
+maxThreads:100
 
 ; max size of queue for pending requests
 maxQueue:100

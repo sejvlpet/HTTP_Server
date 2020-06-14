@@ -31,9 +31,9 @@ Kde lze využít polymorfismus? (doporučené)
 ## Specifikované zadání
 * Program lze spustit se vstupním parametrem - konfiguračním souborem. Pokud program tento soubor dostane, podle definovaných pravidel se z něj pokusí vyčíst a nastavit si dané hodnoty, pokud nedostane, pokračuje s defaultními. Pro ukázku konfiguračního souboru vizte examples/config.txt.
 * Po získání konfiguračních hodnot se pomocí nich server pokusí připravit na poslouchání na síti. V případě selhání se vypíše log chyby (z důvodu možnosti chyby v rámci nastavování logů jako takových se ze začátku logguje pouze s defaultním nastavením). Pokud vše vyjde jak má, server začne poslouchat na dané adrese a portu.
-* V reakci na request předá server socket Controlleru - ten zajistí parsování requestu a se sparsovaným requestem vytvoří workera kterého předá do thread poolu.
+* V reakci na request předá server socket Controlleru - ten zajistí parsování requestu a se sparsovaným requestem vytvoří Workera kterého předá do thread poolu.
 * Server implementuje a pro práci ve více vláknech využívá thread pool. Díky tomu je teda schopen obsluhovat více požadavků najednou. Počet vláken je nastavitelný v konfiguračním souboru stejně jako velikost fronty pro požadavky čekající na vyřízení.
-* Když dojde Worker ve thread poolu na řadu, rozhodne na základě requestu jak se zachovat - vytvoří příslušnou response a zajistí její vrácení.
+* Když dojde Worker v thread poolu na řadu, rozhodne na základě requestu jak se zachovat - vytvoří příslušnou response a zajistí její vrácení.
 * Během běhu serveru probíhá logování.
 * K funcionalitě jsou implementovány unit testy - spustíte je pomocí make runTests (testy nejsou úplně standalone - například pro test spustitelného souboru je třeba daný soubor mít, konkrétně zkompilovat examples/tests/helloWorld.cpp jako examples/tests/helloWorld, pro test nepřístupného adresáře je třeba takový adresář vytvořit (vizte testInvalidPermissions.cpp))
 
@@ -44,7 +44,5 @@ a zaloguje jej)
 * Logger - server má členskou proměnou která je typu std::unique_ptr na Logger a v rámci setupu
 serveru je naplněna dítětem zvoleným v konfiguraci (FileLogger nebo ConsoleLogger). Při logování se pak
 volají přetížené metody těchto tříd
-* Response - Třída controller rozhodne jaká response je třeba zapsat podle toho si vytvoří potomka třídy
+* Response - Instance Workera  rozhodne jaká response je třeba zapsat podle toho si vytvoří potomka třídy
 Response, na které se pak zavolá virtuální metoda WriteOut vypisující příslušnou odpověd
-
-## Poznámky pro testery jsou v kodu oznacene NOTE

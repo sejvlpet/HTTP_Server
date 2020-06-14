@@ -32,7 +32,7 @@ void Server::Error(const std::string &message) {
 void Server::ReadOptions(const std::string &configFileName) {
     std::string response, tmp;
     std::ifstream file(configFileName);
-    std::map<std::string, std::string> options;
+    std::map <std::string, std::string> options;
 
     if (!file.is_open()) {
         Error("Couldn't open file with options");
@@ -55,15 +55,20 @@ void Server::ReadOptions(const std::string &configFileName) {
     SetupOptions(options);
 }
 
-void Server::SetupOptions(const std::map<std::string, std::string> &options) {
+void Server::SetupOptions(const std::map <std::string, std::string> &options) {
     for (const auto &pair: options) {
         const std::string &key = pair.first;
         const std::string &value = pair.second;
         if (_options.find(key) != _options.end()) {
             if (key == "port") {
-                if (std::stoi(value) > 65535 || std::stoi(value) < 1024) {
-                    Error("Invalid port number");
-                    return;
+                try {
+                    if (std::stoi(value) > 65535 || std::stoi(value) < 1024) {
+                        Error("Invalid port number");
+                        return;
+                    } 
+                } catch (...) {
+                        Error("Port number is not a number");
+                        return;
                 }
             } else if (key == "logLocation") {
                 if (_locations.find(value) == _locations.end()) {
@@ -74,8 +79,13 @@ void Server::SetupOptions(const std::map<std::string, std::string> &options) {
                 Error("Trying to set system option");
                 return;
             } else if (key == "maxThreads" || key == "maxQueue") {
-                if (std::stoi(value) <= 0) {
-                    Error("Trying to set invalid count of threads or invalid queue size");
+                try {
+                    if (std::stoi(value) <= 0 || std::stoi(value) > 1000) {
+                        Error("Trying to set invalid count of threads or invalid queue size");
+                        return;
+                    }
+                } catch (...) {
+                    Error("maxThreds or maxQueue is not a number");
                     return;
                 }
             }
@@ -89,7 +99,7 @@ void Server::SetupOptions(const std::map<std::string, std::string> &options) {
 
 
 void Server::Setup() {
-    if(GetStatus() == Server::SETUP_STATUS::FAIL)
+    if (GetStatus() == Server::SETUP_STATUS::FAIL)
         return;
     // as a first steup of setup, test if root is accessible
     if (!dirOk(_options.at("root"))) {
@@ -160,25 +170,14 @@ int Server::Listen() {
     if (_setupStatus == SETUP_STATUS::FAIL) return SETUP_FAIL;
 
 
-    // BUG - tests from browser are not beeing listed well
-    // if you send test from browser, server doesn't hear it and responds late
-    // normally is test response send after another request is recieved
-    // NOTE - if test requested from iPad, it is responded at once
-
-    // NOTE - I have no idea how to solve, maybe refresh of that listening loop every 0.1 second could help? But I'm not sure
-    // I'm ready to simply accept it as a bug of chrome
-
-
     Controller controller(this, std::stoi(_options.at("maxThreads")), std::stoi(_options.at("maxQueue")));
     std::cout << "Listennig on " << _options.at("address") << ":" << _options.at("port") << '\n';
     while (true) {
-        // BUG - shutting down doesn't work optimally
-        // NOTE - do I have to solve this? It seems like a quite acceptable bug to me, after shutdown's called
-        // server only chills up to next request, doesn't hurt anyone, sounds ok to me
+
         if (_shutDown && _workersCount == 0) break;
 
         int newSocket;
-        if ((newSocket = accept(_serverFd, (sockaddr *) &_address, (socklen_t *) &_addrLen)) < 0) {
+        if ((newSocket = accept(_serverFd, (sockaddr * ) & _address, (socklen_t * ) & _addrLen)) < 0) {
             Error("Error in accept");
             return LISTEN_FAIL;
         }
@@ -189,12 +188,12 @@ int Server::Listen() {
 }
 
 int Server::DecWorkers() { // decrements worker counts and returns it
-    std::lock_guard<std::mutex> guard(_serverMutex);
+    std::lock_guard <std::mutex> guard(_serverMutex);
     return --_workersCount;
 }
 
 int Server::IncWorkers() { // increments worker counts and returns it
-    std::lock_guard<std::mutex> guard(_serverMutex);
+    std::lock_guard <std::mutex> guard(_serverMutex);
     return ++_workersCount;
 }
 

@@ -26,8 +26,8 @@ void Worker::HandleRequest() {
         std::string root = _request.GetRoot();
 
         if (target.empty()) {
-
-            _response = std::make_unique<DirResponse>(root);
+            if(dirOk(root))
+                _response = std::make_unique<DirResponse>(root);
 
         } else if (_parent->ShutDownCalled(target)) {
 
@@ -35,11 +35,9 @@ void Worker::HandleRequest() {
             _response = std::make_unique<ByeResponse>();
 
         } else if (isDir(root + '/' + target)) {
-            if (dirOk(root + '/' + target)) {
-
+            if (dirOk(root + '/' + target)) 
                 _response = std::make_unique<DirResponse>(root + target);
 
-            }
         } else if (isExecutable(root + '/' + target)) {
 
             _response = std::make_unique<ExecResponse>(root, target);
