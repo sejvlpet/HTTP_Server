@@ -47,4 +47,4 @@ volají přetížené metody těchto tříd
 * Response - Třída controller rozhodne jaká response je třeba zapsat podle toho si vytvoří potomka třídy
 Response, na které se pak zavolá virtuální metoda WriteOut vypisující příslušnou odpověd
 
-## Poznámky pro testery jsou v kodu oznacene *
+## Poznámky pro testery jsou v kodu oznacene NOTE
