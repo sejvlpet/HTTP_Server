@@ -102,7 +102,6 @@ void Server::Setup() {
     _addrLen = sizeof(_address);
 
     _address.sin_family = AF_INET;
-    _address.sin_addr.s_addr = INADDR_ANY;
     _address.sin_addr.s_addr = inet_addr(_options["address"].c_str());
     _address.sin_port = htons(std::stoi(_options["port"]));
 

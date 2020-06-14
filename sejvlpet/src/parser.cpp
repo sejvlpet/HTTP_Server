@@ -1,11 +1,9 @@
 #include "parser.h"
-#include <iostream>
 
 
 Parser::Parser(const char *buffer, int socket, std::string root) : _buffer(buffer), _socket(socket),
                                                                    _root(std::move(root)) {
     std::map<std::string, std::string> parsed;
-    std::cout << _buffer;
     if (_buffer.empty()) _parsed["valid"] = "false";
     else Parse();
 }
