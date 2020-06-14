@@ -11,7 +11,7 @@ void FileResponse::WriteOut(int socket) {
 
     // read content of given file
     while (std::getline(file, tmp)) {
-        response.append(tmp);
+        response.append(tmp + '\n');
     }
 
     file.close();
