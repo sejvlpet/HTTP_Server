@@ -22,13 +22,16 @@ public:
     void Run(int socket);
 
 private:
-    Server *_parent{nullptr};
-    char _buffer[BUFFER_READ_SIZE]{0};
-    ThreadPool _threadPool;
-    size_t _maxQueue;
+    Server *_parent{nullptr}; //<! pointer to parent server
+    char _buffer[BUFFER_READ_SIZE]{0}; //<! buffer to store request
+    ThreadPool _threadPool; //<! thread pool, where wokers with aprsed request shall be placed
+    size_t _maxQueue; //<! max size of queue of workers waiting to be processed
 
 
-    // Parse message and saves it as request object
+    /**
+     * @param socket Socket number to read request from
+     * @return pardsed request
+     */
     Request ParseMessage(int socket);
 };
 

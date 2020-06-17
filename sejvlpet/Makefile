@@ -60,7 +60,7 @@ run:
 
 compileTests:
 	mkdir -p ${TESTBINARIES}
-	${CXX} -o ${TESTBINARIES}/helloWorld ${TESTDIR}/helloWorld.cpp
+	${CXX} -o ${TESTDIR}/helloWorld ${TESTDIR}/helloWorld.cpp
 	${CXX} -o ${TESTBINARIES}/testFile ${TESTDIR}/testFile.cpp
 	${CXX} -o ${TESTBINARIES}/testInvalidRequest ${TESTDIR}/testInvalidRequest.cpp
 	${CXX} -o ${TESTBINARIES}/testNotFound ${TESTDIR}/testNotFound.cpp
@@ -73,6 +73,6 @@ compileTests:
 
 cleanTests:
 	-rm -f -r ${TESTDIR}/bin
-
+	rm ${TESTDIR}/helloWorld
 runTests:
 	cd ${TESTDIR}; ./run.sh;
