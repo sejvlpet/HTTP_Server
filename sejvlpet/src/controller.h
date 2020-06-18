@@ -19,6 +19,10 @@ public:
      */
     Controller(Server *parent, size_t maxThreads, size_t maxQueue);
 
+    /**
+     * Parses request and tries to place worker into threadPool
+     * @param socket Socket number
+     */
     void Run(int socket);
 
 private:
