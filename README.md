@@ -1,7 +1,16 @@
 # HTTP SERVER
 * Project implements simple HTTP Server in C++. To serve multiple requests, server implements thread pool.
 * Project has been implemented as a semester work for Programing and algorimtization 2 at FIT CTU.
-* Below is full assignment in czech. 
+* To compile use either `$ make`, which compiles project and generates documentation, or `$ make compile` which only
+compiles project.
+* Run project using either `$ make run`, or `$ ./sejvlpet configFile`, where config file specifies server options. 
+You can find example of such a file in examples/config.txt.
+* `$ make runTests` runs tests. Tests are kinda semi-automatic, specifically testExecutable and testPermission needs
+special setup, for more info read comments in their source files. Other tests also depend on server options and server root.
+
+
+
+Below is full assignment in czech. 
 
 
 ## Originální zadání
