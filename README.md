@@ -1,5 +1,5 @@
 # HTTP SERVER
-* Project implements simple HTTP Server in C++. To serve multiple requests, server implements thread pool.
+* Project implements simple HTTP Server in C++. Server can handle more requests at once using thread pool.
 * Project has been implemented as a semester work for Programing and algorimtization 2 at FIT CTU.
 * To compile use either `$ make`, which compiles project and generates documentation, or `$ make compile` which only
 compiles project.
